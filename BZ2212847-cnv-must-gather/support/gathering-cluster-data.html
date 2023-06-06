@@ -2535,7 +2535,8 @@ information about your cluster to Red Hat Support.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="gp">$</span><span class="w"> </span>oc adm must-gather  <span class="nt">--image</span><span class="o">=</span>registry.redhat.io/container-native-virtualization/cnv-must-gather-rhel9:v4.13.0</code></pre>
+<pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="gp">$</span><span class="w"> </span>oc adm must-gather <span class="se">\</span>
+  <span class="nt">--image</span><span class="o">=</span>registry.redhat.io/container-native-virtualization/cnv-must-gather-rhel9:v4.13.0</code></pre>
 </div>
 </div>
 </li>
@@ -2589,7 +2590,8 @@ openshift-must-gather-5drcj    must-gather-s8sdh    2/2     Running     0       
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="gp">$</span><span class="w"> </span>oc adm must-gather <span class="nt">--run-namespace</span> &lt;namespace&gt; <span class="nt">--image</span><span class="o">=</span>registry.redhat.io/container-native-virtualization/cnv-must-gather-rhel9:v4.13.0</code></pre>
+<pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="gp">$</span><span class="w"> </span>oc adm must-gather <span class="nt">--run-namespace</span> &lt;namespace&gt; <span class="se">\</span>
+  <span class="nt">--image</span><span class="o">=</span>registry.redhat.io/container-native-virtualization/cnv-must-gather-rhel9:v4.13.0</code></pre>
 </div>
 </div>
 <div class="sect2">
@@ -2820,8 +2822,8 @@ operating system, run the following command:</p>
 <div class="listingblock">
 <div class="content">
 <pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="gp">$</span><span class="w"> </span>oc adm must-gather <span class="se">\</span>
- <span class="nt">--image-stream</span><span class="o">=</span>openshift/must-gather <span class="se">\ </span><i class="conum" data-value="1"></i><b>(1)</b>
-<span class="go"> --image=registry.redhat.io/container-native-virtualization/cnv-must-gather-rhel9:v4.13.0 <i class="conum" data-value="2"></i><b>(2)</b>
+  <span class="nt">--image-stream</span><span class="o">=</span>openshift/must-gather <span class="se">\ </span><i class="conum" data-value="1"></i><b>(1)</b>
+<span class="go">  --image=registry.redhat.io/container-native-virtualization/cnv-must-gather-rhel9:v4.13.0 <i class="conum" data-value="2"></i><b>(2)</b>
 </span></code></pre>
 </div>
 </div>
@@ -2845,7 +2847,7 @@ Logging Operator in your cluster. For OpenShift Logging, run the following comma
 <div class="listingblock">
 <div class="content">
 <pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="gp">$</span><span class="w"> </span>oc adm must-gather <span class="nt">--image</span><span class="o">=</span><span class="si">$(</span>oc <span class="nt">-n</span> openshift-logging get deployment.apps/cluster-logging-operator <span class="se">\</span>
- <span class="nt">-o</span> <span class="nv">jsonpath</span><span class="o">=</span><span class="s1">'{.spec.template.spec.containers[?(@.name == "cluster-logging-operator")].image}'</span><span class="si">)</span></code></pre>
+  <span class="nt">-o</span> <span class="nv">jsonpath</span><span class="o">=</span><span class="s1">'{.spec.template.spec.containers[?(@.name == "cluster-logging-operator")].image}'</span><span class="si">)</span></code></pre>
 </div>
 </div>
 <details>
