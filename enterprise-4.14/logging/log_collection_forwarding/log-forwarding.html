@@ -21599,6 +21599,30 @@
 
 
                   <li>
+                    <a class="" href="../../logging/logging_release_notes/logging-5-8-release-notes.html">
+                      Logging 5.8
+                    </a>
+                  </li>
+
+                
+
+
+                <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
+                     Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
+
+                
+                
+                
+                
+                
+
+                <!-- is this is a single page? That is, does this topic have more topics?
+                 Welcome 2 Index Page and Welcome 2 More -->
+
+
+
+
+                  <li>
                     <a class="" href="../../logging/logging_release_notes/logging-5-7-release-notes.html">
                       Logging 5.7
                     </a>
@@ -21862,21 +21886,34 @@
         Welcome 2 and Welcome 1 More -->
 
 
+          <!-- is this is a single page? That is, does this topic have more topics?
+          Welcome 1 More -->
+
+            <!-- ^ this establishs whether we are reading this current page -->
+
+            <li><a class="" href="../../logging/cluster-logging-upgrading.html">Updating Logging</a></li>
+            <!--  if active, then highlight it,  otherwise nothing to do -->
+
+
+        <!-- for each topic in this topic_group, for example in Welcome 1, what topics exist?
+        Welcome 2 and Welcome 1 More -->
+
+
             <!-- this topic contains subtopics - Welcome 2 -->
 
 
             <!-- start a new heading area -->
 
             <li class="nav-header">
-              <a class="" href="javascript:void(0);" data-toggle="collapse" data-target="#topicSubGroup-25-7">
-                <span id="sgSpan-25-7" class="fa fa-caret-right"></span>
+              <a class="" href="javascript:void(0);" data-toggle="collapse" data-target="#topicSubGroup-25-8">
+                <span id="sgSpan-25-8" class="fa fa-caret-right"></span>
                   &nbsp;Configuring your Logging deployment
 
                   <!-- prints out the names of the second level books with arrow down or to right
                   So in this case: Welcome 2 -->
 
               </a>
-              <ul id="topicSubGroup-25-7" class="nav-tertiary list-unstyled collapse">
+              <ul id="topicSubGroup-25-8" class="nav-tertiary list-unstyled collapse">
 
                 <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
                      Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
@@ -22121,15 +22158,15 @@
             <!-- start a new heading area -->
 
             <li class="nav-header">
-              <a class="" href="javascript:void(0);" data-toggle="collapse" data-target="#topicSubGroup-25-11">
-                <span id="sgSpan-25-11" class="fa fa-caret-down"></span>
+              <a class="" href="javascript:void(0);" data-toggle="collapse" data-target="#topicSubGroup-25-12">
+                <span id="sgSpan-25-12" class="fa fa-caret-down"></span>
                   &nbsp;Log collection and forwarding
 
                   <!-- prints out the names of the second level books with arrow down or to right
                   So in this case: Welcome 2 -->
 
               </a>
-              <ul id="topicSubGroup-25-11" class="nav-tertiary list-unstyled collapse in">
+              <ul id="topicSubGroup-25-12" class="nav-tertiary list-unstyled collapse in">
 
                 <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
                      Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
@@ -22252,19 +22289,6 @@
 
               </ul>
             </li>
-
-        <!-- for each topic in this topic_group, for example in Welcome 1, what topics exist?
-        Welcome 2 and Welcome 1 More -->
-
-
-          <!-- is this is a single page? That is, does this topic have more topics?
-          Welcome 1 More -->
-
-            <!-- ^ this establishs whether we are reading this current page -->
-
-            <li><a class="" href="../../logging/cluster-logging-upgrading.html">Updating Logging</a></li>
-            <!--  if active, then highlight it,  otherwise nothing to do -->
-
 
         <!-- for each topic in this topic_group, for example in Welcome 1, what topics exist?
         Welcome 2 and Welcome 1 More -->
@@ -32360,6 +32384,30 @@
 
 
                   <li>
+                    <a class="" href="../../distr_tracing/distr_tracing_rn/distr-tracing-rn-2-9-2.html">
+                      2.9.2
+                    </a>
+                  </li>
+
+                
+
+
+                <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
+                     Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
+
+                
+                
+                
+                
+                
+
+                <!-- is this is a single page? That is, does this topic have more topics?
+                 Welcome 2 Index Page and Welcome 2 More -->
+
+
+
+
+                  <li>
                     <a class="" href="../../distr_tracing/distr_tracing_rn/distr-tracing-rn-2-9-1.html">
                       2.9.1
                     </a>
@@ -35438,6 +35486,27 @@
         <div id="toc" class="toc">
 <div id="toctitle"></div>
 <ul class="sectlevel1">
+<li><a href="#about-log-collection_log-forwarding">Log collection</a>
+<ul class="sectlevel2">
+<li><a href="#about-log-collectors-types_log-forwarding">Log collector types</a></li>
+<li><a href="#about-log-collectors-limitations_log-forwarding">Log collection limitations</a></li>
+<li><a href="#logging-vector-fluentd-feature-comparison_log-forwarding">Log collector features by type</a></li>
+<li><a href="#log-forwarding-collector-outputs_log-forwarding">Collector outputs</a></li>
+</ul>
+</li>
+<li><a href="#log-forwarding-about-clf">Log forwarding</a></li>
+<li><a href="#log-forwarding-implementations_log-forwarding">Log forwarding implementations</a>
+<ul class="sectlevel2">
+<li><a href="#log-forwarding-implementations-legacy_log-forwarding">Legacy implementation</a></li>
+<li><a href="#log-forwarding-implementations-multi-clf_log-forwarding">Multi log forwarder feature</a></li>
+</ul>
+</li>
+<li><a href="#log-forwarding-enabling-multi-clf-feature">Enabling the multi log forwarder feature for a cluster</a>
+<ul class="sectlevel2">
+<li><a href="#log-collection-rbac-permissions_log-forwarding">Authorizing log collection RBAC permissions</a></li>
+</ul>
+</li>
+<li><a href="#logging-create-clf_log-forwarding">Creating a log forwarder</a></li>
 <li><a href="#log-forwarding-audit-logs">Sending audit logs to the internal log store</a></li>
 <li><a href="#cluster-logging-collector-log-forwarding-about_log-forwarding">About forwarding logs to third-party systems</a>
 <ul class="sectlevel2">
@@ -35482,6 +35551,548 @@
 <div class="sectionbody">
 <!-- toc disabled -->
 <div class="paragraph">
+<p>The Cluster Logging Operator deploys a collector based on the <code>ClusterLogForwarder</code> resource specification. There are two collector options supported by this Operator: the legacy Fluentd collector, and the Vector collector.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>As of logging version 5.6 Fluentd is deprecated and is planned to be removed in a future release. Red Hat will provide bug fixes and support for this feature during the current release lifecycle, but this feature will no longer receive enhancements and will be removed. As an alternative to Fluentd, you can use Vector instead.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="about-log-collection_log-forwarding"><a class="anchor" href="#about-log-collection_log-forwarding"></a>Log collection</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The log collector is a daemon set that deploys pods to each OpenShift Container Platform node to collect container and node logs.</p>
+</div>
+<div class="paragraph">
+<p>By default, the log collector uses the following sources:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>System and infrastructure logs generated by journald log messages from the operating system, the container runtime, and OpenShift Container Platform.</p>
+</li>
+<li>
+<p><code>/var/log/containers/*.log</code> for all container logs.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>If you configure the log collector to collect audit logs, it collects them from <code>/var/log/audit/audit.log</code>.</p>
+</div>
+<div class="paragraph">
+<p>The log collector collects the logs from these sources and forwards them internally or externally depending on your logging subsystem configuration.</p>
+</div>
+<div class="sect2">
+<h3 id="about-log-collectors-types_log-forwarding"><a class="anchor" href="#about-log-collectors-types_log-forwarding"></a>Log collector types</h3>
+<div class="paragraph">
+<p><a href="https://vector.dev/docs/about/what-is-vector/">Vector</a> is a log collector offered as an alternative to Fluentd for the logging subsystem.</p>
+</div>
+<div class="paragraph">
+<p>You can configure which logging collector type your cluster uses by modifying the <code>ClusterLogging</code> custom resource (CR) <code>collection</code> spec:</p>
+</div>
+<div class="listingblock">
+<div class="title">Example ClusterLogging CR that configures Vector as the collector</div>
+<div class="content">
+<pre class="rouge highlight nowrap"><code data-lang="yaml">  <span class="na">apiVersion</span><span class="pi">:</span> <span class="s2">"</span><span class="s">logging.openshift.io/v1"</span>
+  <span class="na">kind</span><span class="pi">:</span> <span class="s">ClusterLogging</span>
+  <span class="na">metadata</span><span class="pi">:</span>
+    <span class="na">name</span><span class="pi">:</span> <span class="s">instance</span>
+    <span class="na">namespace</span><span class="pi">:</span> <span class="s">openshift-logging</span>
+  <span class="na">spec</span><span class="pi">:</span>
+    <span class="na">collection</span><span class="pi">:</span>
+    <span class="na">logs</span><span class="pi">:</span>
+      <span class="na">type</span><span class="pi">:</span> <span class="s">vector</span>
+      <span class="na">vector</span><span class="pi">:</span> <span class="pi">{}</span>
+<span class="c1"># ...</span></code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="about-log-collectors-limitations_log-forwarding"><a class="anchor" href="#about-log-collectors-limitations_log-forwarding"></a>Log collection limitations</h3>
+<div class="paragraph">
+<p>The container runtimes provide minimal information to identify the source of log messages: project, pod name, and container ID. This information is not sufficient to uniquely identify the source of the logs. If a pod with a given name and project is deleted before the log collector begins processing its logs, information from the API server, such as labels and annotations, might not be available. There might not be a way to distinguish the log messages from a similarly named pod and project or trace the logs to their source. This limitation means that log collection and normalization are considered <em>best effort</em>.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The available container runtimes provide minimal information to identify the source of log messages and do not guarantee unique individual log messages or that these messages can be traced to their source.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="logging-vector-fluentd-feature-comparison_log-forwarding"><a class="anchor" href="#logging-vector-fluentd-feature-comparison_log-forwarding"></a>Log collector features by type</h3>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 1. Log Sources</caption>
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Feature</th>
+<th class="tableblock halign-left valign-top">Fluentd</th>
+<th class="tableblock halign-left valign-top">Vector</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">App container logs</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">App-specific routing</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">App-specific routing by namespace</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Infra container logs</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Infra journal logs</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kube API audit logs</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">OpenShift API audit logs</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Open Virtual Network (OVN) audit logs</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 2. Authorization and Authentication</caption>
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Feature</th>
+<th class="tableblock halign-left valign-top">Fluentd</th>
+<th class="tableblock halign-left valign-top">Vector</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Elasticsearch certificates</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Elasticsearch username / password</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cloudwatch keys</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cloudwatch STS</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kafka certificates</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kafka username / password</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kafka SASL</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Loki bearer token</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 3. Normalizations and Transformations</caption>
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Feature</th>
+<th class="tableblock halign-left valign-top">Fluentd</th>
+<th class="tableblock halign-left valign-top">Vector</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Viaq data model - app</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Viaq data model - infra</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Viaq data model - infra(journal)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Viaq data model - Linux audit</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Viaq data model - kube-apiserver audit</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Viaq data model - OpenShift API audit</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Viaq data model - OVN</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Loglevel Normalization</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">JSON parsing</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Structured Index</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Multiline error detection</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Multicontainer / split indices</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Flatten labels</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CLF static labels</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 4. Tuning</caption>
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Feature</th>
+<th class="tableblock halign-left valign-top">Fluentd</th>
+<th class="tableblock halign-left valign-top">Vector</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Fluentd readlinelimit</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Fluentd buffer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">- chunklimitsize</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">- totallimitsize</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">- overflowaction</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">- flushthreadcount</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">- flushmode</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">- flushinterval</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">- retrywait</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">- retrytype</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">- retrymaxinterval</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">- retrytimeout</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 5. Visibility</caption>
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Feature</th>
+<th class="tableblock halign-left valign-top">Fluentd</th>
+<th class="tableblock halign-left valign-top">Vector</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Metrics</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dashboard</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Alerts</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 6. Miscellaneous</caption>
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Feature</th>
+<th class="tableblock halign-left valign-top">Fluentd</th>
+<th class="tableblock halign-left valign-top">Vector</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Global proxy support</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">x86 support</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ARM support</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">IBM Power support</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">IBM Z support</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">IPv6 support</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Log event buffering</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Disconnected Cluster</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="log-forwarding-collector-outputs_log-forwarding"><a class="anchor" href="#log-forwarding-collector-outputs_log-forwarding"></a>Collector outputs</h3>
+<div class="paragraph">
+<p>The following collector outputs are supported:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 7. Supported outputs</caption>
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Feature</th>
+<th class="tableblock halign-left valign-top">Fluentd</th>
+<th class="tableblock halign-left valign-top">Vector</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Elasticsearch v6-v8</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Fluent forward</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Syslog RFC3164</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003; (Logging 5.7+)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Syslog RFC5424</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003; (Logging 5.7+)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kafka</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cloudwatch</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cloudwatch STS</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Loki</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HTTP</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003; (Logging 5.7+)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Google Cloud Logging</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Splunk</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003; (Logging 5.6+)</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="log-forwarding-about-clf"><a class="anchor" href="#log-forwarding-about-clf"></a>Log forwarding</h2>
+<div class="sectionbody">
+<div class="paragraph">
 <p>Administrators can create <code>ClusterLogForwarder</code> resources that specify which logs are collected, how they are transformed, and where they are forwarded to.</p>
 </div>
 <div class="paragraph">
@@ -35489,6 +36100,233 @@
 </div>
 <div class="paragraph">
 <p>Administrators can also authorize RBAC permissions that define which service accounts and users can access and forward which types of logs.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="log-forwarding-implementations_log-forwarding"><a class="anchor" href="#log-forwarding-implementations_log-forwarding"></a>Log forwarding implementations</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>There are two log forwarding implementations available: the legacy implementation, and the multi log forwarder feature.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Only the Vector collector is supported for use with the multi log forwarder feature. The Fluentd collector can only be used with legacy implementations.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sect2">
+<h3 id="log-forwarding-implementations-legacy_log-forwarding"><a class="anchor" href="#log-forwarding-implementations-legacy_log-forwarding"></a>Legacy implementation</h3>
+<div class="paragraph">
+<p>In legacy implementations, you can only use one log forwarder in your cluster. The <code>ClusterLogForwarder</code> resource in this mode must be named <code>instance</code>, and must be created in the <code>openshift-logging</code> namespace. The <code>ClusterLogForwarder</code> resource also requires a corresponding <code>ClusterLogging</code> resource named <code>instance</code> in the <code>openshift-logging</code> namespace.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="log-forwarding-implementations-multi-clf_log-forwarding"><a class="anchor" href="#log-forwarding-implementations-multi-clf_log-forwarding"></a>Multi log forwarder feature</h3>
+<div class="paragraph">
+<p>The multi log forwarder feature is available in logging 5.8 and later, and provides the following functionality:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Administrators can control which users are allowed to define log collection and which logs they are allowed to collect.</p>
+</li>
+<li>
+<p>Users who have the required permissions are able to specify additional log collection configurations.</p>
+</li>
+<li>
+<p>Administrators who are migrating from the deprecated Fluentd collector to the Vector collector can deploy a new log forwarder separately from their existing deployment. The existing and new log forwarders can operate simultaneously while workloads are being migrated.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>In multi log forwarder implementations, you are not required to create a corresponding <code>ClusterLogging</code> resource for your <code>ClusterLogForwarder</code> resource. You can create multiple <code>ClusterLogForwarder</code> resources using any name, in any namespace, with the following exceptions:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>You cannot create a <code>ClusterLogForwarder</code> resource named <code>instance</code> in the <code>openshift-logging</code> namespace, because this is reserved for a log forwarder that supports the legacy workflow using the Fluentd collector.</p>
+</li>
+<li>
+<p>You cannot create a <code>ClusterLogForwarder</code> resource named <code>collector</code> in the <code>openshift-logging</code> namespace, because this is reserved for the collector.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="log-forwarding-enabling-multi-clf-feature"><a class="anchor" href="#log-forwarding-enabling-multi-clf-feature"></a>Enabling the multi log forwarder feature for a cluster</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>To use the multi log forwarder feature, you must create a service account and cluster role bindings for that service account. You can then reference the service account in the <code>ClusterLogForwarder</code> resource to control access permissions.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>In order to support multi log forwarding in additional namespaces other than the <code>openshift-logging</code> namespace, you must <a href="../../logging/cluster-logging-upgrading.html#logging-operator-upgrading-all-ns_cluster-logging-upgrading">update the Cluster Logging Operator to watch all namespaces</a>. This functionality is supported by default in new Cluster Logging Operator version 5.8 installations.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sect2">
+<h3 id="log-collection-rbac-permissions_log-forwarding"><a class="anchor" href="#log-collection-rbac-permissions_log-forwarding"></a>Authorizing log collection RBAC permissions</h3>
+<div class="paragraph">
+<p>In logging 5.8 and later, the Cluster Logging Operator provides <code>collect-audit-logs</code>, <code>collect-application-logs</code>, and <code>collect-infrastructure-logs</code> cluster roles, which enable the collector to collect audit logs, application logs, and infrastructure logs respectively.</p>
+</div>
+<div class="paragraph">
+<p>You can authorize RBAC permissions for log collection by binding the required cluster roles to a service account.</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>The Cluster Logging Operator is installed in the <code>openshift-logging</code> namespace.</p>
+</li>
+<li>
+<p>You have administrator permissions.</p>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Create a service account for the collector. If you want to write logs to storage that requires a token for authentication, you must include a token in the service account.</p>
+</li>
+<li>
+<p>Bind the appropriate cluster roles to the service account:</p>
+<div class="listingblock">
+<div class="title">Example binding command</div>
+<div class="content">
+<pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="gp">$</span><span class="w"> </span>oc adm policy add-cluster-role-to-user &lt;cluster_role_name&gt; - system:serviceaccount::&lt;namespace_name&gt;:&lt;service_account_name&gt;</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="ulist _additional-resources">
+<div class="title">Additional resources</div>
+<ul>
+<li>
+<p><a href="../../authentication/using-rbac.html#using-rbac">Using RBAC to define and apply permissions</a></p>
+</li>
+<li>
+<p><a href="../../authentication/using-service-accounts-in-applications.html#using-service-accounts-in-applications">Using service accounts in applications</a></p>
+</li>
+<li>
+<p><a href="https://kubernetes.io/docs/reference/access-authn-authz/rbac/">Using RBAC Authorization Kubernetes documentation</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="logging-create-clf_log-forwarding"><a class="anchor" href="#logging-create-clf_log-forwarding"></a>Creating a log forwarder</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>To create a log forwarder, you must create a <code>ClusterLogForwarder</code> CR that specifies the log input types that the service account can collect. You can also specify which outputs the logs can be forwarded to. If you are using the multi log forwarder feature, you must also reference the service account in the <code>ClusterLogForwarder</code> CR.</p>
+</div>
+<div class="paragraph">
+<p>If you are using the multi log forwarder feature on your cluster, you can create <code>ClusterLogForwarder</code> custom resources (CRs) in any namespace, using any name.
+If you are using a legacy implementation, the <code>ClusterLogForwarder</code> CR must be named <code>instance</code>, and must be created in the <code>openshift-logging</code> namespace.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>You need administrator permissions for the namespace where you create the <code>ClusterLogForwarder</code> CR.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="listingblock">
+<div class="title">ClusterLogForwarder resource example</div>
+<div class="content">
+<pre class="rouge highlight nowrap"><code data-lang="yaml"><span class="na">apiVersion</span><span class="pi">:</span> <span class="s2">"</span><span class="s">logging.openshift.io/v1"</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">ClusterLogForwarder</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">&lt;log_forwarder_name&gt;</span> <i class="conum" data-value="1"></i><b>(1)</b>
+  <span class="na">namespace</span><span class="pi">:</span> <span class="s">&lt;log_forwarder_namespace&gt;</span> <i class="conum" data-value="2"></i><b>(2)</b>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">serviceAccount</span><span class="pi">:</span> <span class="s">&lt;service_account_name&gt;</span> <i class="conum" data-value="3"></i><b>(3)</b>
+  <span class="na">pipelines</span><span class="pi">:</span>
+   <span class="pi">-</span> <span class="na">inputRefs</span><span class="pi">:</span>
+     <span class="pi">-</span> <span class="s">&lt;log_type&gt;</span> <i class="conum" data-value="4"></i><b>(4)</b>
+     <span class="na">outputRefs</span><span class="pi">:</span>
+     <span class="pi">-</span> <span class="s">&lt;output_name&gt;</span> <i class="conum" data-value="5"></i><b>(5)</b>
+  <span class="na">outputs</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">&lt;output_name&gt;</span> <i class="conum" data-value="6"></i><b>(6)</b>
+    <span class="na">type</span><span class="pi">:</span> <span class="s">&lt;output_type&gt;</span> <i class="conum" data-value="5"></i><b>(5)</b>
+    <span class="na">url</span><span class="pi">:</span> <span class="s">&lt;log_output_url&gt;</span> <i class="conum" data-value="7"></i><b>(7)</b>
+<span class="c1"># ...</span></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>In legacy implementations, the CR name must be <code>instance</code>. In multi log forwarder implementations, you can use any name.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>In legacy implementations, the CR namespace must be <code>openshift-logging</code>. In multi log forwarder implementations, you can use any namespace.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>The name of your service account. The service account is only required in multi log forwarder implementations.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>The log types that are collected. The value for this field can be <code>audit</code> for audit logs, <code>application</code> for application logs, <code>infrastructure</code> for infrastructure logs, or a named input that has been defined for your application.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="5"></i><b>5</b></td>
+<td>The type of output that you want to forward logs to. The value of this field can be <code>default</code>, <code>loki</code>, <code>kafka</code>, <code>elasticsearch</code>, <code>fluentdForward</code>, <code>syslog</code>, or <code>cloudwatch</code>.
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The <code>default</code> output type is not supported in mutli log forwarder implementations.</p>
+</div>
+</td>
+</tr>
+</table>
+</div></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="6"></i><b>6</b></td>
+<td>A name for the output that you want to forward logs to.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="7"></i><b>7</b></td>
+<td>The URL of the output that you want to forward logs to.</td>
+</tr>
+</table>
 </div>
 </div>
 </div>

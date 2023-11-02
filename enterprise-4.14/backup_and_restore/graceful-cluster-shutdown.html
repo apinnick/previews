@@ -21599,6 +21599,30 @@
 
 
                   <li>
+                    <a class="" href="../logging/logging_release_notes/logging-5-8-release-notes.html">
+                      Logging 5.8
+                    </a>
+                  </li>
+
+                
+
+
+                <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
+                     Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
+
+                
+                
+                
+                
+                
+
+                <!-- is this is a single page? That is, does this topic have more topics?
+                 Welcome 2 Index Page and Welcome 2 More -->
+
+
+
+
+                  <li>
                     <a class="" href="../logging/logging_release_notes/logging-5-7-release-notes.html">
                       Logging 5.7
                     </a>
@@ -21862,21 +21886,34 @@
         Welcome 2 and Welcome 1 More -->
 
 
+          <!-- is this is a single page? That is, does this topic have more topics?
+          Welcome 1 More -->
+
+            <!-- ^ this establishs whether we are reading this current page -->
+
+            <li><a class="" href="../logging/cluster-logging-upgrading.html">Updating Logging</a></li>
+            <!--  if active, then highlight it,  otherwise nothing to do -->
+
+
+        <!-- for each topic in this topic_group, for example in Welcome 1, what topics exist?
+        Welcome 2 and Welcome 1 More -->
+
+
             <!-- this topic contains subtopics - Welcome 2 -->
 
 
             <!-- start a new heading area -->
 
             <li class="nav-header">
-              <a class="" href="javascript:void(0);" data-toggle="collapse" data-target="#topicSubGroup-25-7">
-                <span id="sgSpan-25-7" class="fa fa-caret-right"></span>
+              <a class="" href="javascript:void(0);" data-toggle="collapse" data-target="#topicSubGroup-25-8">
+                <span id="sgSpan-25-8" class="fa fa-caret-right"></span>
                   &nbsp;Configuring your Logging deployment
 
                   <!-- prints out the names of the second level books with arrow down or to right
                   So in this case: Welcome 2 -->
 
               </a>
-              <ul id="topicSubGroup-25-7" class="nav-tertiary list-unstyled collapse">
+              <ul id="topicSubGroup-25-8" class="nav-tertiary list-unstyled collapse">
 
                 <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
                      Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
@@ -22121,15 +22158,15 @@
             <!-- start a new heading area -->
 
             <li class="nav-header">
-              <a class="" href="javascript:void(0);" data-toggle="collapse" data-target="#topicSubGroup-25-11">
-                <span id="sgSpan-25-11" class="fa fa-caret-right"></span>
+              <a class="" href="javascript:void(0);" data-toggle="collapse" data-target="#topicSubGroup-25-12">
+                <span id="sgSpan-25-12" class="fa fa-caret-right"></span>
                   &nbsp;Log collection and forwarding
 
                   <!-- prints out the names of the second level books with arrow down or to right
                   So in this case: Welcome 2 -->
 
               </a>
-              <ul id="topicSubGroup-25-11" class="nav-tertiary list-unstyled collapse">
+              <ul id="topicSubGroup-25-12" class="nav-tertiary list-unstyled collapse">
 
                 <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
                      Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
@@ -22252,19 +22289,6 @@
 
               </ul>
             </li>
-
-        <!-- for each topic in this topic_group, for example in Welcome 1, what topics exist?
-        Welcome 2 and Welcome 1 More -->
-
-
-          <!-- is this is a single page? That is, does this topic have more topics?
-          Welcome 1 More -->
-
-            <!-- ^ this establishs whether we are reading this current page -->
-
-            <li><a class="" href="../logging/cluster-logging-upgrading.html">Updating Logging</a></li>
-            <!--  if active, then highlight it,  otherwise nothing to do -->
-
 
         <!-- for each topic in this topic_group, for example in Welcome 1, what topics exist?
         Welcome 2 and Welcome 1 More -->
@@ -32360,6 +32384,30 @@
 
 
                   <li>
+                    <a class="" href="../distr_tracing/distr_tracing_rn/distr-tracing-rn-2-9-2.html">
+                      2.9.2
+                    </a>
+                  </li>
+
+                
+
+
+                <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
+                     Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
+
+                
+                
+                
+                
+                
+
+                <!-- is this is a single page? That is, does this topic have more topics?
+                 Welcome 2 Index Page and Welcome 2 More -->
+
+
+
+
+                  <li>
                     <a class="" href="../distr_tracing/distr_tracing_rn/distr-tracing-rn-2-9-1.html">
                       2.9.1
                     </a>
@@ -35530,112 +35578,78 @@
 <div class="title">Procedure</div>
 <ol class="arabic">
 <li>
-<p>If you plan to shut down the cluster for an extended period of time, determine the date that cluster certificates expire.</p>
-<div class="paragraph">
-<p>You must restart the cluster prior to the date that certificates expire. As the cluster restarts, the process might require you to manually approve the pending certificate signing requests (CSRs) to recover kubelet certificates.</p>
-</div>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>Check the expiration date for the <code>kube-apiserver-to-kubelet-signer</code> CA certificate:</p>
+<p>If you are shutting the cluster down for an extended period, determine the date on which certificates expire and run the following command:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="gp">$</span><span class="w"> </span>oc <span class="nt">-n</span> openshift-kube-apiserver-operator get secret kube-apiserver-to-kubelet-signer <span class="nt">-o</span> <span class="nv">jsonpath</span><span class="o">=</span><span class="s1">'{.metadata.annotations.auth\.openshift\.io/certificate-not-after}{"\n"}'</span></code></pre>
+<pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="gp">$</span><span class="w"> </span>oc <span class="nt">-n</span> openshift-kube-apiserver-operator get secret kube-apiserver-to-kubelet-signer <span class="nt">-o</span> <span class="nv">jsonpath</span><span class="o">=</span><span class="s1">'{.metadata.annotations.auth\.openshift\.io/certificate-not-after}'</span></code></pre>
 </div>
 </div>
 <div class="listingblock">
 <div class="title">Example output</div>
 <div class="content">
-<pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="go">2023-08-05T14:37:50Z</span></code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Check the expiration date for the kubelet certificates:</p>
-<div class="olist lowerroman">
-<ol class="lowerroman" type="i">
-<li>
-<p>Start a debug session for a control plane node by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="gp">$</span><span class="w"> </span>oc debug node/&lt;node_name&gt;</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Change your root directory to <code>/host</code> by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="gp">sh-4.4#</span><span class="w"> </span><span class="nb">chroot</span> /host</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Check the kubelet client certificate expiration date by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="gp">sh-5.1#</span><span class="w"> </span>openssl x509 <span class="nt">-in</span> /var/lib/kubelet/pki/kubelet-client-current.pem <span class="nt">-noout</span> <span class="nt">-enddate</span></code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="go">notAfter=Jun  6 10:50:07 2023 GMT</span></code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Check the kubelet server certificate expiration date by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="gp">sh-5.1#</span><span class="w"> </span>openssl x509 <span class="nt">-in</span> /var/lib/kubelet/pki/kubelet-server-current.pem <span class="nt">-noout</span> <span class="nt">-enddate</span></code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="go">notAfter=Jun  6 10:50:07 2023 GMT</span></code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Exit the debug session.</p>
-</li>
-<li>
-<p>Repeat these steps to check certificate expiration dates on all control plane nodes. To ensure that the cluster can restart gracefully, plan to restart it before the earliest certificate expiration date.</p>
-</li>
-</ol>
-</div>
-</li>
-</ol>
-</div>
-</li>
-<li>
-<p>Shut down all of the nodes in the cluster. You can do this from your cloud provider&#8217;s web console, or run the following loop:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="gp">$</span><span class="w"> </span><span class="k">for </span>node <span class="k">in</span> <span class="si">$(</span>oc get nodes <span class="nt">-o</span> <span class="nv">jsonpath</span><span class="o">=</span><span class="s1">'{.items[*].metadata.name}'</span><span class="si">)</span><span class="p">;</span> <span class="k">do </span>oc debug node/<span class="k">${</span><span class="nv">node</span><span class="k">}</span> <span class="nt">--</span> <span class="nb">chroot</span> /host shutdown <span class="nt">-h</span> 1<span class="p">;</span> <span class="k">done</span> <i class="conum" data-value="1"></i><b>(1)</b></code></pre>
+<pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="gp">2022-08-05T14:37:50Zuser@user:~ $</span><span class="w"> <i class="conum" data-value="1"></i><b>(1)</b>
+</span></code></pre>
 </div>
 </div>
 <div class="colist arabic">
 <table>
 <tr>
 <td><i class="conum" data-value="1"></i><b>1</b></td>
-<td><code>-h 1</code> indicates how long, in minutes, this process lasts before the control-plane nodes are shut down. For large-scale clusters with 10 nodes or more, set to 10 minutes or longer to make sure all the compute nodes have time to shut down first.</td>
+<td>To ensure that the cluster can restart gracefully, plan to restart it on or before the specified date. As the cluster restarts, the process might require you to manually approve the pending certificate signing requests (CSRs) to recover kubelet certificates.</td>
 </tr>
 </table>
+</div>
+</li>
+<li>
+<p>Mark all the nodes in the cluster as unschedulable. You can do this from your cloud provider&#8217;s web console, or by running the following loop:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="gp">$</span><span class="w"> </span><span class="k">for </span>node <span class="k">in</span> <span class="si">$(</span>oc get nodes <span class="nt">-o</span> <span class="nv">jsonpath</span><span class="o">=</span><span class="s1">'{.items[*].metadata.name}'</span><span class="si">)</span><span class="p">;</span> <span class="k">do </span><span class="nb">echo</span> <span class="k">${</span><span class="nv">node</span><span class="k">}</span> <span class="p">;</span> oc adm cordon <span class="k">${</span><span class="nv">node</span><span class="k">}</span> <span class="p">;</span> <span class="k">done</span></code></pre>
+</div>
 </div>
 <div class="listingblock">
 <div class="title">Example output</div>
 <div class="content">
-<pre class="nowrap">Starting pod/ip-10-0-130-169us-east-2computeinternal-debug ...
+<pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="go">ci-ln-mgdnf4b-72292-n547t-master-0
+node/ci-ln-mgdnf4b-72292-n547t-master-0 cordoned
+ci-ln-mgdnf4b-72292-n547t-master-1
+node/ci-ln-mgdnf4b-72292-n547t-master-1 cordoned
+ci-ln-mgdnf4b-72292-n547t-master-2
+node/ci-ln-mgdnf4b-72292-n547t-master-2 cordoned
+ci-ln-mgdnf4b-72292-n547t-worker-a-s7ntl
+node/ci-ln-mgdnf4b-72292-n547t-worker-a-s7ntl cordoned
+ci-ln-mgdnf4b-72292-n547t-worker-b-cmc9k
+node/ci-ln-mgdnf4b-72292-n547t-worker-b-cmc9k cordoned
+ci-ln-mgdnf4b-72292-n547t-worker-c-vcmtn
+node/ci-ln-mgdnf4b-72292-n547t-worker-c-vcmtn cordoned</span></code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Evacuate the pods using the following method:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="gp">$</span><span class="w"> </span><span class="k">for </span>node <span class="k">in</span> <span class="si">$(</span>oc get nodes <span class="nt">-l</span> node-role.kubernetes.io/worker <span class="nt">-o</span> <span class="nv">jsonpath</span><span class="o">=</span><span class="s1">'{.items[*].metadata.name}'</span><span class="si">)</span><span class="p">;</span> <span class="k">do </span><span class="nb">echo</span> <span class="k">${</span><span class="nv">node</span><span class="k">}</span> <span class="p">;</span> oc adm drain <span class="k">${</span><span class="nv">node</span><span class="k">}</span> <span class="nt">--delete-emptydir-data</span> <span class="nt">--ignore-daemonsets</span><span class="o">=</span><span class="nb">true</span> <span class="nt">--timeout</span><span class="o">=</span>15s <span class="p">;</span> <span class="k">done</span></code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Shut down all of the nodes in the cluster. You can do this from your cloud provider’s web console, or by running the following loop:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="gp">$</span><span class="w"> </span><span class="k">for </span>node <span class="k">in</span> <span class="si">$(</span>oc get nodes <span class="nt">-o</span> <span class="nv">jsonpath</span><span class="o">=</span><span class="s1">'{.items[*].metadata.name}'</span><span class="si">)</span><span class="p">;</span> <span class="k">do </span>oc debug node/<span class="k">${</span><span class="nv">node</span><span class="k">}</span> <span class="nt">--</span> <span class="nb">chroot</span> /host shutdown <span class="nt">-h</span> 1<span class="p">;</span> <span class="k">done</span></code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example output</div>
+<div class="content">
+<pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="go">Starting pod/ip-10-0-130-169us-east-2computeinternal-debug ...
 To use host binaries, run `chroot /host`
 Shutdown scheduled for Mon 2021-09-13 09:36:17 UTC, use 'shutdown -c' to cancel.
-
 Removing debug pod ...
 Starting pod/ip-10-0-150-116us-east-2computeinternal-debug ...
 To use host binaries, run `chroot /host`
-Shutdown scheduled for Mon 2021-09-13 09:36:29 UTC, use 'shutdown -c' to cancel.</pre>
+Shutdown scheduled for Mon 2021-09-13 09:36:29 UTC, use 'shutdown -c' to cancel.</span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -35668,10 +35682,8 @@ Shutdown scheduled for Mon 2021-09-13 09:36:29 UTC, use 'shutdown -c' to cancel.
 </td>
 <td class="content">
 <div class="paragraph">
-<p>It is not necessary to drain control plane nodes of the standard pods that ship with OpenShift Container Platform prior to shutdown.</p>
-</div>
-<div class="paragraph">
-<p>Cluster administrators are responsible for ensuring a clean restart of their own workloads after the cluster is restarted. If you drained control plane nodes prior to shutdown because of custom workloads, you must mark the control plane nodes as schedulable before the cluster will be functional again after restart.</p>
+<p>It is not necessary to drain control plane nodes of the standard pods that ship with OpenShift Container Platform prior to shutdown.
+Cluster administrators are responsible for ensuring a clean restart of their own workloads after the cluster is restarted. If you drained control plane nodes prior to shutdown because of custom workloads, you must mark the control plane nodes as schedulable before the cluster will be functional again after restart.</p>
 </div>
 </td>
 </tr>

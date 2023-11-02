@@ -21599,6 +21599,30 @@
 
 
                   <li>
+                    <a class="" href="../logging/logging_release_notes/logging-5-8-release-notes.html">
+                      Logging 5.8
+                    </a>
+                  </li>
+
+                
+
+
+                <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
+                     Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
+
+                
+                
+                
+                
+                
+
+                <!-- is this is a single page? That is, does this topic have more topics?
+                 Welcome 2 Index Page and Welcome 2 More -->
+
+
+
+
+                  <li>
                     <a class="" href="../logging/logging_release_notes/logging-5-7-release-notes.html">
                       Logging 5.7
                     </a>
@@ -21862,21 +21886,34 @@
         Welcome 2 and Welcome 1 More -->
 
 
+          <!-- is this is a single page? That is, does this topic have more topics?
+          Welcome 1 More -->
+
+            <!-- ^ this establishs whether we are reading this current page -->
+
+            <li><a class="" href="../logging/cluster-logging-upgrading.html">Updating Logging</a></li>
+            <!--  if active, then highlight it,  otherwise nothing to do -->
+
+
+        <!-- for each topic in this topic_group, for example in Welcome 1, what topics exist?
+        Welcome 2 and Welcome 1 More -->
+
+
             <!-- this topic contains subtopics - Welcome 2 -->
 
 
             <!-- start a new heading area -->
 
             <li class="nav-header">
-              <a class="" href="javascript:void(0);" data-toggle="collapse" data-target="#topicSubGroup-25-7">
-                <span id="sgSpan-25-7" class="fa fa-caret-right"></span>
+              <a class="" href="javascript:void(0);" data-toggle="collapse" data-target="#topicSubGroup-25-8">
+                <span id="sgSpan-25-8" class="fa fa-caret-right"></span>
                   &nbsp;Configuring your Logging deployment
 
                   <!-- prints out the names of the second level books with arrow down or to right
                   So in this case: Welcome 2 -->
 
               </a>
-              <ul id="topicSubGroup-25-7" class="nav-tertiary list-unstyled collapse">
+              <ul id="topicSubGroup-25-8" class="nav-tertiary list-unstyled collapse">
 
                 <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
                      Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
@@ -22121,15 +22158,15 @@
             <!-- start a new heading area -->
 
             <li class="nav-header">
-              <a class="" href="javascript:void(0);" data-toggle="collapse" data-target="#topicSubGroup-25-11">
-                <span id="sgSpan-25-11" class="fa fa-caret-right"></span>
+              <a class="" href="javascript:void(0);" data-toggle="collapse" data-target="#topicSubGroup-25-12">
+                <span id="sgSpan-25-12" class="fa fa-caret-right"></span>
                   &nbsp;Log collection and forwarding
 
                   <!-- prints out the names of the second level books with arrow down or to right
                   So in this case: Welcome 2 -->
 
               </a>
-              <ul id="topicSubGroup-25-11" class="nav-tertiary list-unstyled collapse">
+              <ul id="topicSubGroup-25-12" class="nav-tertiary list-unstyled collapse">
 
                 <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
                      Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
@@ -22252,19 +22289,6 @@
 
               </ul>
             </li>
-
-        <!-- for each topic in this topic_group, for example in Welcome 1, what topics exist?
-        Welcome 2 and Welcome 1 More -->
-
-
-          <!-- is this is a single page? That is, does this topic have more topics?
-          Welcome 1 More -->
-
-            <!-- ^ this establishs whether we are reading this current page -->
-
-            <li><a class="" href="../logging/cluster-logging-upgrading.html">Updating Logging</a></li>
-            <!--  if active, then highlight it,  otherwise nothing to do -->
-
 
         <!-- for each topic in this topic_group, for example in Welcome 1, what topics exist?
         Welcome 2 and Welcome 1 More -->
@@ -32360,6 +32384,30 @@
 
 
                   <li>
+                    <a class="" href="../distr_tracing/distr_tracing_rn/distr-tracing-rn-2-9-2.html">
+                      2.9.2
+                    </a>
+                  </li>
+
+                
+
+
+                <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
+                     Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
+
+                
+                
+                
+                
+                
+
+                <!-- is this is a single page? That is, does this topic have more topics?
+                 Welcome 2 Index Page and Welcome 2 More -->
+
+
+
+
+                  <li>
                     <a class="" href="../distr_tracing/distr_tracing_rn/distr-tracing-rn-2-9-1.html">
                       2.9.1
                     </a>
@@ -35446,6 +35494,11 @@
 </ul>
 </li>
 <li><a href="#logging-loki-deploy_cluster-logging-loki">Deploying the LokiStack</a></li>
+<li><a href="#logging-creating-new-group-cluster-admin-user-role_cluster-logging-loki">Creating a new group for the cluster-admin user role</a></li>
+<li><a href="#logging-loki-gui-install_cluster-logging-loki">Installing logging Operators using the OpenShift Container Platform web console</a></li>
+<li><a href="#logging-loki-cli-install_cluster-logging-loki">Installing logging Operators using the OpenShift Container Platform CLI</a></li>
+<li><a href="#logging-loki-restart-hardening_cluster-logging-loki">LokiStack behavior during cluster restarts</a></li>
+<li><a href="#logging-loki-reliability-hardening_cluster-logging-loki">Configuring Loki to tolerate node failure</a></li>
 <li><a href="#logging-loki-retention_cluster-logging-loki">Enabling stream-based retention with Loki</a></li>
 <li><a href="#cluster-logging-forwarding-lokistack_cluster-logging-loki">Forwarding logs to LokiStack</a>
 <ul class="sectlevel2">
@@ -35782,6 +35835,638 @@ an OpenShift Container Platform metric, which would cause conflicts.</p>
 </div>
 </li>
 </ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="logging-creating-new-group-cluster-admin-user-role_cluster-logging-loki"><a class="anchor" href="#logging-creating-new-group-cluster-admin-user-role_cluster-logging-loki"></a>Creating a new group for the cluster-admin user role</h2>
+<div class="sectionbody">
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Querying application logs for multiple namespaces as a <code>cluster-admin</code> user, where the sum total of characters of all of the namespaces in the cluster is greater than 5120, results in the error <code>Parse error: input size too long (XXXX &gt; 5120)</code>. For better control over access to logs in LokiStack, make the <code>cluster-admin</code> user a member of the <code>cluster-admin</code> group. If the <code>cluster-admin</code> group does not exist, create it and add the desired users to it.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Use the following procedure to create a new group for users with <code>cluster-admin</code> permissions.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Enter the following command to create a new group:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="gp">$</span><span class="w"> </span>oc adm <span class="nb">groups </span>new cluster-admin</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Enter the following command to add the desired user to the <code>cluster-admin</code> group:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="gp">$</span><span class="w"> </span>oc adm <span class="nb">groups </span>add-users cluster-admin &lt;username&gt;</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Enter the following command to add <code>cluster-admin</code> user role to the group:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="gp">$</span><span class="w"> </span>oc adm policy add-cluster-role-to-group cluster-admin cluster-admin</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="logging-loki-gui-install_cluster-logging-loki"><a class="anchor" href="#logging-loki-gui-install_cluster-logging-loki"></a>Installing logging Operators using the OpenShift Container Platform web console</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>To install and configure logging on your OpenShift Container Platform cluster, additional Operators must be installed. This can be done from the Operator Hub within the web console.</p>
+</div>
+<div class="paragraph">
+<p>OpenShift Container Platform Operators use custom resources (CR) to manage applications and their components. High-level configuration and settings are provided by the user within a CR. The Operator translates high-level directives into low-level actions, based on best practices embedded within the Operator’s logic. A custom resource definition (CRD) defines a CR and lists all the configurations available to users of the Operator. Installing an Operator creates the CRDs, which are then used to generate CRs.</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>Supported object store (AWS S3, Google Cloud Storage, Azure, Swift, Minio, OpenShift Data Foundation)</p>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Install the <code>Loki Operator</code>:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>In the OpenShift Container Platform web console, click <strong>Operators</strong> &#8594; <strong>OperatorHub</strong>.</p>
+</li>
+<li>
+<p>Type <code>Loki Operator</code> in the filter by keyword box. Choose <strong>Loki Operator</strong> from the list of available Operators and click <strong>Install</strong>.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The Community Loki Operator is not supported by Red Hat.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>On the Install Operator page, for <strong>Update Channel</strong> select <strong>stable</strong>.</p>
+<div class="openblock">
+<div class="content">
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The <code>stable</code> channel only provides updates to the most recent release of logging. To continue receiving updates for prior releases, you must change your subscription channel to <code>stable-X</code> where <code>X</code> is the version of logging you have installed.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>As the Loki Operator must be deployed to the global operator group namespace <code>openshift-operators-redhat</code>, <strong>Installation mode</strong> and <strong>Installed Namespace</strong> is already be selected. If this namespace does not already exist, it is created for you.</p>
+</div>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Select <strong>Enable operator-recommended cluster monitoring on this namespace.</strong></p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>This option sets the <code>openshift.io/cluster-monitoring: "true"</code> label in the Namespace object. You must select this option to ensure that cluster monitoring scrapes the <code>openshift-operators-redhat</code> namespace.</p>
+</div>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>For <strong>Update approval</strong> select <strong>Automatic</strong>, then click <strong>Install</strong>.</p>
+<div class="openblock">
+<div class="content">
+<div class="paragraph">
+<p>If the approval strategy in the subscription is set to <strong>Automatic</strong>, the update process initiates as soon as a new Operator version is available in the selected channel. If the approval strategy is set to <strong>Manual</strong>, you must manually approve pending updates.</p>
+</div>
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Install the <code>Red Hat OpenShift Logging</code> Operator:</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>In the OpenShift Container Platform web console, click <strong>Operators</strong> &#8594; <strong>OperatorHub</strong>.</p>
+</li>
+<li>
+<p>Type <code>OpenShift Logging</code> in the filter by keyword box. Choose <strong>Red Hat OpenShift Logging</strong> from the list of available Operators and click <strong>Install</strong>.</p>
+</li>
+<li>
+<p>On the Install Operator page, under <strong>Update channel</strong> select <strong>stable</strong>.</p>
+<div class="openblock">
+<div class="content">
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The <code>stable</code> channel only provides updates to the most recent release of logging. To continue receiving updates for prior releases, you must change your subscription channel to <code>stable-X</code> where <code>X</code> is the version of logging you have installed.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>As the <code>Red Hat OpenShift Logging</code> Operator is only deployable to the <code>openshift-logging</code> namespace, <strong>Installation mode</strong> and <strong>Installed Namespace</strong> is already selected. If this namespace does not already exist, it is created for you.</p>
+</div>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>If you are creating the <code>openshift-logging</code> namespace, select the option to <strong>Enable Operator recommended cluster monitoring on this Namespace</strong>.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>If the <code>openshift-logging</code> namespace already exists, you must add the namespace label, <code>openshift.io/cluster-monitoring: "true"</code>, to enable metrics service discovery.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>Under <strong>Update approval</strong> select <strong>Automatic</strong>.</p>
+<div class="openblock">
+<div class="content">
+<div class="paragraph">
+<p>If the approval strategy in the subscription is set to <strong>Automatic</strong>, the update process initiates as soon as a new Operator version is available in the selected channel. If the approval strategy is set to <strong>Manual</strong>, you must manually approve pending updates.</p>
+</div>
+</div>
+</div>
+</li>
+<li>
+<p>For <strong>Console plugin</strong> select <strong>Enable</strong>, then click <strong>Install</strong>.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>The Operators should now be available to all users and projects that use this cluster.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Verify the operator installations:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Navigate to <strong>Operators</strong> &#8594; <strong>Installed Operators</strong>.</p>
+</li>
+<li>
+<p>Make sure the <strong>openshift-logging</strong> project is selected.</p>
+</li>
+<li>
+<p>In the <strong>Status</strong> column, verify that you see green checks with <strong>InstallSucceeded</strong> and the text <strong>Up to date</strong>, below.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>An Operator might display a <code>Failed</code> status before the installation finishes. If the Operator install completes with an <code>InstallSucceeded</code> message, refresh the page.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="logging-loki-cli-install_cluster-logging-loki"><a class="anchor" href="#logging-loki-cli-install_cluster-logging-loki"></a>Installing logging Operators using the OpenShift Container Platform CLI</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>To install and configure logging on your OpenShift Container Platform cluster, additional Operators must be installed. This can be done from the OpenShift Container Platform CLI.</p>
+</div>
+<div class="paragraph">
+<p>OpenShift Container Platform Operators use custom resources (CR) to manage applications and their components. High-level configuration and settings are provided by the user within a CR. The Operator translates high-level directives into low-level actions, based on best practices embedded within the Operator’s logic. A custom resource definition (CRD) defines a CR and lists all the configurations available to users of the Operator. Installing an Operator creates the CRDs, which are then used to generate CRs.</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>Supported object store (AWS S3, Google Cloud Storage, Azure, Swift, Minio, OpenShift Data Foundation)</p>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Install the <code>Loki Operator</code> by creating the following objects:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Create a Subscription object YAML file (for example, <code>olo-sub.yaml</code>) to
+subscribe a namespace to the Loki Operator using the template below:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="gp">$</span><span class="w"> </span>oc create <span class="nt">-f</span> &lt;file-name&gt;.yaml</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight nowrap"><code data-lang="yaml"><span class="na">apiVersion</span><span class="pi">:</span> <span class="s">operators.coreos.com/v1alpha1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">Subscription</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">loki-operator</span>
+  <span class="na">namespace</span><span class="pi">:</span> <span class="s">openshift-operators-redhat</span> <i class="conum" data-value="1"></i><b>(1)</b>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">charsion</span><span class="pi">:</span> <span class="s">operators.coreos.com/v1alpha1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">Subscription</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">loki-operator</span>
+  <span class="na">namespace</span><span class="pi">:</span> <span class="s">openshift-operators-redhat</span> <i class="conum" data-value="1"></i><b>(1)</b>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">channel</span><span class="pi">:</span> <span class="s">stable</span> <i class="conum" data-value="2"></i><b>(2)</b>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">loki-operator</span>
+  <span class="na">source</span><span class="pi">:</span> <span class="s">redhat-operators</span> <i class="conum" data-value="3"></i><b>(3)</b>
+  <span class="na">sourceNamespace</span><span class="pi">:</span> <span class="s">openshift-marketplace</span></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>You must specify the <code>openshift-operators-redhat</code> namespace.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Specify <code>stable</code>, or <code>stable-5.&lt;y&gt;</code> as the channel.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>Specify <code>redhat-operators</code>. If your OpenShift Container Platform cluster is installed on a restricted network, also known as a disconnected cluster, specify the name of the CatalogSource object you created when you configured the Operator Lifecycle Manager (OLM).</td>
+</tr>
+</table>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Create a LokiStack instance:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Create an instance object YAML file (for example, <code>logging-loki.yaml</code>) using the template below:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="gp">$</span><span class="w"> </span>oc create <span class="nt">-f</span> &lt;file-name&gt;.yaml</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight nowrap"><code data-lang="yaml"><span class="na">apiVersion</span><span class="pi">:</span> <span class="s">loki.grafana.com/v1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">LokiStack</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">logging-loki</span>
+  <span class="na">namespace</span><span class="pi">:</span> <span class="s">openshift-logging</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">size</span><span class="pi">:</span> <span class="s">1x.small</span> <i class="conum" data-value="1"></i><b>(1)</b>
+  <span class="na">storage</span><span class="pi">:</span>
+    <span class="na">schemas</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">version</span><span class="pi">:</span> <span class="s">v12</span>
+      <span class="na">effectiveDate</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2022-06-01"</span>
+    <span class="na">secret</span><span class="pi">:</span>
+      <span class="na">name</span><span class="pi">:</span> <span class="s">logging-loki-s3</span> <i class="conum" data-value="2"></i><b>(2)</b>
+      <span class="na">type</span><span class="pi">:</span> <span class="s">s3</span> <i class="conum" data-value="3"></i><b>(3)</b>
+  <span class="na">storageClassName</span><span class="pi">:</span> <span class="s">&lt;storage_class_name&gt;</span> <i class="conum" data-value="4"></i><b>(4)</b>
+  <span class="na">tenants</span><span class="pi">:</span>
+    <span class="na">mode</span><span class="pi">:</span> <span class="s">openshift-logging</span></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Supported size options for production instances of Loki are <code>1x.small</code> and <code>1x.medium</code>.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Enter the name of your log store secret.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>Enter the type of your log store secret.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>Enter the name of an existing storage class for temporary storage. For best performance, specify a storage class that allocates block storage. Available storage classes for your cluster can be listed using <code>oc get storageclasses</code>.</td>
+</tr>
+</table>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Install the <code>Red Hat OpenShift Logging</code> Operator by creating the following objects:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Create an Operator Group object YAML file (for example, <code>olo-og.yaml</code>) using the template below:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="gp">$</span><span class="w"> </span>oc create <span class="nt">-f</span> &lt;file-name&gt;.yaml</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight nowrap"><code data-lang="yaml"><span class="na">apiVersion</span><span class="pi">:</span> <span class="s">operators.coreos.com/v1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">OperatorGroup</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">cluster-logging</span>
+  <span class="na">namespace</span><span class="pi">:</span> <span class="s">openshift-logging</span> <i class="conum" data-value="1"></i><b>(1)</b>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">targetNamespaces</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s">openshift-logging</span></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>You must specify the <code>openshift-logging</code> namespace.</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>Create a Subscription object YAML file (for example, <code>olo-sub.yaml</code>) to
+subscribe a namespace to the Red Hat OpenShift Logging Operator using the template below:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="gp">$</span><span class="w"> </span>oc create <span class="nt">-f</span> &lt;file-name&gt;.yaml</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight nowrap"><code data-lang="yaml"><span class="na">apiVersion</span><span class="pi">:</span> <span class="s">operators.coreos.com/v1alpha1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">Subscription</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">cluster-logging</span>
+  <span class="na">namespace</span><span class="pi">:</span> <span class="s">openshift-logging</span> <i class="conum" data-value="1"></i><b>(1)</b>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">channel</span><span class="pi">:</span> <span class="s">stable</span> <i class="conum" data-value="2"></i><b>(2)</b>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">cluster-logging</span>
+  <span class="na">source</span><span class="pi">:</span> <span class="s">redhat-operators</span> <i class="conum" data-value="3"></i><b>(3)</b>
+  <span class="na">sourceNamespace</span><span class="pi">:</span> <span class="s">openshift-marketplace</span></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>You must specify the <code>openshift-logging</code> namespace.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Specify <code>stable</code>, or <code>stable-5.&lt;y&gt;</code> as the channel.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>Specify <code>redhat-operators</code>. If your OpenShift Container Platform cluster is installed on a restricted network, also known as a disconnected cluster, specify the name of the CatalogSource object you created when you configured the Operator Lifecycle Manager (OLM).</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>Verify the Operator installation.</p>
+<div class="paragraph">
+<p>There should be a Red Hat OpenShift Logging Operator in the <code>openshift-logging</code> namespace. The Version number might be different than what is shown.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="gp">$</span><span class="w"> </span>oc get csv <span class="nt">-n</span> openshift-logging</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example output</div>
+<div class="content">
+<pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="go">NAME                            DISPLAY                            VERSION   REPLACES                        PHASE
+cluster-logging.v5.7.4          Red Hat OpenShift Logging          5.7.4     cluster-logging.v5.7.3          Succeeded</span></code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Create an OpenShift Logging instance:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Create an instance object YAML file (for example, <code>olo-instance.yaml</code>) using the template below:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="gp">$</span><span class="w"> </span>oc create <span class="nt">-f</span> &lt;file-name&gt;.yaml</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight nowrap"><code data-lang="yaml"><span class="na">apiVersion</span><span class="pi">:</span> <span class="s">logging.openshift.io/v1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">ClusterLogging</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">instance</span>
+  <span class="na">namespace</span><span class="pi">:</span> <span class="s">openshift-logging</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">logStore</span><span class="pi">:</span>
+    <span class="na">type</span><span class="pi">:</span> <span class="s">lokistack</span>
+    <span class="na">lokistack</span><span class="pi">:</span>
+      <span class="na">name</span><span class="pi">:</span> <span class="s">logging-loki</span>
+  <span class="na">collection</span><span class="pi">:</span>
+    <span class="na">type</span><span class="pi">:</span> <span class="s">vector</span></code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Verify the installation by listing the pods in the <strong>openshift-logging</strong> project.</p>
+<div class="paragraph">
+<p>You should see several pods for components of the Logging subsystem, similar to the following list:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="gp">$</span><span class="w"> </span>oc get pods <span class="nt">-n</span> openshift-logging</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example output</div>
+<div class="content">
+<pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="gp">$</span><span class="w"> </span>oc get pods <span class="nt">-n</span> openshift-logging
+<span class="go">NAME                                               READY   STATUS    RESTARTS   AGE
+cluster-logging-operator-fb7f7cf69-8jsbq           1/1     Running   0          98m
+collector-222js                                    2/2     Running   0          18m
+collector-g9ddv                                    2/2     Running   0          18m
+collector-hfqq8                                    2/2     Running   0          18m
+collector-sphwg                                    2/2     Running   0          18m
+collector-vv7zn                                    2/2     Running   0          18m
+collector-wk5zz                                    2/2     Running   0          18m
+logging-view-plugin-6f76fbb78f-n2n4n               1/1     Running   0          18m
+lokistack-sample-compactor-0                       1/1     Running   0          42m
+lokistack-sample-distributor-7d7688bcb9-dvcj8      1/1     Running   0          42m
+lokistack-sample-gateway-5f6c75f879-bl7k9          2/2     Running   0          42m
+lokistack-sample-gateway-5f6c75f879-xhq98          2/2     Running   0          42m
+lokistack-sample-index-gateway-0                   1/1     Running   0          42m
+lokistack-sample-ingester-0                        1/1     Running   0          42m
+lokistack-sample-querier-6b7b56bccc-2v9q4          1/1     Running   0          42m
+lokistack-sample-query-frontend-84fb57c578-gq2f7   1/1     Running   0          42m</span></code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="logging-loki-restart-hardening_cluster-logging-loki"><a class="anchor" href="#logging-loki-restart-hardening_cluster-logging-loki"></a>LokiStack behavior during cluster restarts</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In logging version 5.8 and newer versions, when an OpenShift Container Platform cluster is restarted, LokiStack ingestion and the query path continue to operate within the available CPU and memory resources available for the node. This means that there is no downtime for the LokiStack during OpenShift Container Platform cluster updates. This behavior is achieved by using <code>PodDisruptionBudget</code> resources. The Loki Operator provisions <code>PodDisruptionBudget</code> resources for Loki, which determine the minimum number of pods that must be available per component to ensure normal operations under certain conditions.</p>
+</div>
+<div class="ulist _additional-resources">
+<div class="title">Additional resources</div>
+<ul>
+<li>
+<p><a href="https://kubernetes.io/docs/concepts/workloads/pods/disruptions/#pod-disruption-budgets">Pod disruption budgets Kubernetes documentation</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="logging-loki-reliability-hardening_cluster-logging-loki"><a class="anchor" href="#logging-loki-reliability-hardening_cluster-logging-loki"></a>Configuring Loki to tolerate node failure</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In the logging subsystem 5.8 and later versions, the Loki Operator supports setting pod anti-affinity rules to request that pods of the same component are scheduled on different available nodes in the cluster.</p>
+</div>
+<div class="paragraph">
+<p>Affinity is a property of pods that controls the nodes on which they prefer to be scheduled. Anti-affinity is a property of pods
+that prevents a pod from being scheduled on a node.</p>
+</div>
+<div class="paragraph">
+<p>In OpenShift Container Platform, <em>pod affinity</em> and <em>pod anti-affinity</em> allow you to constrain which nodes your pod is eligible to be scheduled on based on the key-value labels on other pods.</p>
+</div>
+<div class="paragraph">
+<p>The Operator sets default, preferred <code>podAntiAffinity</code> rules for all Loki components, which includes the <code>compactor</code>, <code>distributor</code>, <code>gateway</code>, <code>indexGateway</code>, <code>ingester</code>, <code>querier</code>, <code>queryFrontend</code>, and <code>ruler</code> components.</p>
+</div>
+<div class="paragraph">
+<p>You can override the preferred <code>podAntiAffinity</code> settings for Loki components by configuring required settings in the <code>requiredDuringSchedulingIgnoredDuringExecution</code> field:</p>
+</div>
+<div class="listingblock">
+<div class="title">Example user settings for the ingester component</div>
+<div class="content">
+<pre class="rouge highlight nowrap"><code data-lang="yaml"><span class="na">apiVersion</span><span class="pi">:</span> <span class="s">loki.grafana.com/v1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">LokiStack</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">logging-loki</span>
+  <span class="na">namespace</span><span class="pi">:</span> <span class="s">openshift-logging</span>
+<span class="na">spec</span><span class="pi">:</span>
+<span class="c1"># ...</span>
+  <span class="na">template</span><span class="pi">:</span>
+    <span class="na">ingester</span><span class="pi">:</span>
+      <span class="na">podAntiAffinity</span><span class="pi">:</span>
+      <span class="c1"># ...</span>
+        <span class="na">requiredDuringSchedulingIgnoredDuringExecution</span><span class="pi">:</span> <i class="conum" data-value="1"></i><b>(1)</b>
+        <span class="pi">-</span> <span class="na">labelSelector</span><span class="pi">:</span>
+            <span class="na">matchLabels</span><span class="pi">:</span> <i class="conum" data-value="2"></i><b>(2)</b>
+              <span class="s">app.kubernetes.io/component</span><span class="pi">:</span> <span class="s">ingester</span>
+          <span class="na">topologyKey</span><span class="pi">:</span> <span class="s">kubernetes.io/hostname</span>
+<span class="c1"># ...</span></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>The stanza to define a required rule.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>The key-value pair (label) that must be matched to apply the rule.</td>
+</tr>
+</table>
+</div>
+<div class="ulist _additional-resources">
+<div class="title">Additional resources</div>
+<ul>
+<li>
+<p><a href="https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.24/#podantiaffinity-v1-core"><code>PodAntiAffinity</code> v1 core Kubernetes documentation</a></p>
+</li>
+<li>
+<p><a href="https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#inter-pod-affinity-and-anti-affinity">Assigning Pods to Nodes Kubernetes documentation</a></p>
+</li>
+<li>
+<p><a href="../nodes/scheduling/nodes-scheduler-pod-affinity.html#nodes-scheduler-pod-affinity">Placing pods relative to other pods using affinity and anti-affinity rules</a></p>
+</li>
+</ul>
 </div>
 </div>
 </div>

@@ -21599,6 +21599,30 @@
 
 
                   <li>
+                    <a class="" href="../logging/logging_release_notes/logging-5-8-release-notes.html">
+                      Logging 5.8
+                    </a>
+                  </li>
+
+                
+
+
+                <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
+                     Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
+
+                
+                
+                
+                
+                
+
+                <!-- is this is a single page? That is, does this topic have more topics?
+                 Welcome 2 Index Page and Welcome 2 More -->
+
+
+
+
+                  <li>
                     <a class="" href="../logging/logging_release_notes/logging-5-7-release-notes.html">
                       Logging 5.7
                     </a>
@@ -21862,21 +21886,34 @@
         Welcome 2 and Welcome 1 More -->
 
 
+          <!-- is this is a single page? That is, does this topic have more topics?
+          Welcome 1 More -->
+
+            <!-- ^ this establishs whether we are reading this current page -->
+
+            <li><a class="" href="../logging/cluster-logging-upgrading.html">Updating Logging</a></li>
+            <!--  if active, then highlight it,  otherwise nothing to do -->
+
+
+        <!-- for each topic in this topic_group, for example in Welcome 1, what topics exist?
+        Welcome 2 and Welcome 1 More -->
+
+
             <!-- this topic contains subtopics - Welcome 2 -->
 
 
             <!-- start a new heading area -->
 
             <li class="nav-header">
-              <a class="" href="javascript:void(0);" data-toggle="collapse" data-target="#topicSubGroup-25-7">
-                <span id="sgSpan-25-7" class="fa fa-caret-right"></span>
+              <a class="" href="javascript:void(0);" data-toggle="collapse" data-target="#topicSubGroup-25-8">
+                <span id="sgSpan-25-8" class="fa fa-caret-right"></span>
                   &nbsp;Configuring your Logging deployment
 
                   <!-- prints out the names of the second level books with arrow down or to right
                   So in this case: Welcome 2 -->
 
               </a>
-              <ul id="topicSubGroup-25-7" class="nav-tertiary list-unstyled collapse">
+              <ul id="topicSubGroup-25-8" class="nav-tertiary list-unstyled collapse">
 
                 <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
                      Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
@@ -22121,15 +22158,15 @@
             <!-- start a new heading area -->
 
             <li class="nav-header">
-              <a class="" href="javascript:void(0);" data-toggle="collapse" data-target="#topicSubGroup-25-11">
-                <span id="sgSpan-25-11" class="fa fa-caret-right"></span>
+              <a class="" href="javascript:void(0);" data-toggle="collapse" data-target="#topicSubGroup-25-12">
+                <span id="sgSpan-25-12" class="fa fa-caret-right"></span>
                   &nbsp;Log collection and forwarding
 
                   <!-- prints out the names of the second level books with arrow down or to right
                   So in this case: Welcome 2 -->
 
               </a>
-              <ul id="topicSubGroup-25-11" class="nav-tertiary list-unstyled collapse">
+              <ul id="topicSubGroup-25-12" class="nav-tertiary list-unstyled collapse">
 
                 <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
                      Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
@@ -22252,19 +22289,6 @@
 
               </ul>
             </li>
-
-        <!-- for each topic in this topic_group, for example in Welcome 1, what topics exist?
-        Welcome 2 and Welcome 1 More -->
-
-
-          <!-- is this is a single page? That is, does this topic have more topics?
-          Welcome 1 More -->
-
-            <!-- ^ this establishs whether we are reading this current page -->
-
-            <li><a class="" href="../logging/cluster-logging-upgrading.html">Updating Logging</a></li>
-            <!--  if active, then highlight it,  otherwise nothing to do -->
-
 
         <!-- for each topic in this topic_group, for example in Welcome 1, what topics exist?
         Welcome 2 and Welcome 1 More -->
@@ -32360,6 +32384,30 @@
 
 
                   <li>
+                    <a class="" href="../distr_tracing/distr_tracing_rn/distr-tracing-rn-2-9-2.html">
+                      2.9.2
+                    </a>
+                  </li>
+
+                
+
+
+                <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
+                     Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
+
+                
+                
+                
+                
+                
+
+                <!-- is this is a single page? That is, does this topic have more topics?
+                 Welcome 2 Index Page and Welcome 2 More -->
+
+
+
+
+                  <li>
                     <a class="" href="../distr_tracing/distr_tracing_rn/distr-tracing-rn-2-9-1.html">
                       2.9.1
                     </a>
@@ -35430,7 +35478,7 @@
       <div class="col-xs-12 col-sm-9 col-md-9 main">
         <div class="page-header">
           <h1>
-            Post-installation machine configuration tasks
+            Postinstallation machine configuration tasks
           </h1>
         </div>
         
@@ -35575,7 +35623,7 @@
 </li>
 <li>
 <p>Some machine configuration must be in place before OpenShift Container Platform is installed to disk. In most cases, this can be accomplished by creating
-a machine config that is injected directly into the OpenShift Container Platform installer process, instead of running as a post-installation machine config. In other cases, you might need to do bare metal installation where you pass kernel arguments at OpenShift Container Platform installer startup, to do such things as setting per-node individual IP addresses or advanced disk partitioning.</p>
+a machine config that is injected directly into the OpenShift Container Platform installer process, instead of running as a postinstallation machine config. In other cases, you might need to do bare metal installation where you pass kernel arguments at OpenShift Container Platform installer startup, to do such things as setting per-node individual IP addresses or advanced disk partitioning.</p>
 </li>
 <li>
 <p>MCO manages items that are set in machine configs. Manual changes you do to your systems will not be overwritten by MCO, unless MCO is explicitly told to manage a conflicting file. In other words, MCO only makes specific updates you request, it does not claim control over the whole node.</p>
@@ -35622,7 +35670,7 @@ offending file, however, and should continue to operate in a <code>degraded</cod
 <p><strong>systemd units</strong>: Create and set the status of a systemd service or add to an existing systemd service by dropping in additional settings.</p>
 </li>
 <li>
-<p><strong>users and groups</strong>: Change SSH keys in the passwd section post-installation.</p>
+<p><strong>users and groups</strong>: Change SSH keys in the passwd section postinstallation.</p>
 <div class="admonitionblock important">
 <table>
 <tr>
@@ -35655,7 +35703,7 @@ offending file, however, and should continue to operate in a <code>degraded</cod
 <p><strong>kernelType</strong>: Optionally identify a non-standard kernel to use instead of the standard kernel. Use <code>realtime</code> to use the RT kernel (for RAN). This is only supported on select platforms.</p>
 </li>
 <li>
-<p><strong>fips</strong>: Enable <a href="https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html-single/security_hardening/index#using-the-system-wide-cryptographic-policies_security-hardening">FIPS</a> mode. FIPS should be set at installation-time setting and not a post-installation procedure.</p>
+<p><strong>fips</strong>: Enable <a href="https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html-single/security_hardening/index#using-the-system-wide-cryptographic-policies_security-hardening">FIPS</a> mode. FIPS should be set at installation-time setting and not a postinstallation procedure.</p>
 </li>
 </ul>
 </div>
@@ -35687,7 +35735,7 @@ offending file, however, and should continue to operate in a <code>degraded</cod
 <p>The MCO is not the only Operator that can change operating system components on OpenShift Container Platform nodes. Other Operators can modify operating system-level features as well. One example is the Node Tuning Operator, which allows you to do node-level tuning through Tuned daemon profiles.</p>
 </div>
 <div class="paragraph">
-<p>Tasks for the MCO configuration that can be done post-installation are included in the following procedures. See descriptions of RHCOS bare metal installation for system configuration tasks that must be done during or before OpenShift Container Platform installation.</p>
+<p>Tasks for the MCO configuration that can be done postinstallation are included in the following procedures. See descriptions of RHCOS bare metal installation for system configuration tasks that must be done during or before OpenShift Container Platform installation.</p>
 </div>
 <div class="paragraph">
 <p>There might be situations where the configuration on a node does not fully match what the currently-applied machine config specifies. This state is called <em>configuration drift</em>. The Machine Config Daemon (MCD) regularly checks the nodes for configuration drift. If the MCD detects configuration drift, the MCO marks the node <code>degraded</code> until an administrator corrects the node configuration. A degraded node is online and operational, but, it cannot be updated. For more information on configuration drift, see <em>Understanding configuration drift detection</em>.</p>
@@ -36629,7 +36677,7 @@ coreos.oem.id=qemu coreos.oem.id=ec2 ignition.platform.id=ec2 enforcing=0
 <div class="sect2">
 <h3 id="rhcos-enabling-multipath-day-2_post-install-machine-configuration-tasks"><a class="anchor" href="#rhcos-enabling-multipath-day-2_post-install-machine-configuration-tasks"></a>Enabling multipathing with kernel arguments on RHCOS</h3>
 <div class="paragraph">
-<p>Red Hat Enterprise Linux CoreOS (RHCOS) supports multipathing on the primary disk, allowing stronger resilience to hardware failure to achieve higher host availability. Post-installation support is available by activating multipathing via the machine config.</p>
+<p>Red Hat Enterprise Linux CoreOS (RHCOS) supports multipathing on the primary disk, allowing stronger resilience to hardware failure to achieve higher host availability. Postinstallation support is available by activating multipathing via the machine config.</p>
 </div>
 <div class="admonitionblock important">
 <table>
@@ -36677,7 +36725,7 @@ coreos.oem.id=qemu coreos.oem.id=ec2 ignition.platform.id=ec2 enforcing=0
 <div class="title">Procedure</div>
 <ol class="arabic">
 <li>
-<p>To enable multipathing post-installation on control plane nodes:</p>
+<p>To enable multipathing postinstallation on control plane nodes:</p>
 <div class="ulist">
 <ul>
 <li>
@@ -36701,7 +36749,7 @@ coreos.oem.id=qemu coreos.oem.id=ec2 ignition.platform.id=ec2 enforcing=0
 </div>
 </li>
 <li>
-<p>To enable multipathing post-installation on worker nodes:</p>
+<p>To enable multipathing postinstallation on worker nodes:</p>
 <div class="ulist">
 <ul>
 <li>

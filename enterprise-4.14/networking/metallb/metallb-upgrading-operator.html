@@ -21599,6 +21599,30 @@
 
 
                   <li>
+                    <a class="" href="../../logging/logging_release_notes/logging-5-8-release-notes.html">
+                      Logging 5.8
+                    </a>
+                  </li>
+
+                
+
+
+                <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
+                     Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
+
+                
+                
+                
+                
+                
+
+                <!-- is this is a single page? That is, does this topic have more topics?
+                 Welcome 2 Index Page and Welcome 2 More -->
+
+
+
+
+                  <li>
                     <a class="" href="../../logging/logging_release_notes/logging-5-7-release-notes.html">
                       Logging 5.7
                     </a>
@@ -21862,21 +21886,34 @@
         Welcome 2 and Welcome 1 More -->
 
 
+          <!-- is this is a single page? That is, does this topic have more topics?
+          Welcome 1 More -->
+
+            <!-- ^ this establishs whether we are reading this current page -->
+
+            <li><a class="" href="../../logging/cluster-logging-upgrading.html">Updating Logging</a></li>
+            <!--  if active, then highlight it,  otherwise nothing to do -->
+
+
+        <!-- for each topic in this topic_group, for example in Welcome 1, what topics exist?
+        Welcome 2 and Welcome 1 More -->
+
+
             <!-- this topic contains subtopics - Welcome 2 -->
 
 
             <!-- start a new heading area -->
 
             <li class="nav-header">
-              <a class="" href="javascript:void(0);" data-toggle="collapse" data-target="#topicSubGroup-25-7">
-                <span id="sgSpan-25-7" class="fa fa-caret-right"></span>
+              <a class="" href="javascript:void(0);" data-toggle="collapse" data-target="#topicSubGroup-25-8">
+                <span id="sgSpan-25-8" class="fa fa-caret-right"></span>
                   &nbsp;Configuring your Logging deployment
 
                   <!-- prints out the names of the second level books with arrow down or to right
                   So in this case: Welcome 2 -->
 
               </a>
-              <ul id="topicSubGroup-25-7" class="nav-tertiary list-unstyled collapse">
+              <ul id="topicSubGroup-25-8" class="nav-tertiary list-unstyled collapse">
 
                 <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
                      Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
@@ -22121,15 +22158,15 @@
             <!-- start a new heading area -->
 
             <li class="nav-header">
-              <a class="" href="javascript:void(0);" data-toggle="collapse" data-target="#topicSubGroup-25-11">
-                <span id="sgSpan-25-11" class="fa fa-caret-right"></span>
+              <a class="" href="javascript:void(0);" data-toggle="collapse" data-target="#topicSubGroup-25-12">
+                <span id="sgSpan-25-12" class="fa fa-caret-right"></span>
                   &nbsp;Log collection and forwarding
 
                   <!-- prints out the names of the second level books with arrow down or to right
                   So in this case: Welcome 2 -->
 
               </a>
-              <ul id="topicSubGroup-25-11" class="nav-tertiary list-unstyled collapse">
+              <ul id="topicSubGroup-25-12" class="nav-tertiary list-unstyled collapse">
 
                 <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
                      Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
@@ -22252,19 +22289,6 @@
 
               </ul>
             </li>
-
-        <!-- for each topic in this topic_group, for example in Welcome 1, what topics exist?
-        Welcome 2 and Welcome 1 More -->
-
-
-          <!-- is this is a single page? That is, does this topic have more topics?
-          Welcome 1 More -->
-
-            <!-- ^ this establishs whether we are reading this current page -->
-
-            <li><a class="" href="../../logging/cluster-logging-upgrading.html">Updating Logging</a></li>
-            <!--  if active, then highlight it,  otherwise nothing to do -->
-
 
         <!-- for each topic in this topic_group, for example in Welcome 1, what topics exist?
         Welcome 2 and Welcome 1 More -->
@@ -32360,6 +32384,30 @@
 
 
                   <li>
+                    <a class="" href="../../distr_tracing/distr_tracing_rn/distr-tracing-rn-2-9-2.html">
+                      2.9.2
+                    </a>
+                  </li>
+
+                
+
+
+                <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
+                     Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
+
+                
+                
+                
+                
+                
+
+                <!-- is this is a single page? That is, does this topic have more topics?
+                 Welcome 2 Index Page and Welcome 2 More -->
+
+
+
+
+                  <li>
                     <a class="" href="../../distr_tracing/distr_tracing_rn/distr-tracing-rn-2-9-1.html">
                       2.9.1
                     </a>
@@ -35442,6 +35490,7 @@
 <ul class="sectlevel1">
 <li><a href="#olm-deleting-metallb-operator-from-a-cluster-using-web-console_metallb-upgrading-operator">Deleting the MetalLB Operator from a cluster using the web console</a></li>
 <li><a href="#olm-deleting-metallb-operator-from-a-cluster-using-cli_metallb-upgrading-operator">Deleting MetalLB Operator from a cluster using the CLI</a></li>
+<li><a href="#olm-updating-metallb-operatorgroup_metallb-upgrading-operator">Editing the MetalLB Operator Operator group</a></li>
 <li><a href="#upgrading-metallb-operator_metallb-upgrading-operator">Upgrading the MetalLB Operator</a></li>
 <li><a href="#additional-resources">Additional resources</a></li>
 </ul>
@@ -35477,7 +35526,7 @@
 </table>
 </div>
 <div class="paragraph">
-<p>For detailed steps to upgrade the MetalLB Operator from 4.10 and earlier, see the guidance that follows.</p>
+<p>For detailed steps to upgrade the MetalLB Operator from 4.10 and earlier, see the guidance that follows. As a cluster administrator, start the upgrade process by deleting the MetalLB Operator by using the OpenShift CLI (<code>oc</code>) or the web console.</p>
 </div>
 </div>
 </div>
@@ -35600,6 +35649,137 @@
 </div>
 </div>
 <div class="sect1">
+<h2 id="olm-updating-metallb-operatorgroup_metallb-upgrading-operator"><a class="anchor" href="#olm-updating-metallb-operatorgroup_metallb-upgrading-operator"></a>Editing the MetalLB Operator Operator group</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>When upgrading from any MetalLB Operator version up to and including 4.10 to 4.11 and later, remove <code>spec.targetNamespaces</code> from the Operator group custom resource (CR). You must remove the spec regardless of whether you used the web console or the CLI to delete the MetalLB Operator.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The MetalLB Operator version 4.11 or later only supports the <code>AllNamespaces</code> install mode, whereas 4.10 or earlier versions support <code>OwnNamespace</code> or <code>SingleNamespace</code> modes.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>You have access to an OpenShift Container Platform cluster with <code>cluster-admin</code> permissions.</p>
+</li>
+<li>
+<p>You have installed the OpenShift CLI (<code>oc</code>).</p>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>List the Operator groups in the <code>metallb-system</code> namespace by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="gp">$</span><span class="w"> </span>oc get operatorgroup <span class="nt">-n</span> metallb-system</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example output</div>
+<div class="content">
+<pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="go">NAME                   AGE
+metallb-system-7jc66   85m</span></code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Verify that the <code>spec.targetNamespaces</code> is present in the Operator group CR associated with the <code>metallb-system</code> namespace by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="gp">$</span><span class="w"> </span>oc get operatorgroup metallb-system-7jc66 <span class="nt">-n</span> metallb-system <span class="nt">-o</span> yaml</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example output</div>
+<div class="content">
+<pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="go">apiVersion: operators.coreos.com/v1
+kind: OperatorGroup
+metadata:
+  annotations:
+    olm.providedAPIs: ""
+  creationTimestamp: "2023-10-25T09:42:49Z"
+  generateName: metallb-system-
+  generation: 1
+  name: metallb-system-7jc66
+  namespace: metallb-system
+  resourceVersion: "25027"
+  uid: f5f644a0-eef8-4e31-a306-e2bbcfaffab3
+spec:
+  targetNamespaces:
+  - metallb-system
+  upgradeStrategy: Default
+status:
+  lastUpdated: "2023-10-25T09:42:49Z"
+  namespaces:
+  - metallb-system</span></code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Edit the Operator group and remove the <code>targetNamespaces</code> and <code>metallb-system</code> present under the <code>spec</code> section by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="gp">$</span><span class="w"> </span>oc edit n metallb-system</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example output</div>
+<div class="content">
+<pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="go">operatorgroup.operators.coreos.com/metallb-system-7jc66 edited</span></code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Verify the <code>spec.targetNamespaces</code> is removed from the Operator group custom resource associated with the <code>metallb-system</code> namespace by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="gp">$</span><span class="w"> </span>oc get operatorgroup metallb-system-7jc66 <span class="nt">-n</span> metallb-system <span class="nt">-o</span> yaml</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example output</div>
+<div class="content">
+<pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="go">apiVersion: operators.coreos.com/v1
+kind: OperatorGroup
+metadata:
+  annotations:
+    olm.providedAPIs: ""
+  creationTimestamp: "2023-10-25T09:42:49Z"
+  generateName: metallb-system-
+  generation: 2
+  name: metallb-system-7jc66
+  namespace: metallb-system
+  resourceVersion: "61658"
+  uid: f5f644a0-eef8-4e31-a306-e2bbcfaffab3
+spec:
+  upgradeStrategy: Default
+status:
+  lastUpdated: "2023-10-25T14:31:30Z"
+  namespaces:
+  - ""</span></code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
 <h2 id="upgrading-metallb-operator_metallb-upgrading-operator"><a class="anchor" href="#upgrading-metallb-operator_metallb-upgrading-operator"></a>Upgrading the MetalLB Operator</h2>
 <div class="sectionbody">
 <div class="ulist">
@@ -35670,7 +35850,7 @@ metallb   33m</span></code></pre>
 <div class="title">Example output</div>
 <div class="content">
 <pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="go">NAME                                   DISPLAY            VERSION               REPLACES   PHASE
-metallb-operator.4.Branch Build.0-202207051316   MetalLB Operator   4.Branch Build.0-202207051316              Succeeded</span></code></pre>
+metallb-operator.Branch Build.0-202207051316   MetalLB Operator   Branch Build.0-202207051316              Succeeded</span></code></pre>
 </div>
 </div>
 </li>

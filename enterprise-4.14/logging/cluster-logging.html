@@ -21599,6 +21599,30 @@
 
 
                   <li>
+                    <a class="" href="../logging/logging_release_notes/logging-5-8-release-notes.html">
+                      Logging 5.8
+                    </a>
+                  </li>
+
+                
+
+
+                <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
+                     Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
+
+                
+                
+                
+                
+                
+
+                <!-- is this is a single page? That is, does this topic have more topics?
+                 Welcome 2 Index Page and Welcome 2 More -->
+
+
+
+
+                  <li>
                     <a class="" href="../logging/logging_release_notes/logging-5-7-release-notes.html">
                       Logging 5.7
                     </a>
@@ -21862,21 +21886,34 @@
         Welcome 2 and Welcome 1 More -->
 
 
+          <!-- is this is a single page? That is, does this topic have more topics?
+          Welcome 1 More -->
+
+            <!-- ^ this establishs whether we are reading this current page -->
+
+            <li><a class="" href="../logging/cluster-logging-upgrading.html">Updating Logging</a></li>
+            <!--  if active, then highlight it,  otherwise nothing to do -->
+
+
+        <!-- for each topic in this topic_group, for example in Welcome 1, what topics exist?
+        Welcome 2 and Welcome 1 More -->
+
+
             <!-- this topic contains subtopics - Welcome 2 -->
 
 
             <!-- start a new heading area -->
 
             <li class="nav-header">
-              <a class="" href="javascript:void(0);" data-toggle="collapse" data-target="#topicSubGroup-25-7">
-                <span id="sgSpan-25-7" class="fa fa-caret-right"></span>
+              <a class="" href="javascript:void(0);" data-toggle="collapse" data-target="#topicSubGroup-25-8">
+                <span id="sgSpan-25-8" class="fa fa-caret-right"></span>
                   &nbsp;Configuring your Logging deployment
 
                   <!-- prints out the names of the second level books with arrow down or to right
                   So in this case: Welcome 2 -->
 
               </a>
-              <ul id="topicSubGroup-25-7" class="nav-tertiary list-unstyled collapse">
+              <ul id="topicSubGroup-25-8" class="nav-tertiary list-unstyled collapse">
 
                 <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
                      Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
@@ -22121,15 +22158,15 @@
             <!-- start a new heading area -->
 
             <li class="nav-header">
-              <a class="" href="javascript:void(0);" data-toggle="collapse" data-target="#topicSubGroup-25-11">
-                <span id="sgSpan-25-11" class="fa fa-caret-right"></span>
+              <a class="" href="javascript:void(0);" data-toggle="collapse" data-target="#topicSubGroup-25-12">
+                <span id="sgSpan-25-12" class="fa fa-caret-right"></span>
                   &nbsp;Log collection and forwarding
 
                   <!-- prints out the names of the second level books with arrow down or to right
                   So in this case: Welcome 2 -->
 
               </a>
-              <ul id="topicSubGroup-25-11" class="nav-tertiary list-unstyled collapse">
+              <ul id="topicSubGroup-25-12" class="nav-tertiary list-unstyled collapse">
 
                 <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
                      Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
@@ -22252,19 +22289,6 @@
 
               </ul>
             </li>
-
-        <!-- for each topic in this topic_group, for example in Welcome 1, what topics exist?
-        Welcome 2 and Welcome 1 More -->
-
-
-          <!-- is this is a single page? That is, does this topic have more topics?
-          Welcome 1 More -->
-
-            <!-- ^ this establishs whether we are reading this current page -->
-
-            <li><a class="" href="../logging/cluster-logging-upgrading.html">Updating Logging</a></li>
-            <!--  if active, then highlight it,  otherwise nothing to do -->
-
 
         <!-- for each topic in this topic_group, for example in Welcome 1, what topics exist?
         Welcome 2 and Welcome 1 More -->
@@ -32360,6 +32384,30 @@
 
 
                   <li>
+                    <a class="" href="../distr_tracing/distr_tracing_rn/distr-tracing-rn-2-9-2.html">
+                      2.9.2
+                    </a>
+                  </li>
+
+                
+
+
+                <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
+                     Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
+
+                
+                
+                
+                
+                
+
+                <!-- is this is a single page? That is, does this topic have more topics?
+                 Welcome 2 Index Page and Welcome 2 More -->
+
+
+
+
+                  <li>
                     <a class="" href="../distr_tracing/distr_tracing_rn/distr-tracing-rn-2-9-1.html">
                       2.9.1
                     </a>
@@ -35447,16 +35495,9 @@
 <li><a href="#cluster-logging-view-cluster-dashboards-about_cluster-logging">About viewing the cluster dashboard</a></li>
 <li><a href="#cluster-logging-troubleshoot-logging-about_cluster-logging">About troubleshooting OpenShift Container Platform Logging</a></li>
 <li><a href="#cluster-logging-export-fields-about_cluster-logging">About exporting fields</a></li>
-<li><a href="#cluster-logging-about-collector_cluster-logging">About the logging collector</a></li>
 <li><a href="#cluster-logging-about-logstore_cluster-logging">About the log store</a></li>
 <li><a href="#cluster-logging-about-visualizer_cluster-logging">About logging visualization</a></li>
 <li><a href="#cluster-logging-eventrouter-about_cluster-logging">About event routing</a></li>
-</ul>
-</li>
-<li><a href="#cluster-logging-about-vector_cluster-logging">About Vector</a>
-<ul class="sectlevel2">
-<li><a href="#cluster-logging-vector-enable_cluster-logging">Enabling Vector</a></li>
-<li><a href="#collector-features">Collector features</a></li>
 </ul>
 </li>
 </ul>
@@ -35737,70 +35778,6 @@
 </div>
 </div>
 <div class="sect2">
-<h3 id="cluster-logging-about-collector_cluster-logging"><a class="anchor" href="#cluster-logging-about-collector_cluster-logging"></a>About the logging collector</h3>
-<div class="paragraph">
-<p>The Cluster Logging Operator deploys a collector based on the <code>ClusterLogForwarder</code> resource specification. There are two collector options supported by this Operator: the Fluentd collector, and the Vector collector.</p>
-</div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-important" title="Important"></i>
-</td>
-<td class="content">
-<div class="paragraph">
-<p>The Fluentd collector is now deprecated and will be removed in a future logging release.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>The logging subsystem for Red Hat OpenShift collects container and node logs.</p>
-</div>
-<div class="paragraph">
-<p>By default, the log collector uses the following sources:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>journald for all system logs</p>
-</li>
-<li>
-<p><code>/var/log/containers/*.log</code> for all container logs</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>If you configure the log collector to collect audit logs, it gets them from <code>/var/log/audit/audit.log</code>.</p>
-</div>
-<div class="paragraph">
-<p>The logging collector is a daemon set that deploys pods to each OpenShift Container Platform node. System and infrastructure logs are generated by journald log messages from the operating system, the container runtime, and OpenShift Container Platform. Application logs are generated by the CRI-O container engine. Fluentd collects the logs from these sources and forwards them internally or externally as you configure in OpenShift Container Platform.</p>
-</div>
-<div class="paragraph">
-<p>The container runtimes provide minimal information to identify the source of log messages: project, pod name, and container ID. This information is not sufficient to uniquely identify the source of the logs. If a pod with a given name and project is deleted before the log collector begins processing its logs, information from the API server, such as labels and annotations, might not be available. There might not be a way to distinguish the log messages from a similarly named pod and project or trace the logs to their source. This limitation means that log collection and normalization are considered <strong>best effort</strong>.</p>
-</div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-important" title="Important"></i>
-</td>
-<td class="content">
-<div class="paragraph">
-<p>The available container runtimes provide minimal information to identify the
-source of log messages and do not guarantee unique individual log
-messages or that these messages can be traced to their source.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>For information, see <a href="../logging/log_collection_forwarding/cluster-logging-collector.html#cluster-logging-collector">Configuring the logging collector</a>.</p>
-</div>
-</div>
-<div class="sect2">
 <h3 id="cluster-logging-about-logstore_cluster-logging"><a class="anchor" href="#cluster-logging-about-logstore_cluster-logging"></a>About the log store</h3>
 <div class="paragraph">
 <p>By default, OpenShift Container Platform uses <a href="https://www.elastic.co/products/elasticsearch">Elasticsearch (ES)</a> to store log data. Optionally you can use the Log Forwarder API to forward logs to an external store. Several types of store are supported, including fluentd, rsyslog, kafka and others.</p>
@@ -35876,506 +35853,6 @@ The Event Router collects events from all projects and writes them to <code>STDO
 <div class="paragraph">
 <p>For information, see <a href="../logging/log_collection_forwarding/cluster-logging-eventrouter.html#cluster-logging-eventrouter">Collecting and storing Kubernetes events</a>.</p>
 </div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="cluster-logging-about-vector_cluster-logging"><a class="anchor" href="#cluster-logging-about-vector_cluster-logging"></a>About Vector</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Vector is a log collector offered as an alternative to Fluentd for the logging subsystem.</p>
-</div>
-<div class="paragraph">
-<p>The following outputs are supported:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>elasticsearch</code>. An external Elasticsearch instance. The <code>elasticsearch</code> output can use a TLS connection.</p>
-</li>
-<li>
-<p><code>kafka</code>. A Kafka broker. The <code>kafka</code> output can use an unsecured or TLS connection.</p>
-</li>
-<li>
-<p><code>loki</code>. Loki, a horizontally scalable, highly available, multitenant log aggregation system.</p>
-</li>
-</ul>
-</div>
-<div class="sect2">
-<h3 id="cluster-logging-vector-enable_cluster-logging"><a class="anchor" href="#cluster-logging-vector-enable_cluster-logging"></a>Enabling Vector</h3>
-<div class="paragraph">
-<p>Use the following steps to enable Vector on your OpenShift Container Platform cluster.</p>
-</div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>Edit the <code>ClusterLogging</code> custom resource (CR) in the <code>openshift-logging</code> project:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="gp">$</span><span class="w"> </span>oc <span class="nt">-n</span> openshift-logging edit ClusterLogging instance</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Add a <code>logging.openshift.io/preview-vector-collector: enabled</code> annotation to the <code>ClusterLogging</code> custom resource (CR).</p>
-</li>
-<li>
-<p>Add <code>vector</code> as a collection type to the <code>ClusterLogging</code> custom resource (CR).</p>
-</li>
-</ol>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="rouge highlight nowrap"><code data-lang="yaml">  <span class="na">apiVersion</span><span class="pi">:</span> <span class="s2">"</span><span class="s">logging.openshift.io/v1"</span>
-  <span class="na">kind</span><span class="pi">:</span> <span class="s2">"</span><span class="s">ClusterLogging"</span>
-  <span class="na">metadata</span><span class="pi">:</span>
-    <span class="na">name</span><span class="pi">:</span> <span class="s2">"</span><span class="s">instance"</span>
-    <span class="na">namespace</span><span class="pi">:</span> <span class="s2">"</span><span class="s">openshift-logging"</span>
-    <span class="na">annotations</span><span class="pi">:</span>
-      <span class="s">logging.openshift.io/preview-vector-collector</span><span class="pi">:</span> <span class="s">enabled</span>
-  <span class="na">spec</span><span class="pi">:</span>
-    <span class="na">collection</span><span class="pi">:</span>
-    <span class="na">logs</span><span class="pi">:</span>
-      <span class="na">type</span><span class="pi">:</span> <span class="s2">"</span><span class="s">vector"</span>
-      <span class="na">vector</span><span class="pi">:</span> <span class="pi">{}</span></code></pre>
-</div>
-</div>
-<div class="ulist _additional-resources">
-<div class="title">Additional resources</div>
-<ul>
-<li>
-<p><a href="https://vector.dev/docs/about/what-is-vector/">Vector Documentation</a></p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="collector-features"><a class="anchor" href="#collector-features"></a>Collector features</h3>
-<table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 1. Log Sources</caption>
-<colgroup>
-<col style="width: 33.3333%;">
-<col style="width: 33.3333%;">
-<col style="width: 33.3334%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Feature</th>
-<th class="tableblock halign-left valign-top">Fluentd</th>
-<th class="tableblock halign-left valign-top">Vector</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">App container logs</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">App-specific routing</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">App-specific routing by namespace</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Infra container logs</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Infra journal logs</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Kube API audit logs</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">OpenShift API audit logs</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Open Virtual Network (OVN) audit logs</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
-</tr>
-</tbody>
-</table>
-<table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 2. Outputs</caption>
-<colgroup>
-<col style="width: 33.3333%;">
-<col style="width: 33.3333%;">
-<col style="width: 33.3334%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Feature</th>
-<th class="tableblock halign-left valign-top">Fluentd</th>
-<th class="tableblock halign-left valign-top">Vector</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Elasticsearch v5-v7</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Fluent forward</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Syslog RFC3164</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003; (Logging 5.7+)</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Syslog RFC5424</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003; (Logging 5.7+)</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Kafka</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Cloudwatch</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Loki</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">HTTP</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003; (Logging 5.7+)</p></td>
-</tr>
-</tbody>
-</table>
-<table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 3. Authorization and Authentication</caption>
-<colgroup>
-<col style="width: 33.3333%;">
-<col style="width: 33.3333%;">
-<col style="width: 33.3334%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Feature</th>
-<th class="tableblock halign-left valign-top">Fluentd</th>
-<th class="tableblock halign-left valign-top">Vector</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Elasticsearch certificates</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Elasticsearch username / password</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Cloudwatch keys</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Cloudwatch STS</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Kafka certificates</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Kafka username / password</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Kafka SASL</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Loki bearer token</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
-</tr>
-</tbody>
-</table>
-<table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 4. Normalizations and Transformations</caption>
-<colgroup>
-<col style="width: 33.3333%;">
-<col style="width: 33.3333%;">
-<col style="width: 33.3334%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Feature</th>
-<th class="tableblock halign-left valign-top">Fluentd</th>
-<th class="tableblock halign-left valign-top">Vector</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Viaq data model - app</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Viaq data model - infra</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Viaq data model - infra(journal)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Viaq data model - Linux audit</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Viaq data model - kube-apiserver audit</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Viaq data model - OpenShift API audit</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Viaq data model - OVN</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Loglevel Normalization</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">JSON parsing</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Structured Index</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Multiline error detection</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Multicontainer / split indices</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Flatten labels</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">CLF static labels</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
-</tr>
-</tbody>
-</table>
-<table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 5. Tuning</caption>
-<colgroup>
-<col style="width: 33.3333%;">
-<col style="width: 33.3333%;">
-<col style="width: 33.3334%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Feature</th>
-<th class="tableblock halign-left valign-top">Fluentd</th>
-<th class="tableblock halign-left valign-top">Vector</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Fluentd readlinelimit</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Fluentd buffer</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">- chunklimitsize</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">- totallimitsize</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">- overflowaction</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">- flushthreadcount</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">- flushmode</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">- flushinterval</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">- retrywait</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">- retrytype</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">- retrymaxinterval</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">- retrytimeout</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-</tbody>
-</table>
-<table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 6. Visibility</caption>
-<colgroup>
-<col style="width: 33.3333%;">
-<col style="width: 33.3333%;">
-<col style="width: 33.3334%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Feature</th>
-<th class="tableblock halign-left valign-top">Fluentd</th>
-<th class="tableblock halign-left valign-top">Vector</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Metrics</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Dashboard</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Alerts</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-</tbody>
-</table>
-<table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 7. Miscellaneous</caption>
-<colgroup>
-<col style="width: 33.3333%;">
-<col style="width: 33.3333%;">
-<col style="width: 33.3334%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Feature</th>
-<th class="tableblock halign-left valign-top">Fluentd</th>
-<th class="tableblock halign-left valign-top">Vector</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Global proxy support</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">x86 support</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ARM support</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">IBM Power support</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">IBM Z support</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">IPv6 support</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Log event buffering</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Disconnected Cluster</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
-</tr>
-</tbody>
-</table>
 </div>
 </div>
 </div>

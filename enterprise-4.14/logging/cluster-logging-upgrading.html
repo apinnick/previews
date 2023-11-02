@@ -21599,6 +21599,30 @@
 
 
                   <li>
+                    <a class="" href="../logging/logging_release_notes/logging-5-8-release-notes.html">
+                      Logging 5.8
+                    </a>
+                  </li>
+
+                
+
+
+                <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
+                     Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
+
+                
+                
+                
+                
+                
+
+                <!-- is this is a single page? That is, does this topic have more topics?
+                 Welcome 2 Index Page and Welcome 2 More -->
+
+
+
+
+                  <li>
                     <a class="" href="../logging/logging_release_notes/logging-5-7-release-notes.html">
                       Logging 5.7
                     </a>
@@ -21862,21 +21886,34 @@
         Welcome 2 and Welcome 1 More -->
 
 
+          <!-- is this is a single page? That is, does this topic have more topics?
+          Welcome 1 More -->
+
+            <!-- ^ this establishs whether we are reading this current page -->
+
+            <li><a class=" active" href="../logging/cluster-logging-upgrading.html">Updating Logging</a></li>
+            <!--  if active, then highlight it,  otherwise nothing to do -->
+
+
+        <!-- for each topic in this topic_group, for example in Welcome 1, what topics exist?
+        Welcome 2 and Welcome 1 More -->
+
+
             <!-- this topic contains subtopics - Welcome 2 -->
 
 
             <!-- start a new heading area -->
 
             <li class="nav-header">
-              <a class="" href="javascript:void(0);" data-toggle="collapse" data-target="#topicSubGroup-25-7">
-                <span id="sgSpan-25-7" class="fa fa-caret-right"></span>
+              <a class="" href="javascript:void(0);" data-toggle="collapse" data-target="#topicSubGroup-25-8">
+                <span id="sgSpan-25-8" class="fa fa-caret-right"></span>
                   &nbsp;Configuring your Logging deployment
 
                   <!-- prints out the names of the second level books with arrow down or to right
                   So in this case: Welcome 2 -->
 
               </a>
-              <ul id="topicSubGroup-25-7" class="nav-tertiary list-unstyled collapse">
+              <ul id="topicSubGroup-25-8" class="nav-tertiary list-unstyled collapse">
 
                 <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
                      Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
@@ -22121,15 +22158,15 @@
             <!-- start a new heading area -->
 
             <li class="nav-header">
-              <a class="" href="javascript:void(0);" data-toggle="collapse" data-target="#topicSubGroup-25-11">
-                <span id="sgSpan-25-11" class="fa fa-caret-right"></span>
+              <a class="" href="javascript:void(0);" data-toggle="collapse" data-target="#topicSubGroup-25-12">
+                <span id="sgSpan-25-12" class="fa fa-caret-right"></span>
                   &nbsp;Log collection and forwarding
 
                   <!-- prints out the names of the second level books with arrow down or to right
                   So in this case: Welcome 2 -->
 
               </a>
-              <ul id="topicSubGroup-25-11" class="nav-tertiary list-unstyled collapse">
+              <ul id="topicSubGroup-25-12" class="nav-tertiary list-unstyled collapse">
 
                 <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
                      Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
@@ -22252,19 +22289,6 @@
 
               </ul>
             </li>
-
-        <!-- for each topic in this topic_group, for example in Welcome 1, what topics exist?
-        Welcome 2 and Welcome 1 More -->
-
-
-          <!-- is this is a single page? That is, does this topic have more topics?
-          Welcome 1 More -->
-
-            <!-- ^ this establishs whether we are reading this current page -->
-
-            <li><a class=" active" href="../logging/cluster-logging-upgrading.html">Updating Logging</a></li>
-            <!--  if active, then highlight it,  otherwise nothing to do -->
-
 
         <!-- for each topic in this topic_group, for example in Welcome 1, what topics exist?
         Welcome 2 and Welcome 1 More -->
@@ -32360,6 +32384,30 @@
 
 
                   <li>
+                    <a class="" href="../distr_tracing/distr_tracing_rn/distr-tracing-rn-2-9-2.html">
+                      2.9.2
+                    </a>
+                  </li>
+
+                
+
+
+                <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
+                     Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
+
+                
+                
+                
+                
+                
+
+                <!-- is this is a single page? That is, does this topic have more topics?
+                 Welcome 2 Index Page and Welcome 2 More -->
+
+
+
+
+                  <li>
                     <a class="" href="../distr_tracing/distr_tracing_rn/distr-tracing-rn-2-9-1.html">
                       2.9.1
                     </a>
@@ -35430,7 +35478,7 @@
       <div class="col-xs-12 col-sm-9 col-md-9 main">
         <div class="page-header">
           <h1>
-            Updating OpenShift Logging
+            Updating Logging
           </h1>
         </div>
         
@@ -35440,42 +35488,256 @@
 <div id="toc" class="toc">
 <div id="toctitle" class="title"></div>
 <ul class="sectlevel1">
-<li><a href="#cluster-logging-supported-versions">Supported Versions</a></li>
-<li><a href="#cluster-logging-updating-logging-to_current_cluster-logging-upgrading">Updating Logging to the current version</a></li>
+<li><a href="#cluster-logging-upgrading-minor">Minor release updates</a></li>
+<li><a href="#cluster-logging-upgrading-major">Major release updates</a></li>
+<li><a href="#logging-operator-upgrading-all-ns_cluster-logging-upgrading">Upgrading the Cluster Logging Operator to watch all namespaces</a></li>
+<li><a href="#logging-upgrading-clo_cluster-logging-upgrading">Updating the Cluster Logging Operator</a></li>
+<li><a href="#logging-upgrading-loki_cluster-logging-upgrading">Updating the Loki Operator</a></li>
+<li><a href="#cluster-logging-upgrading-elasticsearch_cluster-logging-upgrading">Updating the OpenShift Elasticsearch Operator</a></li>
 </ul>
+</div>
+<div class="paragraph">
+<p>There are two types of logging subsystem updates: minor release updates (5.y.z) and major release updates (5.y).</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="cluster-logging-supported-versions"><a class="anchor" href="#cluster-logging-supported-versions"></a>Supported Versions</h2>
+<h2 id="cluster-logging-upgrading-minor"><a class="anchor" href="#cluster-logging-upgrading-minor"></a>Minor release updates</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>For version compatibility and support information, see <a href="https://access.redhat.com/support/policy/updates/openshift#logging">Red Hat OpenShift Container Platform Life Cycle Policy</a></p>
+<p>If you installed the logging subsystem Operators using the <strong>Automatic</strong> update approval option, your Operators receive minor version updates automatically. You do not need to complete any manual update steps.</p>
 </div>
 <div class="paragraph">
-<p>To upgrade from cluster logging in OpenShift Container Platform version 4.6 and earlier to OpenShift Logging 5.x, you update the OpenShift Container Platform cluster to version 4.7 or 4.8. Then, you update the following operators:</p>
+<p>If you installed the logging subsystem Operators using the <strong>Manual</strong> update approval option, you must manually approve minor version updates. For more information, see <a href="../operators/admin/olm-upgrading-operators.html#olm-approving-pending-upgrade_olm-upgrading-operators">Manually approving a pending Operator update</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="cluster-logging-upgrading-major"><a class="anchor" href="#cluster-logging-upgrading-major"></a>Major release updates</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>For major version updates you must complete some manual steps.</p>
+</div>
+<div class="paragraph">
+<p>For major release version compatibility and support information, see <a href="https://access.redhat.com/support/policy/updates/openshift_operators#platform-agnostic">OpenShift Operator Life Cycles</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="logging-operator-upgrading-all-ns_cluster-logging-upgrading"><a class="anchor" href="#logging-operator-upgrading-all-ns_cluster-logging-upgrading"></a>Upgrading the Cluster Logging Operator to watch all namespaces</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In logging 5.7 and older versions, the Cluster Logging Operator only watches the <code>openshift-logging</code> namespace.
+If you want the Cluster Logging Operator to watch all namespaces on your cluster, you must redeploy the Operator. You can complete the following procedure to redeploy the Operator without deleting your logging components.</p>
 </div>
 <div class="ulist">
+<div class="title">Prerequisites</div>
 <ul>
 <li>
-<p>From Elasticsearch Operator 4.x to OpenShift Elasticsearch Operator 5.x</p>
+<p>You have installed the OpenShift CLI (<code>oc</code>).</p>
 </li>
 <li>
-<p>From Cluster Logging Operator 4.x to Red Hat OpenShift Logging Operator 5.x</p>
+<p>You have administrator permissions.</p>
 </li>
 </ul>
 </div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Delete the subscription by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="gp">$</span><span class="w"> </span>oc <span class="nt">-n</span> openshift-logging delete subscription &lt;subscription&gt;</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Delete the Operator group by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="gp">$</span><span class="w"> </span>oc <span class="nt">-n</span> openshift-logging delete operatorgroup &lt;operator_group_name&gt;</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Delete the cluster service version (CSV) by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="gp">$</span><span class="w"> </span>oc delete clusterserviceversion cluster-logging.&lt;version&gt;</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Redeploy the Cluster Logging Operator by following the "Installing Logging" documentation.</p>
+</li>
+</ol>
+</div>
+<div class="ulist">
+<div class="title">Verification</div>
+<ul>
+<li>
+<p>Check that the <code>targetNamespaces</code> field in the <code>OperatorGroup</code> resource is not present or is set to an empty string.</p>
 <div class="paragraph">
-<p>To upgrade from a previous version of OpenShift Logging to the current version, you update OpenShift Elasticsearch Operator and Red Hat OpenShift Logging Operator to their current versions.</p>
+<p>To do this, run the following command and inspect the output:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="gp">$</span><span class="w"> </span>oc get operatorgroup &lt;operator_group_name&gt; <span class="nt">-o</span> yaml</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example output</div>
+<div class="content">
+<pre class="rouge highlight nowrap"><code data-lang="yaml"><span class="na">apiVersion</span><span class="pi">:</span> <span class="s">operators.coreos.com/v1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">OperatorGroup</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">openshift-logging-f52cn</span>
+  <span class="na">namespace</span><span class="pi">:</span> <span class="s">openshift-logging</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">upgradeStrategy</span><span class="pi">:</span> <span class="s">Default</span>
+<span class="na">status</span><span class="pi">:</span>
+  <span class="na">namespaces</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s2">"</span><span class="s">"</span>
+<span class="c1"># ...</span></code></pre>
+</div>
+</div>
+</li>
+</ul>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="cluster-logging-updating-logging-to_current_cluster-logging-upgrading"><a class="anchor" href="#cluster-logging-updating-logging-to_current_cluster-logging-upgrading"></a>Updating Logging to the current version</h2>
+<h2 id="logging-upgrading-clo_cluster-logging-upgrading"><a class="anchor" href="#logging-upgrading-clo_cluster-logging-upgrading"></a>Updating the Cluster Logging Operator</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>To update Logging to the current version, you change the subscriptions for the OpenShift Elasticsearch Operator and Red Hat OpenShift Logging Operator.</p>
+<p>To update the Cluster Logging Operator to a new major release version, you must modify the update channel for the Operator subscription.</p>
 </div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>You have installed the Red Hat OpenShift Logging Operator.</p>
+</li>
+<li>
+<p>You have administrator permissions.</p>
+</li>
+<li>
+<p>You have access to the OpenShift Container Platform web console and are viewing the <strong>Administrator</strong> perspective.</p>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Navigate to <strong>Operators</strong> &#8594; <strong>Installed Operators</strong>.</p>
+</li>
+<li>
+<p>Select the <strong>openshift-logging</strong> project.</p>
+</li>
+<li>
+<p>Click the <strong>Red Hat OpenShift Logging</strong> Operator.</p>
+</li>
+<li>
+<p>Click <strong>Subscription</strong>. In the <strong>Subscription details</strong> section, click the <strong>Update channel</strong> link. This link text might be <strong>stable</strong> or <strong>stable-5.y</strong>, depending on your current update channel.</p>
+</li>
+<li>
+<p>In the <strong>Change Subscription Update Channel</strong> window, select the latest major version update channel, <strong>stable-5.y</strong>, and click <strong>Save</strong>. Note the <code>cluster-logging.v5.y.z</code> version.</p>
+</li>
+</ol>
+</div>
+<div class="olist arabic">
+<div class="title">Verification</div>
+<ol class="arabic">
+<li>
+<p>Wait for a few seconds, then click <strong>Operators</strong> &#8594; <strong>Installed Operators</strong>. Verify that the Red Hat OpenShift Logging Operator version matches the latest <code>cluster-logging.v5.y.z</code> version.</p>
+</li>
+<li>
+<p>On the <strong>Operators</strong> &#8594; <strong>Installed Operators</strong> page, wait for the <strong>Status</strong> field to report <strong>Succeeded</strong>.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="logging-upgrading-loki_cluster-logging-upgrading"><a class="anchor" href="#logging-upgrading-loki_cluster-logging-upgrading"></a>Updating the Loki Operator</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>To update the Loki Operator to a new major release version, you must modify the update channel for the Operator subscription.</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>You have installed the Loki Operator.</p>
+</li>
+<li>
+<p>You have administrator permissions.</p>
+</li>
+<li>
+<p>You have access to the OpenShift Container Platform web console and are viewing the <strong>Administrator</strong> perspective.</p>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Navigate to <strong>Operators</strong> &#8594; <strong>Installed Operators</strong>.</p>
+</li>
+<li>
+<p>Select the <strong>openshift-operators-redhat</strong> project.</p>
+</li>
+<li>
+<p>Click the <strong>Loki Operator</strong>.</p>
+</li>
+<li>
+<p>Click <strong>Subscription</strong>. In the <strong>Subscription details</strong> section, click the <strong>Update channel</strong> link. This link text might be <strong>stable</strong> or <strong>stable-5.y</strong>, depending on your current update channel.</p>
+</li>
+<li>
+<p>In the <strong>Change Subscription Update Channel</strong> window, select the latest major version update channel, <strong>stable-5.y</strong>, and click <strong>Save</strong>. Note the <code>loki-operator.v5.y.z</code> version.</p>
+</li>
+</ol>
+</div>
+<div class="olist arabic">
+<div class="title">Verification</div>
+<ol class="arabic">
+<li>
+<p>Wait for a few seconds, then click <strong>Operators</strong> &#8594; <strong>Installed Operators</strong>. Verify that the Loki Operator version matches the latest <code>loki-operator.v5.y.z</code> version.</p>
+</li>
+<li>
+<p>On the <strong>Operators</strong> &#8594; <strong>Installed Operators</strong> page, wait for the <strong>Status</strong> field to report <strong>Succeeded</strong>.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="cluster-logging-upgrading-elasticsearch_cluster-logging-upgrading"><a class="anchor" href="#cluster-logging-upgrading-elasticsearch_cluster-logging-upgrading"></a>Updating the OpenShift Elasticsearch Operator</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>To update the OpenShift Elasticsearch Operator to the current version, you must modify the subscription.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>As of logging version 5.4.3 the OpenShift Elasticsearch Operator is deprecated and is planned to be removed in a future release. Red Hat will provide bug fixes and support for this feature during the current release lifecycle, but this feature will no longer receive enhancements and will be removed. As an alternative to using the OpenShift Elasticsearch Operator to manage the default log storage, you can use the Loki Operator.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>If you are using Elasticsearch as the default log store, and Kibana as the UI, update the OpenShift Elasticsearch Operator before you update the Cluster Logging Operator.</p>
 <div class="admonitionblock important">
 <table>
 <tr>
@@ -35484,27 +35746,19 @@
 </td>
 <td class="content">
 <div class="paragraph">
-<p>You must update the OpenShift Elasticsearch Operator <em>before</em> you update the Red Hat OpenShift Logging Operator. You must also update <em>both</em> Operators to the same version.</p>
+<p>If you update the Operators in the wrong order, Kibana does not update and the Kibana custom resource (CR) is not created. To fix this issue, delete the Red Hat OpenShift Logging Operator pod. When the Red Hat OpenShift Logging Operator pod redeploys, it creates the Kibana CR and Kibana becomes available again.</p>
 </div>
 </td>
 </tr>
 </table>
 </div>
-<div class="paragraph">
-<p>If you update the Operators in the wrong order, Kibana does not update and the Kibana custom resource (CR) is not created. To work around this problem, you delete the Red Hat OpenShift Logging Operator pod. When the Red Hat OpenShift Logging Operator pod redeploys, it creates the Kibana CR and Kibana becomes available again.</p>
-</div>
-<div class="ulist">
-<div class="title">Prerequisites</div>
-<ul>
-<li>
-<p>The OpenShift Container Platform version is 4.7 or later.</p>
 </li>
 <li>
 <p>The Logging status is healthy:</p>
 <div class="ulist">
 <ul>
 <li>
-<p>All pods are <code>ready</code>.</p>
+<p>All pods have a <code>ready</code> status.</p>
 </li>
 <li>
 <p>The Elasticsearch cluster is healthy.</p>
@@ -35513,7 +35767,13 @@
 </div>
 </li>
 <li>
-<p>Your <a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/snapshot-restore.html">Elasticsearch and Kibana data is backed up.</a></p>
+<p>Your <a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/snapshot-restore.html">Elasticsearch and Kibana data is backed up</a>.</p>
+</li>
+<li>
+<p>You have administrator permissions.</p>
+</li>
+<li>
+<p>You have installed the OpenShift CLI (<code>oc</code>) for the verification steps.</p>
 </li>
 </ul>
 </div>
@@ -35521,73 +35781,33 @@
 <div class="title">Procedure</div>
 <ol class="arabic">
 <li>
-<p>Update the OpenShift Elasticsearch Operator:</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
 <p>In the OpenShift Container Platform web console, click <strong>Operators</strong> &#8594; <strong>Installed Operators</strong>.</p>
 </li>
 <li>
-<p>Select the <code>openshift-Operators-redhat</code> project.</p>
+<p>Select the <strong>openshift-operators-redhat</strong> project.</p>
 </li>
 <li>
-<p>Click the <strong>OpenShift Elasticsearch Operator</strong>.</p>
+<p>Click <strong>OpenShift Elasticsearch Operator</strong>.</p>
 </li>
 <li>
 <p>Click <strong>Subscription</strong> &#8594; <strong>Channel</strong>.</p>
 </li>
 <li>
-<p>In the <strong>Change Subscription Update Channel</strong> window, select <strong>stable-5.x</strong> and click <strong>Save</strong>.</p>
+<p>In the <strong>Change Subscription Update Channel</strong> window, select <strong>stable-5.y</strong> and click <strong>Save</strong>. Note the <code>elasticsearch-operator.v5.y.z</code> version.</p>
 </li>
 <li>
-<p>Wait for a few seconds, then click <strong>Operators</strong> &#8594; <strong>Installed Operators</strong>.</p>
+<p>Wait for a few seconds, then click <strong>Operators</strong> &#8594; <strong>Installed Operators</strong>. Verify that the OpenShift Elasticsearch Operator version matches the latest <code>elasticsearch-operator.v5.y.z</code> version.</p>
 </li>
 <li>
-<p>Verify that the OpenShift Elasticsearch Operator version is 5.x.x.</p>
-</li>
-<li>
-<p>Wait for the <strong>Status</strong> field to report <strong>Succeeded</strong>.</p>
+<p>On the <strong>Operators</strong> &#8594; <strong>Installed Operators</strong> page, wait for the <strong>Status</strong> field to report <strong>Succeeded</strong>.</p>
 </li>
 </ol>
 </div>
-</li>
+<div class="olist arabic">
+<div class="title">Verification</div>
+<ol class="arabic">
 <li>
-<p>Update the Red Hat OpenShift Logging Operator:</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>In the OpenShift Container Platform web console, click <strong>Operators</strong> &#8594; <strong>Installed Operators</strong>.</p>
-</li>
-<li>
-<p>Select the <code>openshift-logging</code> project.</p>
-</li>
-<li>
-<p>Click the <strong>Red Hat OpenShift Logging Operator</strong>.</p>
-</li>
-<li>
-<p>Click <strong>Subscription</strong> &#8594; <strong>Channel</strong>.</p>
-</li>
-<li>
-<p>In the <strong>Change Subscription Update Channel</strong> window, select <strong>stable-5.x</strong> and click <strong>Save</strong>.</p>
-</li>
-<li>
-<p>Wait for a few seconds, then click <strong>Operators</strong> &#8594; <strong>Installed Operators</strong>.</p>
-</li>
-<li>
-<p>Verify that the Red Hat OpenShift Logging Operator version is 5.y.z</p>
-</li>
-<li>
-<p>Wait for the <strong>Status</strong> field to report <strong>Succeeded</strong>.</p>
-</li>
-</ol>
-</div>
-</li>
-<li>
-<p>Check the logging components:</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>Ensure that all Elasticsearch pods are in the <strong>Ready</strong> status:</p>
+<p>Verify that all Elasticsearch pods have a <strong>Ready</strong> status by entering the following command and observing the output:</p>
 <div class="listingblock">
 <div class="content">
 <pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="gp">$</span><span class="w"> </span>oc get pod <span class="nt">-n</span> openshift-logging <span class="nt">--selector</span> <span class="nv">component</span><span class="o">=</span>elasticsearch</code></pre>
@@ -35604,13 +35824,14 @@ elasticsearch-cdm-1pbrl44l-3-88df5d47-m45jc     2/2     Running   0          29m
 </div>
 </li>
 <li>
-<p>Ensure that the Elasticsearch cluster is healthy:</p>
+<p>Verify that the Elasticsearch cluster status is <code>green</code> by entering the following command and observing the output:</p>
 <div class="listingblock">
 <div class="content">
 <pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="gp">$</span><span class="w"> </span>oc <span class="nb">exec</span> <span class="nt">-n</span> openshift-logging <span class="nt">-c</span> elasticsearch elasticsearch-cdm-1pbrl44l-1-55b7546f4c-mshhk <span class="nt">--</span> health</code></pre>
 </div>
 </div>
 <div class="listingblock">
+<div class="title">Example output</div>
 <div class="content">
 <pre class="rouge highlight nowrap"><code data-lang="json"><span class="p">{</span><span class="w">
   </span><span class="nl">"cluster_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"elasticsearch"</span><span class="p">,</span><span class="w">
@@ -35620,7 +35841,7 @@ elasticsearch-cdm-1pbrl44l-3-88df5d47-m45jc     2/2     Running   0          29m
 </div>
 </li>
 <li>
-<p>Ensure that the Elasticsearch cron jobs are created:</p>
+<p>Verify that the Elasticsearch cron jobs are created by entering the following commands and observing the output:</p>
 <div class="listingblock">
 <div class="content">
 <pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="gp">$</span><span class="w"> </span>oc project openshift-logging</code></pre>
@@ -35632,6 +35853,7 @@ elasticsearch-cdm-1pbrl44l-3-88df5d47-m45jc     2/2     Running   0          29m
 </div>
 </div>
 <div class="listingblock">
+<div class="title">Example output</div>
 <div class="content">
 <pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="go">NAME                     SCHEDULE       SUSPEND   ACTIVE   LAST SCHEDULE   AGE
 </span><span class="gp">elasticsearch-im-app     */15 * * * *   False     0        &lt;none&gt;</span><span class="w">          </span>56s
@@ -35641,15 +35863,15 @@ elasticsearch-cdm-1pbrl44l-3-88df5d47-m45jc     2/2     Running   0          29m
 </div>
 </li>
 <li>
-<p>Verify that the log store is updated to 5.x and the indices are <code>green</code>:</p>
+<p>Verify that the log store is updated to the correct version and the indices are <code>green</code> by entering the following command and observing the output:</p>
 <div class="listingblock">
 <div class="content">
 <pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="gp">$</span><span class="w"> </span>oc <span class="nb">exec</span> <span class="nt">-c</span> elasticsearch &lt;any_es_pod_in_the_cluster&gt; <span class="nt">--</span> indices</code></pre>
 </div>
 </div>
-</li>
-<li>
-<p>Verify that the output includes the <code>app-00000x</code>, <code>infra-00000x</code>, <code>audit-00000x</code>, <code>.security</code> indices.</p>
+<div class="paragraph">
+<p>Verify that the output includes the <code>app-00000x</code>, <code>infra-00000x</code>, <code>audit-00000x</code>, <code>.security</code> indices:</p>
+</div>
 <details>
 <summary class="title">Sample output with indices in a green status</summary>
 <div class="content">
@@ -35686,31 +35908,15 @@ green  open   audit-000001                                                      
 </details>
 </li>
 <li>
-<p>Verify that the log collector is updated:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="gp">$</span><span class="w"> </span>oc get ds collector <span class="nt">-o</span> json | <span class="nb">grep </span>collector</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Verify that the output includes a <code>collectort</code> container:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="go">"containerName": "collector"</span></code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Verify that the log visualizer is updated to 5.x using the Kibana CRD:</p>
+<p>Verify that the log visualizer is updated to the correct version by entering the following command and observing the output:</p>
 <div class="listingblock">
 <div class="content">
 <pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="gp">$</span><span class="w"> </span>oc get kibana kibana <span class="nt">-o</span> json</code></pre>
 </div>
 </div>
-</li>
-<li>
+<div class="paragraph">
 <p>Verify that the output includes a Kibana pod with the <code>ready</code> status:</p>
+</div>
 <details>
 <summary class="title">Sample output with a ready Kibana pod</summary>
 <div class="content">
@@ -35750,9 +35956,6 @@ green  open   audit-000001                                                      
 </div>
 </div>
 </details>
-</li>
-</ol>
-</div>
 </li>
 </ol>
 </div>

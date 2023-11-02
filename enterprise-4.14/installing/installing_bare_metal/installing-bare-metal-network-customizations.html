@@ -21599,6 +21599,30 @@
 
 
                   <li>
+                    <a class="" href="../../logging/logging_release_notes/logging-5-8-release-notes.html">
+                      Logging 5.8
+                    </a>
+                  </li>
+
+                
+
+
+                <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
+                     Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
+
+                
+                
+                
+                
+                
+
+                <!-- is this is a single page? That is, does this topic have more topics?
+                 Welcome 2 Index Page and Welcome 2 More -->
+
+
+
+
+                  <li>
                     <a class="" href="../../logging/logging_release_notes/logging-5-7-release-notes.html">
                       Logging 5.7
                     </a>
@@ -21862,21 +21886,34 @@
         Welcome 2 and Welcome 1 More -->
 
 
+          <!-- is this is a single page? That is, does this topic have more topics?
+          Welcome 1 More -->
+
+            <!-- ^ this establishs whether we are reading this current page -->
+
+            <li><a class="" href="../../logging/cluster-logging-upgrading.html">Updating Logging</a></li>
+            <!--  if active, then highlight it,  otherwise nothing to do -->
+
+
+        <!-- for each topic in this topic_group, for example in Welcome 1, what topics exist?
+        Welcome 2 and Welcome 1 More -->
+
+
             <!-- this topic contains subtopics - Welcome 2 -->
 
 
             <!-- start a new heading area -->
 
             <li class="nav-header">
-              <a class="" href="javascript:void(0);" data-toggle="collapse" data-target="#topicSubGroup-25-7">
-                <span id="sgSpan-25-7" class="fa fa-caret-right"></span>
+              <a class="" href="javascript:void(0);" data-toggle="collapse" data-target="#topicSubGroup-25-8">
+                <span id="sgSpan-25-8" class="fa fa-caret-right"></span>
                   &nbsp;Configuring your Logging deployment
 
                   <!-- prints out the names of the second level books with arrow down or to right
                   So in this case: Welcome 2 -->
 
               </a>
-              <ul id="topicSubGroup-25-7" class="nav-tertiary list-unstyled collapse">
+              <ul id="topicSubGroup-25-8" class="nav-tertiary list-unstyled collapse">
 
                 <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
                      Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
@@ -22121,15 +22158,15 @@
             <!-- start a new heading area -->
 
             <li class="nav-header">
-              <a class="" href="javascript:void(0);" data-toggle="collapse" data-target="#topicSubGroup-25-11">
-                <span id="sgSpan-25-11" class="fa fa-caret-right"></span>
+              <a class="" href="javascript:void(0);" data-toggle="collapse" data-target="#topicSubGroup-25-12">
+                <span id="sgSpan-25-12" class="fa fa-caret-right"></span>
                   &nbsp;Log collection and forwarding
 
                   <!-- prints out the names of the second level books with arrow down or to right
                   So in this case: Welcome 2 -->
 
               </a>
-              <ul id="topicSubGroup-25-11" class="nav-tertiary list-unstyled collapse">
+              <ul id="topicSubGroup-25-12" class="nav-tertiary list-unstyled collapse">
 
                 <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
                      Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
@@ -22252,19 +22289,6 @@
 
               </ul>
             </li>
-
-        <!-- for each topic in this topic_group, for example in Welcome 1, what topics exist?
-        Welcome 2 and Welcome 1 More -->
-
-
-          <!-- is this is a single page? That is, does this topic have more topics?
-          Welcome 1 More -->
-
-            <!-- ^ this establishs whether we are reading this current page -->
-
-            <li><a class="" href="../../logging/cluster-logging-upgrading.html">Updating Logging</a></li>
-            <!--  if active, then highlight it,  otherwise nothing to do -->
-
 
         <!-- for each topic in this topic_group, for example in Welcome 1, what topics exist?
         Welcome 2 and Welcome 1 More -->
@@ -32360,6 +32384,30 @@
 
 
                   <li>
+                    <a class="" href="../../distr_tracing/distr_tracing_rn/distr-tracing-rn-2-9-2.html">
+                      2.9.2
+                    </a>
+                  </li>
+
+                
+
+
+                <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
+                     Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
+
+                
+                
+                
+                
+                
+
+                <!-- is this is a single page? That is, does this topic have more topics?
+                 Welcome 2 Index Page and Welcome 2 More -->
+
+
+
+
+                  <li>
                     <a class="" href="../../distr_tracing/distr_tracing_rn/distr-tracing-rn-2-9-1.html">
                       2.9.1
                     </a>
@@ -39910,7 +39958,7 @@ or the <code>ignition.config.url</code> option will be ignored.</p>
 <p>Configure network settings without the need for kernel arguments.</p>
 </li>
 <li>
-<p>Embed arbitrary pre-install and post-install scripts or binaries.</p>
+<p>Embed arbitrary preinstall and post-install scripts or binaries.</p>
 </li>
 </ul>
 </div>
@@ -39941,25 +39989,21 @@ subcommand. When you boot the ISO image, the customizations are applied automati
 </span></code></pre>
 </div>
 </div>
-</li>
-</ol>
-</div>
 <div class="colist arabic">
 <table>
 <tr>
 <td><i class="conum" data-value="1"></i><b>1</b></td>
-<td>The Ignition config file that is generated from <code>openshift-installer</code>.</td>
+<td>The Ignition config file that is generated from the <code>openshift-installer</code> installation program.</td>
 </tr>
 <tr>
 <td><i class="conum" data-value="2"></i><b>2</b></td>
-<td>When you specify this option, the ISO image automatically runs an install. Otherwise, the image remains configured for installing, but does not do so automatically unless you specify the <code>coreos.inst.install_dev</code> kernel argument.
-<div class="paragraph">
-<p>Your customizations are applied and affect every subsequent boot of the ISO image.</p>
+<td>When you specify this option, the ISO image automatically runs an installation. Otherwise, the image remains configured for installation, but does not install automatically unless you specify the <code>coreos.inst.install_dev</code> kernel argument.</td>
+</tr>
+</table>
 </div>
-<div class="olist arabic">
-<ol class="arabic">
+</li>
 <li>
-<p>To remove the ISO image customizations and return the image to its pristine state, run:</p>
+<p>Optional: To remove the ISO image customizations and return the image to its pristine state, run:</p>
 <div class="listingblock">
 <div class="content">
 <pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="gp">$</span><span class="w"> </span>coreos-installer iso reset rhcos-&lt;version&gt;-live.x86_64.iso</code></pre>
@@ -39970,9 +40014,9 @@ subcommand. When you boot the ISO image, the customizations are applied automati
 </div>
 </li>
 </ol>
-</div></td>
-</tr>
-</table>
+</div>
+<div class="paragraph">
+<p>Applying your customizations affects every subsequent boot of RHCOS.</p>
 </div>
 <div class="sect4">
 <h5 id="installation-user-infra-machines-advanced-customizing-live-iso-serial-console_installing-bare-metal-network-customizations"><a class="anchor" href="#installation-user-infra-machines-advanced-customizing-live-iso-serial-console_installing-bare-metal-network-customizations"></a>Modifying a live install ISO image to enable the serial console</h5>
@@ -40053,6 +40097,20 @@ subcommand. When you boot the ISO image, the customizations are applied automati
 <div class="paragraph">
 <p>You can provide certificate authority (CA) certificates to Ignition with the <code>--ignition-ca</code> flag of the <code>customize</code> subcommand. You can use the CA certificates during both the installation boot and when provisioning the installed system.</p>
 </div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Custom CA certificates affect how Ignition fetches remote resources but they do not affect the certificates installed onto the system.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
 <div class="olist arabic">
 <div class="title">Procedure</div>
 <ol class="arabic">
@@ -40065,6 +40123,9 @@ subcommand. When you boot the ISO image, the customizations are applied automati
 <div class="content">
 <pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="gp">$</span><span class="w"> </span>coreos-installer iso customize rhcos-&lt;version&gt;-live.x86_64.iso <span class="nt">--ignition-ca</span> cert.pem</code></pre>
 </div>
+</div>
+</li>
+</ol>
 </div>
 <div class="admonitionblock important">
 <table>
@@ -40081,25 +40142,8 @@ You must use the <code>--dest-ignition</code> flag to create a customized image 
 </tr>
 </table>
 </div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
 <div class="paragraph">
-<p>Custom CA certificates affect how Ignition fetches remote resources but they do not affect the certificates installed onto the system.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>Your CA certificate is applied and affects every subsequent boot of the ISO image.</p>
-</div>
-</li>
-</ol>
+<p>Applying your custom CA certificate affects every subsequent boot of RHCOS.</p>
 </div>
 </div>
 <div class="sect4">
@@ -40232,7 +40276,7 @@ subcommand. When you boot the PXE environment, the customizations are applied au
 <pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="gp">$</span><span class="w"> </span>coreos-installer pxe customize rhcos-&lt;version&gt;-live-initramfs.x86_64.img <span class="se">\</span>
     <span class="nt">--dest-ignition</span> bootstrap.ign <span class="se">\ </span><i class="conum" data-value="1"></i><b>(1)</b>
 <span class="gp">    --dest-device /dev/disk/by-id/scsi-&lt;serial_number&gt;</span><span class="w"> </span><span class="se">\ </span><i class="conum" data-value="2"></i><b>(2)</b>
-<span class="gp">    -o rhcos-&lt;version&gt;</span><span class="nt">-custom-initramfs</span>.x86_64.img</code></pre>
+<span class="gp">    -o rhcos-&lt;version&gt;</span><span class="nt">-custom-initramfs</span>.x86_64.img <i class="conum" data-value="3"></i><b>(3)</b></code></pre>
 </div>
 </div>
 <div class="colist arabic">
@@ -40245,13 +40289,17 @@ subcommand. When you boot the PXE environment, the customizations are applied au
 <td><i class="conum" data-value="2"></i><b>2</b></td>
 <td>When you specify this option, the PXE environment automatically runs an install. Otherwise, the image remains configured for installing, but does not do so automatically unless you specify the <code>coreos.inst.install_dev</code> kernel argument.</td>
 </tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>Use the customized <code>initramfs</code> file in your PXE configuration. Add the <code>ignition.firstboot</code> and <code>ignition.platform.id=metal</code> kernel arguments if they are not already present.</td>
+</tr>
 </table>
-</div>
-<div class="paragraph">
-<p>Your customizations are applied and affect every subsequent boot of the PXE environment.</p>
 </div>
 </li>
 </ol>
+</div>
+<div class="paragraph">
+<p>Applying your customizations affects every subsequent boot of RHCOS.</p>
 </div>
 <div class="sect4">
 <h5 id="installation-user-infra-machines-advanced-customizing-live-pxe-serial-console_installing-bare-metal-network-customizations"><a class="anchor" href="#installation-user-infra-machines-advanced-customizing-live-pxe-serial-console_installing-bare-metal-network-customizations"></a>Modifying a live install PXE environment to enable the serial console</h5>
@@ -40273,7 +40321,7 @@ subcommand. When you boot the PXE environment, the customizations are applied au
   <span class="nt">--dest-console</span> tty0 <span class="se">\</span><i class="conum" data-value="2"></i><b>(2)</b>
   <span class="nt">--dest-console</span> ttyS0,&lt;options&gt; <span class="se">\</span><i class="conum" data-value="3"></i><b>(3)</b>
   <span class="nt">--dest-device</span> /dev/disk/by-id/scsi-&lt;serial_number&gt; <span class="se">\</span><i class="conum" data-value="4"></i><b>(4)</b>
-  <span class="nt">-o</span> rhcos-&lt;version&gt;-custom-initramfs.x86_64.img</code></pre>
+  <span class="nt">-o</span> rhcos-&lt;version&gt;-custom-initramfs.x86_64.img <i class="conum" data-value="5"></i><b>(5)</b></code></pre>
 </div>
 </div>
 <div class="colist arabic">
@@ -40294,6 +40342,10 @@ subcommand. When you boot the PXE environment, the customizations are applied au
 <td><i class="conum" data-value="4"></i><b>4</b></td>
 <td>The specified disk to install to. If you omit this option, the PXE environment automatically runs the installer which will fail unless you also specify the <code>coreos.inst.install_dev</code> kernel argument.</td>
 </tr>
+<tr>
+<td><i class="conum" data-value="5"></i><b>5</b></td>
+<td>Use the customized <code>initramfs</code> file in your PXE configuration. Add the <code>ignition.firstboot</code> and <code>ignition.platform.id=metal</code> kernel arguments if they are not already present.</td>
+</tr>
 </table>
 </div>
 <div class="paragraph">
@@ -40307,6 +40359,20 @@ subcommand. When you boot the PXE environment, the customizations are applied au
 <h5 id="installation-user-infra-machines-advanced-customizing-live-pxe-ca-certs_installing-bare-metal-network-customizations"><a class="anchor" href="#installation-user-infra-machines-advanced-customizing-live-pxe-ca-certs_installing-bare-metal-network-customizations"></a>Modifying a live install PXE environment to use a custom certificate authority</h5>
 <div class="paragraph">
 <p>You can provide certificate authority (CA) certificates to Ignition with the <code>--ignition-ca</code> flag of the <code>customize</code> subcommand. You can use the CA certificates during both the installation boot and when provisioning the installed system.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Custom CA certificates affect how Ignition fetches remote resources but they do not affect the certificates installed onto the system.</p>
+</div>
+</td>
+</tr>
+</table>
 </div>
 <div class="olist arabic">
 <div class="title">Procedure</div>
@@ -40323,6 +40389,12 @@ subcommand. When you boot the PXE environment, the customizations are applied au
     <span class="nt">-o</span> rhcos-&lt;version&gt;-custom-initramfs.x86_64.img</code></pre>
 </div>
 </div>
+</li>
+<li>
+<p>Use the customized <code>initramfs</code> file in your PXE configuration. Add the <code>ignition.firstboot</code> and <code>ignition.platform.id=metal</code> kernel arguments if they are not already present.</p>
+</li>
+</ol>
+</div>
 <div class="admonitionblock important">
 <table>
 <tr>
@@ -40338,25 +40410,8 @@ You must use the <code>--dest-ignition</code> flag to create a customized image 
 </tr>
 </table>
 </div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
 <div class="paragraph">
-<p>Custom CA certificates affect how Ignition fetches remote resources but they do not affect the certificates installed onto the system.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>Your CA certificate is applied and affects every subsequent boot of the PXE environment.</p>
-</div>
-</li>
-</ol>
+<p>Applying your custom CA certificate affects every subsequent boot of RHCOS.</p>
 </div>
 </div>
 <div class="sect4">
@@ -40459,6 +40514,9 @@ You must use the <code>--dest-ignition</code> flag to create a customized image 
     <span class="nt">-o</span> rhcos-&lt;version&gt;-custom-initramfs.x86_64.img</code></pre>
 </div>
 </div>
+</li>
+<li>
+<p>Use the customized <code>initramfs</code> file in your PXE configuration. Add the <code>ignition.firstboot</code> and <code>ignition.platform.id=metal</code> kernel arguments if they are not already present.</p>
 <div class="paragraph">
 <p>Network settings are applied to the live system and are carried over to the destination system.</p>
 </div>
@@ -40509,7 +40567,7 @@ You must use the <code>--dest-ignition</code> flag to create a customized image 
 </table>
 </div>
 <div class="paragraph">
-<p>The networking options are passed to the <code>dracut</code> tool during system boot. For more information about the networking options supported by <code>dracut</code>, see the <code>dracut.cmdline</code> manual page.</p>
+<p>The networking options are passed to the <code>dracut</code> tool during system boot. For more information about the networking options supported by <code>dracut</code>, see the <a href="https://www.man7.org/linux/man-pages/man7/dracut.cmdline.7.html"><code>dracut.cmdline</code> manual page</a>.</p>
 </div>
 <div class="paragraph">
 <p>The following examples are the networking options for ISO installation.</p>
@@ -41505,7 +41563,7 @@ ip=team0:dhcp</span></code></pre>
 <p>RHCOS supports multipathing on the primary disk, allowing stronger resilience to hardware failure to achieve higher host availability.</p>
 </div>
 <div class="paragraph">
-<p>You can enable multipathing at installation time for nodes that were provisioned in OpenShift Container Platform 4.8 or later. While post-installation support is available by activating multipathing via the machine config, enabling multipathing during installation is recommended.</p>
+<p>You can enable multipathing at installation time for nodes that were provisioned in OpenShift Container Platform 4.8 or later. While postinstallation support is available by activating multipathing via the machine config, enabling multipathing during installation is recommended.</p>
 </div>
 <div class="paragraph">
 <p>In setups where any I/O to non-optimized paths results in I/O system errors, you must enable multipathing at installation time.</p>
