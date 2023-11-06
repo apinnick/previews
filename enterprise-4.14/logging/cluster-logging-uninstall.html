@@ -21682,30 +21682,6 @@
 
 
                   <li>
-                    <a class="" href="../logging/v5_7/logging-5-7-configuration.html">
-                      Configuring Logging
-                    </a>
-                  </li>
-
-                
-
-
-                <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
-                     Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
-
-                
-                
-                
-                
-                
-
-                <!-- is this is a single page? That is, does this topic have more topics?
-                 Welcome 2 Index Page and Welcome 2 More -->
-
-
-
-
-                  <li>
                     <a class="" href="../logging/v5_7/logging-5-7-administration.html">
                       Administering Logging
                     </a>
@@ -21735,30 +21711,6 @@
 
               </a>
               <ul id="topicSubGroup-25-3" class="nav-tertiary list-unstyled collapse">
-
-                <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
-                     Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
-
-                
-                
-                
-                
-                
-
-                <!-- is this is a single page? That is, does this topic have more topics?
-                 Welcome 2 Index Page and Welcome 2 More -->
-
-
-
-
-                  <li>
-                    <a class="" href="../logging/v5_6/logging-5-6-configuration.html">
-                      Configuring Logging
-                    </a>
-                  </li>
-
-                
-
 
                 <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
                      Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
@@ -21981,30 +21933,6 @@
                   <li>
                     <a class="" href="../logging/config/cluster-logging-visualizer.html">
                       Configuring the log visualizer
-                    </a>
-                  </li>
-
-                
-
-
-                <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
-                     Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
-
-                
-                
-                
-                
-                
-
-                <!-- is this is a single page? That is, does this topic have more topics?
-                 Welcome 2 Index Page and Welcome 2 More -->
-
-
-
-
-                  <li>
-                    <a class="" href="../logging/config/cluster-logging-storage-considerations.html">
-                      Configuring Logging storage
                     </a>
                   </li>
 
@@ -35489,6 +35417,8 @@
 <div id="toctitle" class="title"></div>
 <ul class="sectlevel1">
 <li><a href="#cluster-logging-uninstall_cluster-logging-uninstall">Uninstalling the logging subsystem for Red Hat OpenShift</a></li>
+<li><a href="#olm-deleting-operators-from-a-cluster-using-web-console_cluster-logging-uninstall">Deleting Operators from a cluster using the web console</a></li>
+<li><a href="#olm-deleting-operator-from-a-cluster-using-cli_cluster-logging-uninstall">Deleting Operators from a cluster using the CLI</a></li>
 </ul>
 </div>
 <div class="paragraph">
@@ -35642,6 +35572,124 @@ OpenShift Container Platform web console
 <p>If you want to recover storage space, you can delete the PVs.</p>
 </li>
 </ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="olm-deleting-operators-from-a-cluster-using-web-console_cluster-logging-uninstall"><a class="anchor" href="#olm-deleting-operators-from-a-cluster-using-web-console_cluster-logging-uninstall"></a>Deleting Operators from a cluster using the web console</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Cluster administrators can delete installed Operators from a selected namespace by using the web console.</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>You have access to an OpenShift Container Platform cluster web console using an account with
+<code>cluster-admin</code> permissions.</p>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Navigate to the <strong>Operators</strong> → <strong>Installed Operators</strong> page.</p>
+</li>
+<li>
+<p>Scroll or enter a keyword into the <strong>Filter by name</strong> field to find the Operator that you want to remove. Then, click on it.</p>
+</li>
+<li>
+<p>On the right side of the <strong>Operator Details</strong> page, select <strong>Uninstall Operator</strong> from the <strong>Actions</strong> list.</p>
+<div class="paragraph">
+<p>An <strong>Uninstall Operator?</strong> dialog box is displayed.</p>
+</div>
+</li>
+<li>
+<p>Select <strong>Uninstall</strong> to remove the Operator, Operator deployments, and pods. Following this action, the Operator stops running and no longer receives updates.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>This action does not remove resources managed by the Operator, including custom resource definitions (CRDs) and custom resources (CRs). Dashboards and navigation items enabled by the web console and off-cluster resources that continue to run might need manual clean up. To remove these after uninstalling the Operator, you might need to manually delete the Operator CRDs.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="olm-deleting-operator-from-a-cluster-using-cli_cluster-logging-uninstall"><a class="anchor" href="#olm-deleting-operator-from-a-cluster-using-cli_cluster-logging-uninstall"></a>Deleting Operators from a cluster using the CLI</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Cluster administrators can delete installed Operators from a selected namespace by using the CLI.</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>You have access to an OpenShift Container Platform cluster using an account with
+<code>cluster-admin</code> permissions.</p>
+</li>
+<li>
+<p>The OpenShift CLI (<code>oc</code>) is installed on your workstation.</p>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Check the current version of the subscribed Operator (for example, <code>jaeger</code>) in the <code>currentCSV</code> field:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="gp">$</span><span class="w"> </span>oc get subscription jaeger <span class="nt">-n</span> openshift-operators <span class="nt">-o</span> yaml | <span class="nb">grep </span>currentCSV</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example output</div>
+<div class="content">
+<pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="go">  currentCSV: jaeger-operator.v1.8.2</span></code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Delete the subscription (for example, <code>jaeger</code>):</p>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="gp">$</span><span class="w"> </span>oc delete subscription jaeger <span class="nt">-n</span> openshift-operators</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example output</div>
+<div class="content">
+<pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="go">subscription.operators.coreos.com "jaeger" deleted</span></code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Delete the CSV for the Operator in the target namespace using the <code>currentCSV</code> value from the previous step:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="gp">$</span><span class="w"> </span>oc delete clusterserviceversion jaeger-operator.v1.8.2 <span class="nt">-n</span> openshift-operators</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example output</div>
+<div class="content">
+<pre class="rouge highlight nowrap"><code data-lang="terminal"><span class="go">clusterserviceversion.operators.coreos.com "jaeger-operator.v1.8.2" deleted</span></code></pre>
+</div>
 </div>
 </li>
 </ol>

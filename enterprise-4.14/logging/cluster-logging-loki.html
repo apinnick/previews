@@ -21682,30 +21682,6 @@
 
 
                   <li>
-                    <a class="" href="../logging/v5_7/logging-5-7-configuration.html">
-                      Configuring Logging
-                    </a>
-                  </li>
-
-                
-
-
-                <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
-                     Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
-
-                
-                
-                
-                
-                
-
-                <!-- is this is a single page? That is, does this topic have more topics?
-                 Welcome 2 Index Page and Welcome 2 More -->
-
-
-
-
-                  <li>
                     <a class="" href="../logging/v5_7/logging-5-7-administration.html">
                       Administering Logging
                     </a>
@@ -21735,30 +21711,6 @@
 
               </a>
               <ul id="topicSubGroup-25-3" class="nav-tertiary list-unstyled collapse">
-
-                <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
-                     Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
-
-                
-                
-                
-                
-                
-
-                <!-- is this is a single page? That is, does this topic have more topics?
-                 Welcome 2 Index Page and Welcome 2 More -->
-
-
-
-
-                  <li>
-                    <a class="" href="../logging/v5_6/logging-5-6-configuration.html">
-                      Configuring Logging
-                    </a>
-                  </li>
-
-                
-
 
                 <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
                      Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
@@ -21981,30 +21933,6 @@
                   <li>
                     <a class="" href="../logging/config/cluster-logging-visualizer.html">
                       Configuring the log visualizer
-                    </a>
-                  </li>
-
-                
-
-
-                <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
-                     Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
-
-                
-                
-                
-                
-                
-
-                <!-- is this is a single page? That is, does this topic have more topics?
-                 Welcome 2 Index Page and Welcome 2 More -->
-
-
-
-
-                  <li>
-                    <a class="" href="../logging/config/cluster-logging-storage-considerations.html">
-                      Configuring Logging storage
                     </a>
                   </li>
 
@@ -35662,7 +35590,7 @@
 <div class="title">Prerequisites</div>
 <ul>
 <li>
-<p>Logging subsystem for Red Hat OpenShift Operator 5.5 and later</p>
+<p>You have installed the Cluster Logging Operator.</p>
 </li>
 <li>
 <p>Supported Log Store (AWS S3, Google Cloud Storage, Azure, Swift, Minio, OpenShift Data Foundation)</p>
@@ -35673,7 +35601,7 @@
 <div class="title">Procedure</div>
 <ol class="arabic">
 <li>
-<p>Install the <code>Loki Operator</code> Operator:</p>
+<p>Install the Loki Operator:</p>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
@@ -35683,7 +35611,7 @@
 <p>Choose  <strong>Loki Operator</strong> from the list of available Operators, and click <strong>Install</strong>.</p>
 </li>
 <li>
-<p>Under <strong>Installation Mode</strong>, select <strong>All namespaces on the cluster</strong>.</p>
+<p>Under <strong>Installation mode</strong>, select <strong>All namespaces on the cluster</strong>.</p>
 </li>
 <li>
 <p>Under <strong>Installed Namespace</strong>, select <strong>openshift-operators-redhat</strong>.</p>
@@ -35699,7 +35627,7 @@ an OpenShift Container Platform metric, which would cause conflicts.</p>
 </div>
 </li>
 <li>
-<p>Select an <strong>Approval Strategy</strong>.</p>
+<p>Select an <strong>Update approval</strong>.</p>
 <div class="ulist">
 <ul>
 <li>
@@ -35810,14 +35738,14 @@ an OpenShift Container Platform metric, which would cause conflicts.</p>
 </div>
 </li>
 <li>
-<p>Enable the RedHat OpenShift Logging Console Plugin:</p>
+<p>Enable the Red Hat OpenShift Logging Console Plugin:</p>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
 <p>In the OpenShift Container Platform web console, click <strong>Operators</strong> &#8594; <strong>Installed Operators</strong>.</p>
 </li>
 <li>
-<p>Select the <strong>RedHat OpenShift Logging</strong> Operator.</p>
+<p>Select the <strong>Red Hat OpenShift Logging</strong> Operator.</p>
 </li>
 <li>
 <p>Under Console plugin, click <strong>Disabled</strong>.</p>

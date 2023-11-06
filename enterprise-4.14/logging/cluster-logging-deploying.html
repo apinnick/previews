@@ -21682,30 +21682,6 @@
 
 
                   <li>
-                    <a class="" href="../logging/v5_7/logging-5-7-configuration.html">
-                      Configuring Logging
-                    </a>
-                  </li>
-
-                
-
-
-                <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
-                     Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
-
-                
-                
-                
-                
-                
-
-                <!-- is this is a single page? That is, does this topic have more topics?
-                 Welcome 2 Index Page and Welcome 2 More -->
-
-
-
-
-                  <li>
                     <a class="" href="../logging/v5_7/logging-5-7-administration.html">
                       Administering Logging
                     </a>
@@ -21735,30 +21711,6 @@
 
               </a>
               <ul id="topicSubGroup-25-3" class="nav-tertiary list-unstyled collapse">
-
-                <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
-                     Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
-
-                
-                
-                
-                
-                
-
-                <!-- is this is a single page? That is, does this topic have more topics?
-                 Welcome 2 Index Page and Welcome 2 More -->
-
-
-
-
-                  <li>
-                    <a class="" href="../logging/v5_6/logging-5-6-configuration.html">
-                      Configuring Logging
-                    </a>
-                  </li>
-
-                
-
 
                 <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
                      Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
@@ -21981,30 +21933,6 @@
                   <li>
                     <a class="" href="../logging/config/cluster-logging-visualizer.html">
                       Configuring the log visualizer
-                    </a>
-                  </li>
-
-                
-
-
-                <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
-                     Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
-
-                
-                
-                
-                
-                
-
-                <!-- is this is a single page? That is, does this topic have more topics?
-                 Welcome 2 Index Page and Welcome 2 More -->
-
-
-
-
-                  <li>
-                    <a class="" href="../logging/config/cluster-logging-storage-considerations.html">
-                      Configuring Logging storage
                     </a>
                   </li>
 
@@ -35478,7 +35406,7 @@
       <div class="col-xs-12 col-sm-9 col-md-9 main">
         <div class="page-header">
           <h1>
-            Installing the logging subsystem for Red Hat OpenShift
+            Installing Logging
           </h1>
         </div>
         
@@ -35487,6 +35415,12 @@
 <div id="toctitle"></div>
 <ul class="sectlevel1">
 <li><a href="#cluster-logging-deploy-console_cluster-logging-deploying">Installing the logging subsystem for Red Hat OpenShift using the web console</a></li>
+<li><a href="#cluster-logging-deploying-es-operator">Installing the Elasticsearch Operator</a>
+<ul class="sectlevel2">
+<li><a href="#logging-es-storage-considerations_cluster-logging-deploying">Storage considerations for Elasticsearch</a></li>
+<li><a href="#logging-install-es-operator_cluster-logging-deploying">Installing the OpenShift Elasticsearch Operator by using the web console</a></li>
+</ul>
+</li>
 <li><a href="#postinstallation-tasks">Postinstallation tasks</a></li>
 <li><a href="#cluster-logging-deploy-cli_cluster-logging-deploying">Installing the logging subsystem for Red Hat OpenShift using the CLI</a></li>
 <li><a href="#postinstallation-tasks-2">Postinstallation tasks</a>
@@ -35501,21 +35435,7 @@
 <div class="sectionbody">
 <!-- toc disabled -->
 <div class="paragraph">
-<p>You can install the logging subsystem for Red Hat OpenShift by deploying the OpenShift Elasticsearch and Red Hat OpenShift Logging Operators. The OpenShift Elasticsearch Operator creates and manages the Elasticsearch cluster used by OpenShift Logging. The logging subsystem Operator creates and manages the components of the logging stack.</p>
-</div>
-<div class="paragraph">
-<p>The process for deploying the logging subsystem to OpenShift Container Platform
- involves:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Reviewing the <a href="../logging/config/cluster-logging-storage-considerations.html#cluster-logging-storage">Logging subsystem storage considerations</a>.</p>
-</li>
-<li>
-<p>Installing the logging subsystem for OpenShift Container Platform using <a href="../logging/cluster-logging-deploying.html#cluster-logging-deploy-console_cluster-logging-deploying">the web console</a> or <a href="../logging/cluster-logging-deploying.html#cluster-logging-deploy-cli_cluster-logging-deploying">the CLI</a>.</p>
-</li>
-</ul>
+<p>You can install the logging subsystem for Red Hat OpenShift by deploying the Red Hat OpenShift Logging Operator. The logging subsystem Operator creates and manages the components of the logging stack.</p>
 </div>
 <div class="admonitionblock important">
 <table>
@@ -35526,20 +35446,6 @@
 <td class="content">
 <div class="paragraph">
 <p>For new installations, Vector and LokiStack are recommended. Documentation for logging is in the process of being updated to reflect these underlying component changes.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-<div class="paragraph">
-<p>As of logging version 5.4.3 the OpenShift Elasticsearch Operator is deprecated and is planned to be removed in a future release. Red Hat will provide bug fixes and support for this feature during the current release lifecycle, but this feature will no longer receive enhancements and will be removed. As an alternative to using the OpenShift Elasticsearch Operator to manage the default log storage, you can use the Loki Operator.</p>
 </div>
 </td>
 </tr>
@@ -35564,8 +35470,19 @@
 <div class="sect1">
 <h2 id="cluster-logging-deploy-console_cluster-logging-deploying"><a class="anchor" href="#cluster-logging-deploy-console_cluster-logging-deploying"></a>Installing the logging subsystem for Red Hat OpenShift using the web console</h2>
 <div class="sectionbody">
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
 <div class="paragraph">
-<p>You can use the OpenShift Container Platform web console to install the OpenShift Elasticsearch and Red Hat OpenShift Logging Operators.</p>
+<p>If you do not want to use the default Elasticsearch log store, you can remove the internal Elasticsearch <code>logStore</code> and Kibana <code>visualization</code> components from the <code>ClusterLogging</code> custom resource (CR). Removing these components is optional but saves resources.</p>
+</div>
+</td>
+</tr>
+</table>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -35575,102 +35492,15 @@
 </td>
 <td class="content">
 <div class="paragraph">
-<p>If you do not want to use the default Elasticsearch log store, you can remove the internal Elasticsearch <code>logStore</code> and Kibana <code>visualization</code> components from the <code>ClusterLogging</code> custom resource (CR). Removing these components is optional but saves resources. For more information, see the additional resources of this section.</p>
+<p>Logging is provided as an installable component, with a distinct release cycle from the core OpenShift Container Platform. The <a href="https://access.redhat.com/support/policy/updates/openshift_operators#platform-agnostic">Red Hat OpenShift Container Platform Life Cycle Policy</a> outlines release compatibility.</p>
 </div>
 </td>
 </tr>
 </table>
-</div>
-<div class="ulist">
-<div class="title">Prerequisites</div>
-<ul>
-<li>
-<p>Ensure that you have the necessary persistent storage for Elasticsearch. Note that each Elasticsearch node
-requires its own storage volume.</p>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-<div class="paragraph">
-<p>If you use a local volume for persistent storage, do not use a raw block volume, which is described with <code>volumeMode: block</code> in the <code>LocalVolume</code> object. Elasticsearch cannot use raw block volumes.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>Elasticsearch is a memory-intensive application. By default, OpenShift Container Platform installs three Elasticsearch nodes with memory requests and limits of 16 GB. This initial set of three OpenShift Container Platform nodes might not have enough memory to run Elasticsearch within your cluster. If you experience memory issues that are related to Elasticsearch, add more Elasticsearch nodes to your cluster rather than increasing the memory on existing nodes.</p>
-</div>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<div class="title">Procedure</div>
-<p>To install the OpenShift Elasticsearch Operator and Red Hat OpenShift Logging Operator by using the OpenShift Container Platform web console:</p>
 </div>
 <div class="olist arabic">
+<div class="title">Procedure</div>
 <ol class="arabic">
-<li>
-<p>Install the OpenShift Elasticsearch Operator:</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>In the OpenShift Container Platform web console, click <strong>Operators</strong> &#8594; <strong>OperatorHub</strong>.</p>
-</li>
-<li>
-<p>Choose  <strong>OpenShift Elasticsearch Operator</strong> from the list of available Operators, and click <strong>Install</strong>.</p>
-</li>
-<li>
-<p>Ensure that the <strong>All namespaces on the cluster</strong> is selected under <strong>Installation Mode</strong>.</p>
-</li>
-<li>
-<p>Ensure that <strong>openshift-operators-redhat</strong> is selected under <strong>Installed Namespace</strong>.</p>
-<div class="paragraph">
-<p>You must specify the <code>openshift-operators-redhat</code> namespace. The <code>openshift-operators</code> namespace might contain Community Operators, which are untrusted and could publish a metric with the same name as
-metric, which would cause conflicts.</p>
-</div>
-</li>
-<li>
-<p>Select <strong>Enable operator recommended cluster monitoring on this namespace</strong>.</p>
-<div class="paragraph">
-<p>This option sets the <code>openshift.io/cluster-monitoring: "true"</code> label in the Namespace object. You must select this option to ensure that cluster monitoring scrapes the <code>openshift-operators-redhat</code> namespace.</p>
-</div>
-</li>
-<li>
-<p>Select <strong>stable-5.x</strong> as the <strong>Update Channel</strong>.</p>
-</li>
-<li>
-<p>Select an <strong>Approval Strategy</strong>.</p>
-<div class="ulist">
-<ul>
-<li>
-<p>The <strong>Automatic</strong> strategy allows Operator Lifecycle Manager (OLM) to automatically update the Operator when a new version is available.</p>
-</li>
-<li>
-<p>The <strong>Manual</strong> strategy requires a user with appropriate credentials to approve the Operator update.</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Click <strong>Install</strong>.</p>
-</li>
-<li>
-<p>Verify that the OpenShift Elasticsearch Operator installed by switching to the <strong>Operators</strong> → <strong>Installed Operators</strong> page.</p>
-</li>
-<li>
-<p>Ensure that <strong>OpenShift Elasticsearch Operator</strong> is listed in all projects with a <strong>Status</strong> of <strong>Succeeded</strong>.</p>
-</li>
-</ol>
-</div>
-</li>
-<li>
-<p>Install the Red Hat OpenShift Logging Operator:</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
 <li>
 <p>In the OpenShift Container Platform web console, click <strong>Operators</strong> &#8594; <strong>OperatorHub</strong>.</p>
 </li>
@@ -35678,7 +35508,7 @@ metric, which would cause conflicts.</p>
 <p>Choose  <strong>Red Hat OpenShift Logging</strong> from the list of available Operators, and click <strong>Install</strong>.</p>
 </li>
 <li>
-<p>Ensure that <strong>A specific namespace on the cluster</strong> is selected under <strong>Installation Mode</strong>.</p>
+<p>Ensure that <strong>A specific namespace on the cluster</strong> is selected under <strong>Installation mode</strong>.</p>
 </li>
 <li>
 <p>Ensure that <strong>Operator recommended namespace</strong> is <strong>openshift-logging</strong> under <strong>Installed Namespace</strong>.</p>
@@ -35690,10 +35520,28 @@ metric, which would cause conflicts.</p>
 </div>
 </li>
 <li>
-<p>Select <strong>stable-5.x</strong> as the <strong>Update Channel</strong>.</p>
+<p>Select <strong>stable-5.x</strong> as the <strong>Update channel</strong>.</p>
+<div class="openblock">
+<div class="content">
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The <code>stable</code> channel only provides updates to the most recent release of logging. To continue receiving updates for prior releases, you must change your subscription channel to <code>stable-X</code> where <code>X</code> is the version of logging you have installed.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
 </li>
 <li>
-<p>Select an <strong>Approval Strategy</strong>.</p>
+<p>Select an <strong>Update approval</strong>.</p>
 <div class="ulist">
 <ul>
 <li>
@@ -35706,7 +35554,22 @@ metric, which would cause conflicts.</p>
 </div>
 </li>
 <li>
+<p>Select <strong>Enable</strong> or <strong>Disable</strong> for the Console plugin.</p>
+</li>
+<li>
 <p>Click <strong>Install</strong>.</p>
+</li>
+</ol>
+</div>
+<div class="olist arabic">
+<div class="title">Verification</div>
+<ol class="arabic">
+<li>
+<p>Verify that the <strong>Red Hat OpenShift Logging Operator</strong> is installed by switching to the <strong>Operators</strong> → <strong>Installed Operators</strong> page.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Ensure that <strong>Red Hat OpenShift Logging</strong> is listed in the <strong>openshift-logging</strong> project with a <strong>Status</strong> of <strong>Succeeded</strong>.</p>
 </li>
 <li>
 <p>Verify that the Red Hat OpenShift Logging Operator installed by switching to the <strong>Operators</strong> → <strong>Installed Operators</strong> page.</p>
@@ -35726,6 +35589,72 @@ metric, which would cause conflicts.</p>
 </li>
 </ul>
 </div>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Create a <strong>ClusterLogging</strong> instance.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The form view of the web console does not include all available options. The <strong>YAML view</strong> is recommended for completing your setup.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>In the <strong>collection</strong> section, select a Collector Implementation.</p>
+<div class="openblock">
+<div class="content">
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>As of logging version 5.6 Fluentd is deprecated and is planned to be removed in a future release. Red Hat will provide bug fixes and support for this feature during the current release lifecycle, but this feature will no longer receive enhancements and will be removed. As an alternative to Fluentd, you can use Vector instead.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</li>
+<li>
+<p>In the <strong>logStore</strong> section, select a type.</p>
+<div class="openblock">
+<div class="content">
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>As of logging version 5.4.3 the OpenShift Elasticsearch Operator is deprecated and is planned to be removed in a future release. Red Hat will provide bug fixes and support for this feature during the current release lifecycle, but this feature will no longer receive enhancements and will be removed. As an alternative to using the OpenShift Elasticsearch Operator to manage the default log storage, you can use the Loki Operator.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</li>
+<li>
+<p>Click <strong>Create</strong>.</p>
 </li>
 </ol>
 </div>
@@ -35961,6 +35890,164 @@ elasticsearch-cdm-x6kdekli-3   0/1     1            0           6m44s</span></co
 </li>
 </ul>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="cluster-logging-deploying-es-operator"><a class="anchor" href="#cluster-logging-deploying-es-operator"></a>Installing the Elasticsearch Operator</h2>
+<div class="sectionbody">
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>As of logging version 5.4.3 the OpenShift Elasticsearch Operator is deprecated and is planned to be removed in a future release. Red Hat will provide bug fixes and support for this feature during the current release lifecycle, but this feature will no longer receive enhancements and will be removed. As an alternative to using the OpenShift Elasticsearch Operator to manage the default log storage, you can use the Loki Operator.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sect2">
+<h3 id="logging-es-storage-considerations_cluster-logging-deploying"><a class="anchor" href="#logging-es-storage-considerations_cluster-logging-deploying"></a>Storage considerations for Elasticsearch</h3>
+<div class="paragraph">
+<p>A persistent volume is required for each Elasticsearch deployment configuration. On OpenShift Container Platform this is achieved using persistent volume claims (PVCs).</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>If you use a local volume for persistent storage, do not use a raw block volume, which is described with <code>volumeMode: block</code> in the <code>LocalVolume</code> object. Elasticsearch cannot use raw block volumes.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The OpenShift Elasticsearch Operator names the PVCs using the Elasticsearch resource name.</p>
+</div>
+<div class="paragraph">
+<p>Fluentd ships any logs from <strong>systemd journal</strong> and <strong>/var/log/containers/*.log</strong> to Elasticsearch.</p>
+</div>
+<div class="paragraph">
+<p>Elasticsearch requires sufficient memory to perform large merge operations. If it does not have enough memory, it becomes unresponsive. To avoid this problem, evaluate how much application log data you need, and allocate approximately double that amount of free storage capacity.</p>
+</div>
+<div class="paragraph">
+<p>By default, when storage capacity is 85% full, Elasticsearch stops allocating new data to the node. At 90%, Elasticsearch attempts to relocate existing shards from that node to other nodes if possible. But if no nodes have a free capacity below 85%, Elasticsearch effectively rejects creating new indices and becomes RED.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>These low and high watermark values are Elasticsearch defaults in the current release. You can modify these default values. Although the alerts use the same default values, you cannot change these values in the alerts.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="logging-install-es-operator_cluster-logging-deploying"><a class="anchor" href="#logging-install-es-operator_cluster-logging-deploying"></a>Installing the OpenShift Elasticsearch Operator by using the web console</h3>
+<div class="paragraph">
+<p>The OpenShift Elasticsearch Operator creates and manages the Elasticsearch cluster used by OpenShift Logging.</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>Elasticsearch is a memory-intensive application. Each Elasticsearch node needs at least 16GB of memory for both memory requests and limits, unless you specify otherwise in the <code>ClusterLogging</code> custom resource.</p>
+<div class="paragraph">
+<p>The initial set of OpenShift Container Platform nodes might not be large enough to support the Elasticsearch cluster. You must add additional nodes to the OpenShift Container Platform cluster to run with the recommended or higher memory, up to a maximum of 64GB for each Elasticsearch node.</p>
+</div>
+<div class="paragraph">
+<p>Elasticsearch nodes can operate with a lower memory setting, though this is not recommended for production environments.</p>
+</div>
+</li>
+<li>
+<p>Ensure that you have the necessary persistent storage for Elasticsearch. Note that each Elasticsearch node
+requires its own storage volume.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>If you use a local volume for persistent storage, do not use a raw block volume, which is described with <code>volumeMode: block</code> in the <code>LocalVolume</code> object. Elasticsearch cannot use raw block volumes.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>In the OpenShift Container Platform web console, click <strong>Operators</strong> &#8594; <strong>OperatorHub</strong>.</p>
+</li>
+<li>
+<p>Click <strong>OpenShift Elasticsearch Operator</strong> from the list of available Operators, and click <strong>Install</strong>.</p>
+</li>
+<li>
+<p>Ensure that the <strong>All namespaces on the cluster</strong> is selected under <strong>Installation mode</strong>.</p>
+</li>
+<li>
+<p>Ensure that <strong>openshift-operators-redhat</strong> is selected under <strong>Installed Namespace</strong>.</p>
+<div class="paragraph">
+<p>You must specify the <code>openshift-operators-redhat</code> namespace. The <code>openshift-operators</code> namespace might contain Community Operators, which are untrusted and could publish a metric with the same name as OpenShift Container Platform metric, which would cause conflicts.</p>
+</div>
+</li>
+<li>
+<p>Select <strong>Enable operator recommended cluster monitoring on this namespace</strong>.</p>
+<div class="paragraph">
+<p>This option sets the <code>openshift.io/cluster-monitoring: "true"</code> label in the <code>Namespace</code> object. You must select this option to ensure that cluster monitoring scrapes the <code>openshift-operators-redhat</code> namespace.</p>
+</div>
+</li>
+<li>
+<p>Select <strong>stable-5.x</strong> as the <strong>Update channel</strong>.</p>
+</li>
+<li>
+<p>Select an <strong>Update approval</strong> strategy:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>The <strong>Automatic</strong> strategy allows Operator Lifecycle Manager (OLM) to automatically update the Operator when a new version is available.</p>
+</li>
+<li>
+<p>The <strong>Manual</strong> strategy requires a user with appropriate credentials to approve the Operator update.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Click <strong>Install</strong>.</p>
+</li>
+</ol>
+</div>
+<div class="olist arabic">
+<div class="title">Verification</div>
+<ol class="arabic">
+<li>
+<p>Verify that the OpenShift Elasticsearch Operator installed by switching to the <strong>Operators</strong> → <strong>Installed Operators</strong> page.</p>
+</li>
+<li>
+<p>Ensure that <strong>OpenShift Elasticsearch Operator</strong> is listed in all projects with a <strong>Status</strong> of <strong>Succeeded</strong>.</p>
+</li>
+</ol>
+</div>
 <div class="ulist _additional-resources">
 <div class="title">Additional resources</div>
 <ul>
@@ -35971,6 +36058,7 @@ elasticsearch-cdm-x6kdekli-3   0/1     1            0           6m44s</span></co
 <p><a href="../logging/config/cluster-logging-log-store.html#cluster-logging-removing-unused-components-if-no-elasticsearch_cluster-logging-log-store">Removing unused components if you do not use the default Elasticsearch log store</a></p>
 </li>
 </ul>
+</div>
 </div>
 </div>
 </div>

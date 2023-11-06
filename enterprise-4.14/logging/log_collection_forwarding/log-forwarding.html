@@ -21682,30 +21682,6 @@
 
 
                   <li>
-                    <a class="" href="../../logging/v5_7/logging-5-7-configuration.html">
-                      Configuring Logging
-                    </a>
-                  </li>
-
-                
-
-
-                <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
-                     Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
-
-                
-                
-                
-                
-                
-
-                <!-- is this is a single page? That is, does this topic have more topics?
-                 Welcome 2 Index Page and Welcome 2 More -->
-
-
-
-
-                  <li>
                     <a class="" href="../../logging/v5_7/logging-5-7-administration.html">
                       Administering Logging
                     </a>
@@ -21735,30 +21711,6 @@
 
               </a>
               <ul id="topicSubGroup-25-3" class="nav-tertiary list-unstyled collapse">
-
-                <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
-                     Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
-
-                
-                
-                
-                
-                
-
-                <!-- is this is a single page? That is, does this topic have more topics?
-                 Welcome 2 Index Page and Welcome 2 More -->
-
-
-
-
-                  <li>
-                    <a class="" href="../../logging/v5_6/logging-5-6-configuration.html">
-                      Configuring Logging
-                    </a>
-                  </li>
-
-                
-
 
                 <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
                      Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
@@ -21981,30 +21933,6 @@
                   <li>
                     <a class="" href="../../logging/config/cluster-logging-visualizer.html">
                       Configuring the log visualizer
-                    </a>
-                  </li>
-
-                
-
-
-                <!-- for each topic in this topic_group, in Welcome 2, what topics exist?
-                     Welcome 2 Index Page, Welcome 3 and Welcome 2 More - we list them all.. -->
-
-                
-                
-                
-                
-                
-
-                <!-- is this is a single page? That is, does this topic have more topics?
-                 Welcome 2 Index Page and Welcome 2 More -->
-
-
-
-
-                  <li>
-                    <a class="" href="../../logging/config/cluster-logging-storage-considerations.html">
-                      Configuring Logging storage
                     </a>
                   </li>
 
@@ -35507,6 +35435,12 @@
 </ul>
 </li>
 <li><a href="#logging-create-clf_log-forwarding">Creating a log forwarder</a></li>
+<li><a href="#logging-multiline-except_log-forwarding">Enabling multi-line exception detection</a>
+<ul class="sectlevel2">
+<li><a href="#details">Details</a></li>
+<li><a href="#troubleshooting">Troubleshooting</a></li>
+</ul>
+</li>
 <li><a href="#log-forwarding-audit-logs">Sending audit logs to the internal log store</a></li>
 <li><a href="#cluster-logging-collector-log-forwarding-about_log-forwarding">About forwarding logs to third-party systems</a>
 <ul class="sectlevel2">
@@ -36327,6 +36261,155 @@ If you are using a legacy implementation, the <code>ClusterLogForwarder</code> C
 <td>The URL of the output that you want to forward logs to.</td>
 </tr>
 </table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="logging-multiline-except_log-forwarding"><a class="anchor" href="#logging-multiline-except_log-forwarding"></a>Enabling multi-line exception detection</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Enables multi-line error detection of container logs.</p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Enabling this feature could have performance implications and may require additional computing resources or alternate logging solutions.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Log parsers often incorrectly identify separate lines of the same exception as separate exceptions. This leads to extra log entries and an incomplete or inaccurate view of the traced information.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example java exception</div>
+<div class="content">
+<pre class="rouge highlight nowrap"><code data-lang="text">java.lang.NullPointerException: Cannot invoke "String.toString()" because "&lt;param1&gt;" is null
+    at testjava.Main.handle(Main.java:47)
+    at testjava.Main.printMe(Main.java:19)
+    at testjava.Main.main(Main.java:10)</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>To enable logging to detect multi-line exceptions and reassemble them into a single log entry, ensure that the <code>ClusterLogForwarder</code> Custom Resource (CR) contains a <code>detectMultilineErrors</code> field, with a value of <code>true</code>.</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="title">Example ClusterLogForwarder CR</div>
+<div class="content">
+<pre class="rouge highlight nowrap"><code data-lang="yaml"><span class="na">apiVersion</span><span class="pi">:</span> <span class="s">logging.openshift.io/v1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">ClusterLogForwarder</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">instance</span>
+  <span class="na">namespace</span><span class="pi">:</span> <span class="s">openshift-logging</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">pipelines</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">my-app-logs</span>
+      <span class="na">inputRefs</span><span class="pi">:</span>
+        <span class="pi">-</span> <span class="s">application</span>
+      <span class="na">outputRefs</span><span class="pi">:</span>
+        <span class="pi">-</span> <span class="s">default</span>
+      <span class="na">detectMultilineErrors</span><span class="pi">:</span> <span class="no">true</span></code></pre>
+</div>
+</div>
+<div class="sect2">
+<h3 id="details"><a class="anchor" href="#details"></a>Details</h3>
+<div class="paragraph">
+<p>When log messages appear as a consecutive sequence forming an exception stack trace, they are combined into a single, unified log record. The first log message&#8217;s content is replaced with the concatenated content of all the message fields in the sequence.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 8. Supported languages per collector:</caption>
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Language</th>
+<th class="tableblock halign-left valign-top">Fluentd</th>
+<th class="tableblock halign-left valign-top">Vector</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Java</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">✓</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">JS</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">✓</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ruby</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">✓</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Python</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">✓</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Golang</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">✓</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">PHP</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dart</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">✓</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="troubleshooting"><a class="anchor" href="#troubleshooting"></a>Troubleshooting</h3>
+<div class="paragraph">
+<p>When enabled, the collector configuration will include a new section with type: <code>detect_exceptions</code></p>
+</div>
+<div class="listingblock">
+<div class="title">Example vector configuration section</div>
+<div class="content">
+<pre class="nowrap">[transforms.detect_exceptions_app-logs]
+ type = "detect_exceptions"
+ inputs = ["application"]
+ languages = ["All"]
+ group_by = ["kubernetes.namespace_name","kubernetes.pod_name","kubernetes.container_name"]
+ expire_after_ms = 2000
+ multiline_flush_interval_ms = 1000</pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example fluentd config section</div>
+<div class="content">
+<pre class="nowrap">&lt;label @MULTILINE_APP_LOGS&gt;
+  &lt;match kubernetes.**&gt;
+    @type detect_exceptions
+    remove_tag_prefix 'kubernetes'
+    message message
+    force_line_breaks true
+    multiline_flush_interval .2
+  &lt;/match&gt;
+&lt;/label&gt;</pre>
+</div>
+</div>
 </div>
 </div>
 </div>
