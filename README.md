@@ -23,5 +23,5 @@ Preview build URL structure: `https://<user>.github.io/previews/<branch>/html-si
 You can run the following command to build the preview and upload it if you are in the same directory as the master.adoc file:
 
 ~~~
-$ bccutil && BRANCH=$(git branch --show-current) && cp -r build/tmp/en-US/ ~/previews/$BRANCH/ && cd ~/previews && git add . && git commit -m "init" && git push && cd - && echo -e "\nPreview build uploaded.\nPreview build URL: https://$GITUSER.github.io/previews/$BRANCH/html-single/"
+$ bccutil && BRANCH=$(git branch --show-current) && cp -r build/tmp/en-US/ ~/previews/$BRANCH/ && cd ~/previews && git add . && git commit -m "init" && git push && cd - && GITUSER=$(git config --get remote.origin.url | sed -r 's/^.*://; s/\/.*$//') && echo -e "\nPreview build uploaded.\nPreview build URL: https://$GITUSER.github.io/previews/$BRANCH/html-single/"
 ~~~
