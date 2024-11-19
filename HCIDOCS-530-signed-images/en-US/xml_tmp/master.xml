@@ -9,7 +9,7 @@
 <info>
 <title>User guide</title><subtitle>Deploying sandboxed containers in OpenShift Container Platform</subtitle>
 
-<date>2024-11-17</date>
+<date>2024-11-18</date>
 <productname>OpenShift sandboxed containers</productname>
 <productnumber>1.8</productnumber>
 <release>1.8</release>
@@ -366,7 +366,7 @@ If you run sandboxed workloads on ineligible nodes, you will experience errors.<
 <simpara>For more information about the support scope of Red Hat Technology Preview features, see <link xlink:href="https://access.redhat.com/support/offerings/techpreview/">Technology Preview Features Support Scope</link>.</simpara>
 </important>
 <simpara>You can sign container images by using a tool such as <link xlink:href="https://developers.redhat.com/products/trusted-artifact-signer/overview">Red Hat Trusted Artifact Signer</link>. Then, you create a container image signature verification policy.</simpara>
-<simpara>The Key Broker Service on the Trustee cluster verifies the signatures, ensuring that only trusted and authenticated container images are deployed in your environment.</simpara>
+<simpara>The Confidential compute attestation Operator verifies the signatures, ensuring that only trusted and authenticated container images are deployed in your environment.</simpara>
 <simpara>For more information, see <link xlink:href="https://www.redhat.com/en/blog/exploring-openshift-confidential-containers-solution">Exploring the OpenShift Confidential Containers solution</link>.</simpara>
 </section>
 <section xml:id="ocp-virt-and-osc_about-osc">

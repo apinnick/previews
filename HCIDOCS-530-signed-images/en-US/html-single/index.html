@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" class="chrometwo"><head><title>User guide</title><link rel="stylesheet" type="text/css" href="Common_Content/css/default.css"/><meta name="generator" content="publican v4.3.2"/><meta name="description" content="Deploying OpenShift sandboxed containers in OpenShift Container Platform on bare metal, public cloud, and IBM platforms."/><link rel="next" href="#idm46293270296688" title="Preface"/><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><script type="text/javascript" src="Common_Content/scripts/jquery-1.7.1.min.js"> </script><script type="text/javascript" src="Common_Content/scripts/utils.js"> </script><script type="text/javascript" src="Common_Content/scripts/highlight.js/highlight.pack.js"> </script></head><body><div id="chrometwo"><div id="main"><div xml:lang="en-US" class="book" id="idm46293268524080"><div class="titlepage"><div><div class="producttitle"><span class="productname">OpenShift sandboxed containers</span> <span class="productnumber">1.8</span></div><div><h1 class="title">User guide</h1></div><div><h2 class="subtitle">Deploying sandboxed containers in OpenShift Container Platform</h2></div><div><div xml:lang="en-US" class="authorgroup"><span class="orgname">Red Hat Customer Content Services</span></div></div><div><a href="#idm46293261256384">Legal Notice</a></div><div><div class="abstract"><p class="title"><strong>Abstract</strong></p><div class="para">
+<html xmlns="http://www.w3.org/1999/xhtml" class="chrometwo"><head><title>User guide</title><link rel="stylesheet" type="text/css" href="Common_Content/css/default.css"/><meta name="generator" content="publican v4.3.2"/><meta name="description" content="Deploying OpenShift sandboxed containers in OpenShift Container Platform on bare metal, public cloud, and IBM platforms."/><link rel="next" href="#idm45567356796864" title="Preface"/><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><script type="text/javascript" src="Common_Content/scripts/jquery-1.7.1.min.js"> </script><script type="text/javascript" src="Common_Content/scripts/utils.js"> </script><script type="text/javascript" src="Common_Content/scripts/highlight.js/highlight.pack.js"> </script></head><body><div id="chrometwo"><div id="main"><div xml:lang="en-US" class="book" id="idm45567357300992"><div class="titlepage"><div><div class="producttitle"><span class="productname">OpenShift sandboxed containers</span> <span class="productnumber">1.8</span></div><div><h1 class="title">User guide</h1></div><div><h2 class="subtitle">Deploying sandboxed containers in OpenShift Container Platform</h2></div><div><div xml:lang="en-US" class="authorgroup"><span class="orgname">Red Hat Customer Content Services</span></div></div><div><a href="#idm45567348196240">Legal Notice</a></div><div><div class="abstract"><p class="title"><strong>Abstract</strong></p><div class="para">
 				Deploying OpenShift sandboxed containers in OpenShift Container Platform on bare metal, public cloud, and IBM platforms.
-			</div></div></div></div><hr/></div><div class="toc"><ul class="toc"><li><span class="preface"><a href="#idm46293270296688">Preface</a></span></li><li><span class="chapter"><a href="#about-osc">1. About OpenShift sandboxed containers</a></span><ul><li><span class="section"><a href="#osc-features_about-osc">1.1. Features</a></span></li><li><span class="section"><a href="#compatiblity-platforms_about-osc">1.2. Compatibility with OpenShift Container Platform</a></span></li><li><span class="section"><a href="#about-node-eligibility-checks_about-osc">1.3. Node eligibility checks</a></span></li><li><span class="section"><a href="#common-terms_about-osc">1.4. Common terms</a></span></li><li><span class="section"><a href="#osc-operator_about-osc">1.5. OpenShift sandboxed containers Operator</a></span></li><li><span class="section"><a href="#about-confidential-containers_about-osc">1.6. About Confidential Containers</a></span></li><li><span class="section"><a href="#ocp-virt-and-osc_about-osc">1.7. OpenShift Virtualization</a></span></li><li><span class="section"><a href="#block_volume_support_about-osc">1.8. Block volume support</a></span></li><li><span class="section"><a href="#fips-compliance_about-osc">1.9. FIPS compliance</a></span></li></ul></li><li><span class="chapter"><a href="#deploying-osc-bare-metal">2. Deploying OpenShift sandboxed containers on bare metal</a></span><ul><li><span class="section"><a href="#osc-resource-requirements_deploying-bare-metal">2.1. OpenShift sandboxed containers resource requirements</a></span></li><li><span class="section"><a href="#deploying-osc-web_metal-web">2.2. Deploying OpenShift sandboxed containers by using the web console</a></span><ul><li><span class="section"><a href="#installing-operator-web-console_metal-web">2.2.1. Installing the OpenShift sandboxed containers Operator</a></span></li><li><span class="section"><a href="#creating-kataconfig-cr-web_metal-web">2.2.2. Creating the KataConfig custom resource</a></span></li><li><span class="section"><a href="#configuring-workload-objects_metal-web">2.2.3. Configuring workload objects</a></span></li></ul></li><li><span class="section"><a href="#deploying-osc-cli_metal-cli">2.3. Deploying OpenShift sandboxed containers by using the command line</a></span><ul><li><span class="section"><a href="#installing-operator-cli_metal-cli">2.3.1. Installing the OpenShift sandboxed containers Operator</a></span></li><li><span class="section"><a href="#optional_configurations">2.3.2. Optional configurations</a></span></li><li><span class="section"><a href="#creating-kataconfig-cr-cli_metal-cli">2.3.3. Creating the KataConfig custom resource</a></span></li><li><span class="section"><a href="#modifying-pod-overhead.adoc_metal-cli">2.3.4. Modifying pod overhead</a></span></li><li><span class="section"><a href="#configuring-workload-objects_metal-cli">2.3.5. Configuring workload objects</a></span></li></ul></li></ul></li><li><span class="chapter"><a href="#deploying-aws">3. Deploying OpenShift sandboxed containers on AWS</a></span><ul><li><span class="section"><a href="#peer-pod-resource-requirements_aws">3.1. Peer pod resource requirements</a></span></li><li><span class="section"><a href="#deploying-osc-web_aws-web">3.2. Deploying OpenShift sandboxed containers by using the web console</a></span><ul><li><span class="section"><a href="#installing-operator-web-console_aws-web">3.2.1. Installing the OpenShift sandboxed containers Operator</a></span></li><li><span class="section"><a href="#aws-enabling-ports_aws-web">3.2.2. Enabling ports for AWS</a></span></li><li><span class="section"><a href="#creating-peer-pods-secret_aws-web">3.2.3. Creating the peer pods secret</a></span></li><li><span class="section"><a href="#creating-peer-pods-config-map_aws-web">3.2.4. Creating the peer pods config map</a></span></li><li><span class="section"><a href="#creating-kataconfig-cr-web_aws-web">3.2.5. Creating the KataConfig custom resource</a></span></li><li><span class="section"><a href="#configuring-workload-objects_aws-web">3.2.6. Configuring workload objects</a></span></li></ul></li><li><span class="section"><a href="#deploying-osc-cli_aws-cli">3.3. Deploying OpenShift sandboxed containers by using the command line</a></span><ul><li><span class="section"><a href="#installing-operator-cli_aws-cli">3.3.1. Installing the OpenShift sandboxed containers Operator</a></span></li><li><span class="section"><a href="#modifying-peer-pod-vm-limit_aws-cli">3.3.2. Modifying the number of peer pod VMs per node</a></span></li><li><span class="section"><a href="#aws-enabling-ports_aws-cli">3.3.3. Enabling ports for AWS</a></span></li><li><span class="section"><a href="#creating-peer-pods-secret_aws-cli">3.3.4. Creating the peer pods secret</a></span></li><li><span class="section"><a href="#creating-peer-pods-config-map_aws-cli">3.3.5. Creating the peer pods config map</a></span></li><li><span class="section"><a href="#creating-kataconfig-cr-cli_aws-cli">3.3.6. Creating the KataConfig custom resource</a></span></li><li><span class="section"><a href="#configuring-workload-objects_aws-cli">3.3.7. Configuring workload objects</a></span></li></ul></li></ul></li><li><span class="chapter"><a href="#deploying-osc-on-azure">4. Deploying OpenShift sandboxed containers on Azure</a></span><ul><li><span class="section"><a href="#peer-pod-resource-requirements_azure">4.1. Peer pod resource requirements</a></span></li><li><span class="section"><a href="#deploying-osc-web_azure-web">4.2. Deploying OpenShift sandboxed containers by using the web console</a></span><ul><li><span class="section"><a href="#installing-operator-web-console_azure-web">4.2.1. Installing the OpenShift sandboxed containers Operator</a></span></li><li><span class="section"><a href="#creating-peer-pods-secret_azure-web">4.2.2. Creating the peer pods secret</a></span></li><li><span class="section"><a href="#creating-peer-pods-config-map_azure-web">4.2.3. Creating the peer pods config map</a></span></li><li><span class="section"><a href="#creating-ssh-key-secret_azure-web">4.2.4. Creating the Azure secret</a></span></li><li><span class="section"><a href="#creating-kataconfig-cr-web_azure-web">4.2.5. Creating the KataConfig custom resource</a></span></li><li><span class="section"><a href="#configuring-workload-objects_azure-web">4.2.6. Configuring workload objects</a></span></li></ul></li><li><span class="section"><a href="#deploying-osc-cli_azure-cli">4.3. Deploying OpenShift sandboxed containers by using the command line</a></span><ul><li><span class="section"><a href="#installing-operator-cli_azure-cli">4.3.1. Installing the OpenShift sandboxed containers Operator</a></span></li><li><span class="section"><a href="#modifying-peer-pod-vm-limit_azure-cli">4.3.2. Modifying the number of peer pod VMs per node</a></span></li><li><span class="section"><a href="#creating-peer-pods-secret_azure-cli">4.3.3. Creating the peer pods secret</a></span></li><li><span class="section"><a href="#creating-peer-pods-config-map_azure-cli">4.3.4. Creating the peer pods config map</a></span></li><li><span class="section"><a href="#creating-ssh-key-secret_azure-cli">4.3.5. Creating the Azure secret</a></span></li><li><span class="section"><a href="#creating-kataconfig-cr-cli_azure-cli">4.3.6. Creating the KataConfig custom resource</a></span></li><li><span class="section"><a href="#configuring-workload-objects_azure-cli">4.3.7. Configuring workload objects</a></span></li></ul></li></ul></li><li><span class="chapter"><a href="#deploying-cc_azure-cc">5. Deploying Confidential Containers on Azure</a></span><ul><li><span class="section"><a href="#cc-installing-cc-operator-cli_azure-cc">5.1. Installing the Confidential compute attestation Operator</a></span></li><li><span class="section"><a href="#cc-enabling-feature-gate_azure-cc">5.2. Enabling the Confidential Containers feature gate</a></span></li><li><span class="section"><a href="#cc-creating-route_azure-cc">5.3. Creating the route for Trustee</a></span></li><li><span class="section"><a href="#creating-peer-pods-config-map_azure-cc">5.4. Updating the peer pods config map</a></span></li><li><span class="section"><a href="#deleting-cr-cli_azure-cc">5.5. Deleting the KataConfig custom resource</a></span></li><li><span class="section"><a href="#creating-kataconfig-cr-cli_azure-cc">5.6. Re-creating the KataConfig custom resource</a></span></li><li><span class="section"><a href="#cc-creating-trustee-auth-secret_azure-cc">5.7. Creating the Trustee authentication secret</a></span></li><li><span class="section"><a href="#cc-creating-trustee-config-map_azure-cc">5.8. Creating the Trustee config map</a></span></li><li><span class="section"><a href="#configuring-trustee_azure-cc">5.9. Configuring Trustee values, policies, and secrets</a></span><ul><li><span class="section"><a href="#cc-configuring-reference-values_azure-cc">5.9.1. Configuring reference values</a></span></li><li><span class="section"><a href="#cc-creating-attestation-policy_azure-cc">5.9.2. Creating an attestation policy</a></span></li><li><span class="section"><a href="#cc-configuring-pccs-for-tdx_azure-cc">5.9.3. Configuring PCCS for TDX</a></span></li><li><span class="section"><a href="#cc-creating-secret-for-clients_azure-cc">5.9.4. Creating a secret with custom keys for clients</a></span></li><li><span class="section"><a href="#cc-creating-secret-signed-container-images_azure-cc">5.9.5. Creating a secret for container image signature verification</a></span></li><li><span class="section"><a href="#cc-creating-container-image-sig-policy_azure-cc">5.9.6. Creating the container image signature verification policy</a></span></li><li><span class="section"><a href="#cc-creating-resource-access-policy_azure-cc">5.9.7. Creating the resource access policy</a></span></li></ul></li><li><span class="section"><a href="#cc-creating-kbsconfig-cr_azure-cc">5.10. Creating the KbsConfig custom resource</a></span></li><li><span class="section"><a href="#cc-verifing-trustee-config_azure-cc">5.11. Verifying the Trustee configuration</a></span></li><li><span class="section"><a href="#verifying-attestation-process_azure-cc">5.12. Verifying the attestation process</a></span></li></ul></li><li><span class="chapter"><a href="#deploying-osc-ibm">6. Deploying OpenShift sandboxed containers on IBM Z and IBM LinuxONE</a></span><ul><li><span class="section"><a href="#peer-pod-resource-requirements_ibm-osc">6.1. Peer pod resource requirements</a></span></li><li><span class="section"><a href="#deploying-osc-cli_ibm-osc">6.2. Deploying OpenShift sandboxed containers on IBM Z and IBM LinuxONE</a></span><ul><li><span class="section"><a href="#installing-operator-cli_ibm-osc">6.2.1. Installing the OpenShift sandboxed containers Operator</a></span></li><li><span class="section"><a href="#modifying-peer-pod-vm-limit_ibm-osc">6.2.2. Modifying the number of peer pod VMs per node</a></span></li><li><span class="section"><a href="#ibm-configuring-libvirt_ibm-osc">6.2.3. Configuring the libvirt volume</a></span></li><li><span class="section"><a href="#ibm-embedding-podvm-image_ibm-osc">6.2.4. Creating a custom peer pod VM image</a></span></li><li><span class="section"><a href="#creating-peer-pods-secret_ibm-osc">6.2.5. Creating the peer pods secret</a></span></li><li><span class="section"><a href="#creating-peer-pods-config-map_ibm-osc">6.2.6. Creating the peer pods config map</a></span></li><li><span class="section"><a href="#creating-libvirt-config-map_ibm-osc">6.2.7. Creating the peer pod VM image config map</a></span></li><li><span class="section"><a href="#creating-ssh-key-secret_ibm-osc">6.2.8. Creating the KVM host secret</a></span></li><li><span class="section"><a href="#creating-kataconfig-cr-cli_ibm-osc">6.2.9. Creating the KataConfig custom resource</a></span></li><li><span class="section"><a href="#configuring-workload-objects_ibm-osc">6.2.10. Configuring workload objects</a></span></li></ul></li></ul></li><li><span class="chapter"><a href="#deploying-cc_ibm-cc">7. Deploying Confidential Containers on IBM Z and IBM LinuxONE</a></span><ul><li><span class="section"><a href="#cc-installing-cc-operator-cli_ibm-cc">7.1. Installing the Confidential compute attestation Operator</a></span></li><li><span class="section"><a href="#cc-enabling-feature-gate_ibm-cc">7.2. Enabling the Confidential Containers feature gate</a></span></li><li><span class="section"><a href="#cc-creating-route_ibm-cc">7.3. Creating the route for Trustee</a></span></li><li><span class="section"><a href="#creating-peer-pods-config-map_ibm-cc">7.4. Updating the peer pods config map</a></span></li><li><span class="section"><a href="#deleting-cr-cli_ibm-cc">7.5. Deleting the KataConfig custom resource</a></span></li><li><span class="section"><a href="#creating-peer-pods-secret_ibm-cc">7.6. Updating the peer pods secret</a></span></li><li><span class="section"><a href="#creating-kataconfig-cr-cli_ibm-cc">7.7. Re-creating the KataConfig custom resource</a></span></li><li><span class="section"><a href="#cc-creating-trustee-auth-secret_ibm-cc">7.8. Creating the Trustee authentication secret</a></span></li><li><span class="section"><a href="#cc-creating-trustee-config-map_ibm-cc">7.9. Creating the Trustee config map</a></span></li><li><span class="section"><a href="#ibm-cc-obtaining-se-header.adoc_ibm-cc">7.10. Obtaining the IBM Secure Execution header</a></span></li><li><span class="section"><a href="#ibm-cc-obtaining-attest-fields-certs-keys_ibm-cc">7.11. Configuring the IBM Secure Execution certificates and keys</a></span></li><li><span class="section"><a href="#ibm-cc-creating-persistent-storage-components_ibm-cc">7.12. Creating the persistent storage components</a></span></li><li><span class="section"><a href="#configuring-trustee_ibm-cc">7.13. Configuring Trustee values, policies, and secrets</a></span><ul><li><span class="section"><a href="#cc-configuring-reference-values_ibm-cc">7.13.1. Configuring reference values</a></span></li><li><span class="section"><a href="#cc-creating-attestation-policy_ibm-cc">7.13.2. Creating the attestation policy for IBM Secure Execution</a></span></li><li><span class="section"><a href="#cc-creating-secret-for-clients_ibm-cc">7.13.3. Creating a secret with custom keys for clients</a></span></li><li><span class="section"><a href="#cc-creating-secret-signed-container-images_ibm-cc">7.13.4. Creating a secret for container image signature verification</a></span></li><li><span class="section"><a href="#cc-creating-container-image-sig-policy_ibm-cc">7.13.5. Creating the container image signature verification policy</a></span></li><li><span class="section"><a href="#cc-creating-resource-access-policy_ibm-cc">7.13.6. Creating the resource access policy</a></span></li></ul></li><li><span class="section"><a href="#cc-creating-kbsconfig-cr_ibm-cc">7.14. Creating the KbsConfig custom resource</a></span></li><li><span class="section"><a href="#cc-verifing-trustee-config_ibm-cc">7.15. Verifying the Trustee configuration</a></span></li><li><span class="section"><a href="#verifying-attestation-process_ibm-cc">7.16. Verifying the attestation process</a></span></li></ul></li><li><span class="chapter"><a href="#monitoring">8. Monitoring</a></span><ul><li><span class="section"><a href="#about-metrics_monitoring">8.1. About metrics</a></span></li><li><span class="section"><a href="#viewing-metrics_monitoring">8.2. Viewing metrics</a></span></li></ul></li><li><span class="chapter"><a href="#uninstalling">9. Uninstalling</a></span><ul><li><span class="section"><a href="#uninstalling-ocs">9.1. Uninstalling OpenShift sandboxed containers</a></span><ul><li><span class="section"><a href="#uninstalling-osc-by-using-web-console">9.1.1. Uninstalling OpenShift sandboxed containers by using the web console</a></span></li><li><span class="section"><a href="#uninstalling-osc-by-using-cli">9.1.2. Uninstalling OpenShift sandboxed containers by using the CLI</a></span></li></ul></li><li><span class="section"><a href="#removing-cc-environment">9.2. Removing the Confidential Containers environment</a></span><ul><li><span class="section"><a href="#removing-cc-environment-web">9.2.1. Removing the Confidential Containers environment by using the web console</a></span></li><li><span class="section"><a href="#removing-cc-environment-cli">9.2.2. Removing the Confidential Containers environment by using the CLI</a></span></li></ul></li></ul></li><li><span class="chapter"><a href="#upgrading">10. Upgrading</a></span><ul><li><span class="section"><a href="#upgrading-resources">10.1. Upgrading resources</a></span></li><li><span class="section"><a href="#upgrading-operator">10.2. Upgrading the Operator</a></span></li></ul></li><li><span class="chapter"><a href="#troubleshooting">11. Troubleshooting</a></span><ul><li><span class="section"><a href="#collect_data_rh_support">11.1. Collecting data for Red Hat Support</a></span></li><li><span class="section"><a href="#collecting-log-data">11.2. Collecting log data</a></span><ul><li><span class="section"><a href="#enabling-debug-logs-crio_troubleshooting">11.2.1. Enabling debug logs for CRI-O runtime</a></span></li><li><span class="section"><a href="#viewing-debug-logs-components_troubleshooting">11.2.2. Viewing debug logs for components</a></span></li></ul></li></ul></li><li><span class="appendix"><a href="#kataconfig-status-messages">A. KataConfig status messages</a></span></li></ul></div><section class="preface" id="idm46293270296688"><div class="titlepage"><div><div><h1 class="title">Preface</h1></div></div></div><h2 id="providing-feedback-on-red-hat-documentation">Providing feedback on Red Hat documentation</h2><p>
+			</div></div></div></div><hr/></div><div class="toc"><ul class="toc"><li><span class="preface"><a href="#idm45567356796864">Preface</a></span></li><li><span class="chapter"><a href="#about-osc">1. About OpenShift sandboxed containers</a></span><ul><li><span class="section"><a href="#osc-features_about-osc">1.1. Features</a></span></li><li><span class="section"><a href="#compatiblity-platforms_about-osc">1.2. Compatibility with OpenShift Container Platform</a></span></li><li><span class="section"><a href="#about-node-eligibility-checks_about-osc">1.3. Node eligibility checks</a></span></li><li><span class="section"><a href="#common-terms_about-osc">1.4. Common terms</a></span></li><li><span class="section"><a href="#osc-operator_about-osc">1.5. OpenShift sandboxed containers Operator</a></span></li><li><span class="section"><a href="#about-confidential-containers_about-osc">1.6. About Confidential Containers</a></span></li><li><span class="section"><a href="#ocp-virt-and-osc_about-osc">1.7. OpenShift Virtualization</a></span></li><li><span class="section"><a href="#block_volume_support_about-osc">1.8. Block volume support</a></span></li><li><span class="section"><a href="#fips-compliance_about-osc">1.9. FIPS compliance</a></span></li></ul></li><li><span class="chapter"><a href="#deploying-osc-bare-metal">2. Deploying OpenShift sandboxed containers on bare metal</a></span><ul><li><span class="section"><a href="#osc-resource-requirements_deploying-bare-metal">2.1. OpenShift sandboxed containers resource requirements</a></span></li><li><span class="section"><a href="#deploying-osc-web_metal-web">2.2. Deploying OpenShift sandboxed containers by using the web console</a></span><ul><li><span class="section"><a href="#installing-operator-web-console_metal-web">2.2.1. Installing the OpenShift sandboxed containers Operator</a></span></li><li><span class="section"><a href="#creating-kataconfig-cr-web_metal-web">2.2.2. Creating the KataConfig custom resource</a></span></li><li><span class="section"><a href="#configuring-workload-objects_metal-web">2.2.3. Configuring workload objects</a></span></li></ul></li><li><span class="section"><a href="#deploying-osc-cli_metal-cli">2.3. Deploying OpenShift sandboxed containers by using the command line</a></span><ul><li><span class="section"><a href="#installing-operator-cli_metal-cli">2.3.1. Installing the OpenShift sandboxed containers Operator</a></span></li><li><span class="section"><a href="#optional_configurations">2.3.2. Optional configurations</a></span></li><li><span class="section"><a href="#creating-kataconfig-cr-cli_metal-cli">2.3.3. Creating the KataConfig custom resource</a></span></li><li><span class="section"><a href="#modifying-pod-overhead.adoc_metal-cli">2.3.4. Modifying pod overhead</a></span></li><li><span class="section"><a href="#configuring-workload-objects_metal-cli">2.3.5. Configuring workload objects</a></span></li></ul></li></ul></li><li><span class="chapter"><a href="#deploying-aws">3. Deploying OpenShift sandboxed containers on AWS</a></span><ul><li><span class="section"><a href="#peer-pod-resource-requirements_aws">3.1. Peer pod resource requirements</a></span></li><li><span class="section"><a href="#deploying-osc-web_aws-web">3.2. Deploying OpenShift sandboxed containers by using the web console</a></span><ul><li><span class="section"><a href="#installing-operator-web-console_aws-web">3.2.1. Installing the OpenShift sandboxed containers Operator</a></span></li><li><span class="section"><a href="#aws-enabling-ports_aws-web">3.2.2. Enabling ports for AWS</a></span></li><li><span class="section"><a href="#creating-peer-pods-secret_aws-web">3.2.3. Creating the peer pods secret</a></span></li><li><span class="section"><a href="#creating-peer-pods-config-map_aws-web">3.2.4. Creating the peer pods config map</a></span></li><li><span class="section"><a href="#creating-kataconfig-cr-web_aws-web">3.2.5. Creating the KataConfig custom resource</a></span></li><li><span class="section"><a href="#configuring-workload-objects_aws-web">3.2.6. Configuring workload objects</a></span></li></ul></li><li><span class="section"><a href="#deploying-osc-cli_aws-cli">3.3. Deploying OpenShift sandboxed containers by using the command line</a></span><ul><li><span class="section"><a href="#installing-operator-cli_aws-cli">3.3.1. Installing the OpenShift sandboxed containers Operator</a></span></li><li><span class="section"><a href="#modifying-peer-pod-vm-limit_aws-cli">3.3.2. Modifying the number of peer pod VMs per node</a></span></li><li><span class="section"><a href="#aws-enabling-ports_aws-cli">3.3.3. Enabling ports for AWS</a></span></li><li><span class="section"><a href="#creating-peer-pods-secret_aws-cli">3.3.4. Creating the peer pods secret</a></span></li><li><span class="section"><a href="#creating-peer-pods-config-map_aws-cli">3.3.5. Creating the peer pods config map</a></span></li><li><span class="section"><a href="#creating-kataconfig-cr-cli_aws-cli">3.3.6. Creating the KataConfig custom resource</a></span></li><li><span class="section"><a href="#configuring-workload-objects_aws-cli">3.3.7. Configuring workload objects</a></span></li></ul></li></ul></li><li><span class="chapter"><a href="#deploying-osc-on-azure">4. Deploying OpenShift sandboxed containers on Azure</a></span><ul><li><span class="section"><a href="#peer-pod-resource-requirements_azure">4.1. Peer pod resource requirements</a></span></li><li><span class="section"><a href="#deploying-osc-web_azure-web">4.2. Deploying OpenShift sandboxed containers by using the web console</a></span><ul><li><span class="section"><a href="#installing-operator-web-console_azure-web">4.2.1. Installing the OpenShift sandboxed containers Operator</a></span></li><li><span class="section"><a href="#creating-peer-pods-secret_azure-web">4.2.2. Creating the peer pods secret</a></span></li><li><span class="section"><a href="#creating-peer-pods-config-map_azure-web">4.2.3. Creating the peer pods config map</a></span></li><li><span class="section"><a href="#creating-ssh-key-secret_azure-web">4.2.4. Creating the Azure secret</a></span></li><li><span class="section"><a href="#creating-kataconfig-cr-web_azure-web">4.2.5. Creating the KataConfig custom resource</a></span></li><li><span class="section"><a href="#configuring-workload-objects_azure-web">4.2.6. Configuring workload objects</a></span></li></ul></li><li><span class="section"><a href="#deploying-osc-cli_azure-cli">4.3. Deploying OpenShift sandboxed containers by using the command line</a></span><ul><li><span class="section"><a href="#installing-operator-cli_azure-cli">4.3.1. Installing the OpenShift sandboxed containers Operator</a></span></li><li><span class="section"><a href="#modifying-peer-pod-vm-limit_azure-cli">4.3.2. Modifying the number of peer pod VMs per node</a></span></li><li><span class="section"><a href="#creating-peer-pods-secret_azure-cli">4.3.3. Creating the peer pods secret</a></span></li><li><span class="section"><a href="#creating-peer-pods-config-map_azure-cli">4.3.4. Creating the peer pods config map</a></span></li><li><span class="section"><a href="#creating-ssh-key-secret_azure-cli">4.3.5. Creating the Azure secret</a></span></li><li><span class="section"><a href="#creating-kataconfig-cr-cli_azure-cli">4.3.6. Creating the KataConfig custom resource</a></span></li><li><span class="section"><a href="#configuring-workload-objects_azure-cli">4.3.7. Configuring workload objects</a></span></li></ul></li></ul></li><li><span class="chapter"><a href="#deploying-cc_azure-cc">5. Deploying Confidential Containers on Azure</a></span><ul><li><span class="section"><a href="#cc-installing-cc-operator-cli_azure-cc">5.1. Installing the Confidential compute attestation Operator</a></span></li><li><span class="section"><a href="#cc-enabling-feature-gate_azure-cc">5.2. Enabling the Confidential Containers feature gate</a></span></li><li><span class="section"><a href="#cc-creating-route_azure-cc">5.3. Creating the route for Trustee</a></span></li><li><span class="section"><a href="#creating-peer-pods-config-map_azure-cc">5.4. Updating the peer pods config map</a></span></li><li><span class="section"><a href="#deleting-cr-cli_azure-cc">5.5. Deleting the KataConfig custom resource</a></span></li><li><span class="section"><a href="#creating-kataconfig-cr-cli_azure-cc">5.6. Re-creating the KataConfig custom resource</a></span></li><li><span class="section"><a href="#cc-creating-trustee-auth-secret_azure-cc">5.7. Creating the Trustee authentication secret</a></span></li><li><span class="section"><a href="#cc-creating-trustee-config-map_azure-cc">5.8. Creating the Trustee config map</a></span></li><li><span class="section"><a href="#configuring-trustee_azure-cc">5.9. Configuring Trustee values, policies, and secrets</a></span><ul><li><span class="section"><a href="#cc-configuring-reference-values_azure-cc">5.9.1. Configuring reference values</a></span></li><li><span class="section"><a href="#cc-creating-attestation-policy_azure-cc">5.9.2. Creating an attestation policy</a></span></li><li><span class="section"><a href="#cc-configuring-pccs-for-tdx_azure-cc">5.9.3. Configuring PCCS for TDX</a></span></li><li><span class="section"><a href="#cc-creating-secret-for-clients_azure-cc">5.9.4. Creating a secret with custom keys for clients</a></span></li><li><span class="section"><a href="#cc-creating-secret-signed-container-images_azure-cc">5.9.5. Creating a secret for container image signature verification</a></span></li><li><span class="section"><a href="#cc-creating-container-image-sig-policy_azure-cc">5.9.6. Creating the container image signature verification policy</a></span></li><li><span class="section"><a href="#cc-creating-resource-access-policy_azure-cc">5.9.7. Creating the resource access policy</a></span></li></ul></li><li><span class="section"><a href="#cc-creating-kbsconfig-cr_azure-cc">5.10. Creating the KbsConfig custom resource</a></span></li><li><span class="section"><a href="#cc-verifing-trustee-config_azure-cc">5.11. Verifying the Trustee configuration</a></span></li><li><span class="section"><a href="#verifying-attestation-process_azure-cc">5.12. Verifying the attestation process</a></span></li></ul></li><li><span class="chapter"><a href="#deploying-osc-ibm">6. Deploying OpenShift sandboxed containers on IBM Z and IBM LinuxONE</a></span><ul><li><span class="section"><a href="#peer-pod-resource-requirements_ibm-osc">6.1. Peer pod resource requirements</a></span></li><li><span class="section"><a href="#deploying-osc-cli_ibm-osc">6.2. Deploying OpenShift sandboxed containers on IBM Z and IBM LinuxONE</a></span><ul><li><span class="section"><a href="#installing-operator-cli_ibm-osc">6.2.1. Installing the OpenShift sandboxed containers Operator</a></span></li><li><span class="section"><a href="#modifying-peer-pod-vm-limit_ibm-osc">6.2.2. Modifying the number of peer pod VMs per node</a></span></li><li><span class="section"><a href="#ibm-configuring-libvirt_ibm-osc">6.2.3. Configuring the libvirt volume</a></span></li><li><span class="section"><a href="#ibm-embedding-podvm-image_ibm-osc">6.2.4. Creating a custom peer pod VM image</a></span></li><li><span class="section"><a href="#creating-peer-pods-secret_ibm-osc">6.2.5. Creating the peer pods secret</a></span></li><li><span class="section"><a href="#creating-peer-pods-config-map_ibm-osc">6.2.6. Creating the peer pods config map</a></span></li><li><span class="section"><a href="#creating-libvirt-config-map_ibm-osc">6.2.7. Creating the peer pod VM image config map</a></span></li><li><span class="section"><a href="#creating-ssh-key-secret_ibm-osc">6.2.8. Creating the KVM host secret</a></span></li><li><span class="section"><a href="#creating-kataconfig-cr-cli_ibm-osc">6.2.9. Creating the KataConfig custom resource</a></span></li><li><span class="section"><a href="#configuring-workload-objects_ibm-osc">6.2.10. Configuring workload objects</a></span></li></ul></li></ul></li><li><span class="chapter"><a href="#deploying-cc_ibm-cc">7. Deploying Confidential Containers on IBM Z and IBM LinuxONE</a></span><ul><li><span class="section"><a href="#cc-installing-cc-operator-cli_ibm-cc">7.1. Installing the Confidential compute attestation Operator</a></span></li><li><span class="section"><a href="#cc-enabling-feature-gate_ibm-cc">7.2. Enabling the Confidential Containers feature gate</a></span></li><li><span class="section"><a href="#cc-creating-route_ibm-cc">7.3. Creating the route for Trustee</a></span></li><li><span class="section"><a href="#creating-peer-pods-config-map_ibm-cc">7.4. Updating the peer pods config map</a></span></li><li><span class="section"><a href="#deleting-cr-cli_ibm-cc">7.5. Deleting the KataConfig custom resource</a></span></li><li><span class="section"><a href="#creating-peer-pods-secret_ibm-cc">7.6. Updating the peer pods secret</a></span></li><li><span class="section"><a href="#creating-kataconfig-cr-cli_ibm-cc">7.7. Re-creating the KataConfig custom resource</a></span></li><li><span class="section"><a href="#cc-creating-trustee-auth-secret_ibm-cc">7.8. Creating the Trustee authentication secret</a></span></li><li><span class="section"><a href="#cc-creating-trustee-config-map_ibm-cc">7.9. Creating the Trustee config map</a></span></li><li><span class="section"><a href="#ibm-cc-obtaining-se-header.adoc_ibm-cc">7.10. Obtaining the IBM Secure Execution header</a></span></li><li><span class="section"><a href="#ibm-cc-obtaining-attest-fields-certs-keys_ibm-cc">7.11. Configuring the IBM Secure Execution certificates and keys</a></span></li><li><span class="section"><a href="#ibm-cc-creating-persistent-storage-components_ibm-cc">7.12. Creating the persistent storage components</a></span></li><li><span class="section"><a href="#configuring-trustee_ibm-cc">7.13. Configuring Trustee values, policies, and secrets</a></span><ul><li><span class="section"><a href="#cc-configuring-reference-values_ibm-cc">7.13.1. Configuring reference values</a></span></li><li><span class="section"><a href="#cc-creating-attestation-policy_ibm-cc">7.13.2. Creating the attestation policy for IBM Secure Execution</a></span></li><li><span class="section"><a href="#cc-creating-secret-for-clients_ibm-cc">7.13.3. Creating a secret with custom keys for clients</a></span></li><li><span class="section"><a href="#cc-creating-secret-signed-container-images_ibm-cc">7.13.4. Creating a secret for container image signature verification</a></span></li><li><span class="section"><a href="#cc-creating-container-image-sig-policy_ibm-cc">7.13.5. Creating the container image signature verification policy</a></span></li><li><span class="section"><a href="#cc-creating-resource-access-policy_ibm-cc">7.13.6. Creating the resource access policy</a></span></li></ul></li><li><span class="section"><a href="#cc-creating-kbsconfig-cr_ibm-cc">7.14. Creating the KbsConfig custom resource</a></span></li><li><span class="section"><a href="#cc-verifing-trustee-config_ibm-cc">7.15. Verifying the Trustee configuration</a></span></li><li><span class="section"><a href="#verifying-attestation-process_ibm-cc">7.16. Verifying the attestation process</a></span></li></ul></li><li><span class="chapter"><a href="#monitoring">8. Monitoring</a></span><ul><li><span class="section"><a href="#about-metrics_monitoring">8.1. About metrics</a></span></li><li><span class="section"><a href="#viewing-metrics_monitoring">8.2. Viewing metrics</a></span></li></ul></li><li><span class="chapter"><a href="#uninstalling">9. Uninstalling</a></span><ul><li><span class="section"><a href="#uninstalling-ocs">9.1. Uninstalling OpenShift sandboxed containers</a></span><ul><li><span class="section"><a href="#uninstalling-osc-by-using-web-console">9.1.1. Uninstalling OpenShift sandboxed containers by using the web console</a></span></li><li><span class="section"><a href="#uninstalling-osc-by-using-cli">9.1.2. Uninstalling OpenShift sandboxed containers by using the CLI</a></span></li></ul></li><li><span class="section"><a href="#removing-cc-environment">9.2. Removing the Confidential Containers environment</a></span><ul><li><span class="section"><a href="#removing-cc-environment-web">9.2.1. Removing the Confidential Containers environment by using the web console</a></span></li><li><span class="section"><a href="#removing-cc-environment-cli">9.2.2. Removing the Confidential Containers environment by using the CLI</a></span></li></ul></li></ul></li><li><span class="chapter"><a href="#upgrading">10. Upgrading</a></span><ul><li><span class="section"><a href="#upgrading-resources">10.1. Upgrading resources</a></span></li><li><span class="section"><a href="#upgrading-operator">10.2. Upgrading the Operator</a></span></li></ul></li><li><span class="chapter"><a href="#troubleshooting">11. Troubleshooting</a></span><ul><li><span class="section"><a href="#collect_data_rh_support">11.1. Collecting data for Red Hat Support</a></span></li><li><span class="section"><a href="#collecting-log-data">11.2. Collecting log data</a></span><ul><li><span class="section"><a href="#enabling-debug-logs-crio_troubleshooting">11.2.1. Enabling debug logs for CRI-O runtime</a></span></li><li><span class="section"><a href="#viewing-debug-logs-components_troubleshooting">11.2.2. Viewing debug logs for components</a></span></li></ul></li></ul></li><li><span class="appendix"><a href="#kataconfig-status-messages">A. KataConfig status messages</a></span></li></ul></div><section class="preface" id="idm45567356796864"><div class="titlepage"><div><div><h1 class="title">Preface</h1></div></div></div><h2 id="providing-feedback-on-red-hat-documentation">Providing feedback on Red Hat documentation</h2><p>
 			You can provide feedback or report an error by submitting the <span class="strong strong"><strong>Create Issue</strong></span> form in Jira. The Jira issue will be created in the Red Hat Hybrid Cloud Infrastructure Jira project, where you can track the progress of your feedback.
 		</p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem">
 					Ensure that you are logged in to Jira. If you do not have a Jira account, you must create a <a class="link" href="https://issues.redhat.com">Red Hat Jira account</a>.
@@ -52,19 +52,19 @@
 					You must install Red Hat Enterprise Linux CoreOS (RHCOS) on the worker nodes. RHEL nodes are not supported.
 				</p></div></div><p>
 				The following compatibility matrix for OpenShift sandboxed containers and OpenShift Container Platform releases identifies compatible features and environments.
-			</p><div class="table" id="idm46293268019072"><p class="title"><strong>Table 1.1. Supported architectures</strong></p><div class="table-contents"><table class="lt-4-cols lt-7-rows"><colgroup><col style="width: 50%; " class="col_1"/><col style="width: 50%; " class="col_2"/></colgroup><thead><tr><th align="left" valign="bottom" id="idm46293268014240" scope="col">Architecture</th><th align="left" valign="bottom" id="idm46293267438432" scope="col">OpenShift Container Platform version</th></tr></thead><tbody><tr><td align="left" valign="top" headers="idm46293268014240">
+			</p><div class="table" id="idm45567351862672"><p class="title"><strong>Table 1.1. Supported architectures</strong></p><div class="table-contents"><table class="lt-4-cols lt-7-rows"><colgroup><col style="width: 50%; " class="col_1"/><col style="width: 50%; " class="col_2"/></colgroup><thead><tr><th align="left" valign="bottom" id="idm45567356528112" scope="col">Architecture</th><th align="left" valign="bottom" id="idm45567356527024" scope="col">OpenShift Container Platform version</th></tr></thead><tbody><tr><td align="left" valign="top" headers="idm45567356528112">
 							<p>
 								x86_64
 							</p>
-							</td><td align="left" valign="top" headers="idm46293267438432">
+							</td><td align="left" valign="top" headers="idm45567356527024">
 							<p>
 								4.8 or later
 							</p>
-							</td></tr><tr><td align="left" valign="top" headers="idm46293268014240">
+							</td></tr><tr><td align="left" valign="top" headers="idm45567356528112">
 							<p>
 								s390x
 							</p>
-							</td><td align="left" valign="top" headers="idm46293267438432">
+							</td><td align="left" valign="top" headers="idm45567356527024">
 							<p>
 								4.14 or later
 							</p>
@@ -78,43 +78,43 @@
 				Peer pods technology for the deployment of OpenShift sandboxed containers in public clouds was available as Developer Preview in OpenShift sandboxed containers 1.5 and OpenShift Container Platform 4.14.
 			</p><p>
 				With the release of OpenShift sandboxed containers 1.7, the Operator requires OpenShift Container Platform version 4.15 or later.
-			</p><div class="table" id="idm46293270407264"><p class="title"><strong>Table 1.2. Feature availability by OpenShift version</strong></p><div class="table-contents"><table class="gt-4-cols lt-7-rows"><colgroup><col style="width: 25%; " class="col_1"/><col style="width: 25%; " class="col_2"/><col style="width: 25%; " class="col_3"/><col style="width: 25%; " class="col_4"/></colgroup><thead><tr><th align="left" valign="bottom" id="idm46293267244784" scope="col">Feature</th><th align="left" valign="bottom" id="idm46293267243696" scope="col">Deployment method</th><th align="left" valign="bottom" id="idm46293267242608" scope="col">OpenShift Container Platform 4.15</th><th align="left" valign="bottom" id="idm46293267241552" scope="col">OpenShift Container Platform 4.16</th></tr></thead><tbody><tr><td rowspan="2" align="left" valign="top" headers="idm46293267244784">
+			</p><div class="table" id="idm45567354796768"><p class="title"><strong>Table 1.2. Feature availability by OpenShift version</strong></p><div class="table-contents"><table class="gt-4-cols lt-7-rows"><colgroup><col style="width: 25%; " class="col_1"/><col style="width: 25%; " class="col_2"/><col style="width: 25%; " class="col_3"/><col style="width: 25%; " class="col_4"/></colgroup><thead><tr><th align="left" valign="bottom" id="idm45567351348112" scope="col">Feature</th><th align="left" valign="bottom" id="idm45567351347024" scope="col">Deployment method</th><th align="left" valign="bottom" id="idm45567351345936" scope="col">OpenShift Container Platform 4.15</th><th align="left" valign="bottom" id="idm45567355015616" scope="col">OpenShift Container Platform 4.16</th></tr></thead><tbody><tr><td rowspan="2" align="left" valign="top" headers="idm45567351348112">
 							<p>
 								Confidential Containers
 							</p>
-							</td><td align="left" valign="top" headers="idm46293267243696">
+							</td><td align="left" valign="top" headers="idm45567351347024">
 							<p>
 								Bare metal
 							</p>
-							</td><td align="left" valign="top" headers="idm46293267242608"> </td><td align="left" valign="top" headers="idm46293267241552"> </td></tr><tr><td align="left" valign="top" headers="idm46293267243696">
+							</td><td align="left" valign="top" headers="idm45567351345936"> </td><td align="left" valign="top" headers="idm45567355015616"> </td></tr><tr><td align="left" valign="top" headers="idm45567351347024">
 							<p>
 								Peer pods
 							</p>
-							</td><td align="left" valign="top" headers="idm46293267242608">
+							</td><td align="left" valign="top" headers="idm45567351345936">
 							<p>
 								Technology Preview
 							</p>
-							</td><td align="left" valign="top" headers="idm46293267241552">
+							</td><td align="left" valign="top" headers="idm45567355015616">
 							<p>
 								Technology Preview <sup>[1]</sup>
 							</p>
-							</td></tr><tr><td rowspan="2" align="left" valign="top" headers="idm46293267244784">
+							</td></tr><tr><td rowspan="2" align="left" valign="top" headers="idm45567351348112">
 							<p>
 								GPU support <sup>[2]</sup>
 							</p>
-							</td><td align="left" valign="top" headers="idm46293267243696">
+							</td><td align="left" valign="top" headers="idm45567351347024">
 							<p>
 								Bare metal
 							</p>
-							</td><td align="left" valign="top" headers="idm46293267242608"> </td><td align="left" valign="top" headers="idm46293267241552"> </td></tr><tr><td align="left" valign="top" headers="idm46293267243696">
+							</td><td align="left" valign="top" headers="idm45567351345936"> </td><td align="left" valign="top" headers="idm45567355015616"> </td></tr><tr><td align="left" valign="top" headers="idm45567351347024">
 							<p>
 								Peer pods
 							</p>
-							</td><td align="left" valign="top" headers="idm46293267242608">
+							</td><td align="left" valign="top" headers="idm45567351345936">
 							<p>
 								Developer Preview
 							</p>
-							</td><td align="left" valign="top" headers="idm46293267241552">
+							</td><td align="left" valign="top" headers="idm45567355015616">
 							<p>
 								Developer Preview
 							</p>
@@ -122,23 +122,23 @@
 						Technology Preview of Confidential Containers has been available since OpenShift sandboxed containers 1.7.0.
 					</li><li class="listitem">
 						GPU functionality is not available on IBM Z.
-					</li></ol></div><div class="table" id="idm46293267471120"><p class="title"><strong>Table 1.3. Supported cloud platforms for OpenShift sandboxed containers</strong></p><div class="table-contents"><table class="lt-4-cols lt-7-rows"><colgroup><col style="width: 33%; " class="col_1"/><col style="width: 33%; " class="col_2"/><col style="width: 33%; " class="col_3"/></colgroup><thead><tr><th align="left" valign="bottom" id="idm46293267317248" scope="col">Platform</th><th align="left" valign="bottom" id="idm46293267316160" scope="col">GPU</th><th align="left" valign="bottom" id="idm46293267540736" scope="col">Confidential Containers</th></tr></thead><tbody><tr><td align="left" valign="top" headers="idm46293267317248">
+					</li></ol></div><div class="table" id="idm45567352426880"><p class="title"><strong>Table 1.3. Supported cloud platforms for OpenShift sandboxed containers</strong></p><div class="table-contents"><table class="lt-4-cols lt-7-rows"><colgroup><col style="width: 33%; " class="col_1"/><col style="width: 33%; " class="col_2"/><col style="width: 33%; " class="col_3"/></colgroup><thead><tr><th align="left" valign="bottom" id="idm45567355756176" scope="col">Platform</th><th align="left" valign="bottom" id="idm45567355755088" scope="col">GPU</th><th align="left" valign="bottom" id="idm45567355754000" scope="col">Confidential Containers</th></tr></thead><tbody><tr><td align="left" valign="top" headers="idm45567355756176">
 							<p>
 								AWS Cloud Computing Services
 							</p>
-							</td><td align="left" valign="top" headers="idm46293267316160">
+							</td><td align="left" valign="top" headers="idm45567355755088">
 							<p>
 								Developer Preview
 							</p>
-							</td><td align="left" valign="top" headers="idm46293267540736"> </td></tr><tr><td align="left" valign="top" headers="idm46293267317248">
+							</td><td align="left" valign="top" headers="idm45567355754000"> </td></tr><tr><td align="left" valign="top" headers="idm45567355756176">
 							<p>
 								Microsoft Azure Cloud Computing Services
 							</p>
-							</td><td align="left" valign="top" headers="idm46293267316160">
+							</td><td align="left" valign="top" headers="idm45567355755088">
 							<p>
 								Developer Preview
 							</p>
-							</td><td align="left" valign="top" headers="idm46293267540736">
+							</td><td align="left" valign="top" headers="idm45567355754000">
 							<p>
 								Technology Preview <sup>[1]</sup>
 							</p>
@@ -211,7 +211,7 @@
 				</p></div></div><p>
 				You can sign container images by using a tool such as <a class="link" href="https://developers.redhat.com/products/trusted-artifact-signer/overview">Red Hat Trusted Artifact Signer</a>. Then, you create a container image signature verification policy.
 			</p><p>
-				The Key Broker Service on the Trustee cluster verifies the signatures, ensuring that only trusted and authenticated container images are deployed in your environment.
+				The Confidential compute attestation Operator verifies the signatures, ensuring that only trusted and authenticated container images are deployed in your environment.
 			</p><p>
 				For more information, see <a class="link" href="https://www.redhat.com/en/blog/exploring-openshift-confidential-containers-solution">Exploring the OpenShift Confidential Containers solution</a>.
 			</p></section><section class="section" id="ocp-virt-and-osc_about-osc"><div class="titlepage"><div><div><h2 class="title">1.7. OpenShift Virtualization</h2></div></div></div><p>
@@ -299,51 +299,51 @@ spec:
 				When a memory limit is specified, the workload is terminated if it consumes more memory than the limit. If no memory limit is specified, the kernel running on the VM might run out of memory. If the kernel runs out of memory, it might terminate other processes on the VM.
 			</p><div class="formalpara"><p class="title"><strong>Default memory sizes</strong></p><p>
 					The following table lists some the default values for resource allocation.
-				</p></div><div class="informaltable"><table class="lt-4-cols lt-7-rows"><colgroup><col style="width: 50%; " class="col_1"/><col style="width: 50%; " class="col_2"/></colgroup><thead><tr><th align="left" valign="top" id="idm46293267048976" scope="col">Resource</th><th align="left" valign="top" id="idm46293267047888" scope="col">Value</th></tr></thead><tbody><tr><td align="left" valign="top" headers="idm46293267048976">
+				</p></div><div class="informaltable"><table class="lt-4-cols lt-7-rows"><colgroup><col style="width: 50%; " class="col_1"/><col style="width: 50%; " class="col_2"/></colgroup><thead><tr><th align="left" valign="top" id="idm45567351300768" scope="col">Resource</th><th align="left" valign="top" id="idm45567351299680" scope="col">Value</th></tr></thead><tbody><tr><td align="left" valign="top" headers="idm45567351300768">
 							<p>
 								Memory allocated by default to a virtual machine
 							</p>
-							</td><td align="left" valign="top" headers="idm46293267047888">
+							</td><td align="left" valign="top" headers="idm45567351299680">
 							<p>
 								2Gi
 							</p>
-							</td></tr><tr><td align="left" valign="top" headers="idm46293267048976">
+							</td></tr><tr><td align="left" valign="top" headers="idm45567351300768">
 							<p>
 								Guest Linux kernel memory usage at boot
 							</p>
-							</td><td align="left" valign="top" headers="idm46293267047888">
+							</td><td align="left" valign="top" headers="idm45567351299680">
 							<p>
 								~110Mi
 							</p>
-							</td></tr><tr><td align="left" valign="top" headers="idm46293267048976">
+							</td></tr><tr><td align="left" valign="top" headers="idm45567351300768">
 							<p>
 								Memory used by the QEMU process (excluding VM memory)
 							</p>
-							</td><td align="left" valign="top" headers="idm46293267047888">
+							</td><td align="left" valign="top" headers="idm45567351299680">
 							<p>
 								~30Mi
 							</p>
-							</td></tr><tr><td align="left" valign="top" headers="idm46293267048976">
+							</td></tr><tr><td align="left" valign="top" headers="idm45567351300768">
 							<p>
 								Memory used by the <code class="literal">virtiofsd</code> process (excluding VM I/O buffers)
 							</p>
-							</td><td align="left" valign="top" headers="idm46293267047888">
+							</td><td align="left" valign="top" headers="idm45567351299680">
 							<p>
 								~10Mi
 							</p>
-							</td></tr><tr><td align="left" valign="top" headers="idm46293267048976">
+							</td></tr><tr><td align="left" valign="top" headers="idm45567351300768">
 							<p>
 								Memory used by the <code class="literal">containerd-shim-kata-v2</code> process
 							</p>
-							</td><td align="left" valign="top" headers="idm46293267047888">
+							</td><td align="left" valign="top" headers="idm45567351299680">
 							<p>
 								~20Mi
 							</p>
-							</td></tr><tr><td align="left" valign="top" headers="idm46293267048976">
+							</td></tr><tr><td align="left" valign="top" headers="idm45567351300768">
 							<p>
 								File buffer cache data after running <code class="literal">dnf install</code> on Fedora
 							</p>
-							</td><td align="left" valign="top" headers="idm46293267047888">
+							</td><td align="left" valign="top" headers="idm45567351299680">
 							<p>
 								~300Mi* <sup>[1]</sup>
 							</p>
@@ -4511,14 +4511,14 @@ Mar 11 11:57:28 openshift-worker-0 kata[2241647]: time="2023-03-11T11:57:28.6089
 							<a class="link" href="https://docs.redhat.com/documentation/en-us/openshift_container_platform/4.17/html-single/support/index#support_gathering_data_gathering-cluster-data">Gathering data about your cluster</a> in the OpenShift Container Platform documentation
 						</li></ul></div></section></section></section><section class="appendix" id="kataconfig-status-messages"><div class="titlepage"><div><div><h1 class="title">Appendix A. KataConfig status messages</h1></div></div></div><p>
 			The following table displays the status messages for the <code class="literal">KataConfig</code> custom resource (CR) for a cluster with two worker nodes.
-		</p><div class="table" id="idm46293261690384"><p class="title"><strong>Table A.1. <code class="literal">KataConfig</code> status messages</strong></p><div class="table-contents"><table class="lt-4-cols lt-7-rows"><colgroup><col style="width: 50%; " class="col_1"/><col style="width: 50%; " class="col_2"/></colgroup><thead><tr><th align="left" valign="top" id="idm46293261685232" scope="col">Status</th><th align="left" valign="top" id="idm46293261684144" scope="col">Description</th></tr></thead><tbody><tr><td align="left" valign="top" headers="idm46293261685232">
+		</p><div class="table" id="idm45567345347776"><p class="title"><strong>Table A.1. <code class="literal">KataConfig</code> status messages</strong></p><div class="table-contents"><table class="lt-4-cols lt-7-rows"><colgroup><col style="width: 50%; " class="col_1"/><col style="width: 50%; " class="col_2"/></colgroup><thead><tr><th align="left" valign="top" id="idm45567345342624" scope="col">Status</th><th align="left" valign="top" id="idm45567345341536" scope="col">Description</th></tr></thead><tbody><tr><td align="left" valign="top" headers="idm45567345342624">
 						<p>
 							<span class="strong strong"><strong>Initial installation</strong></span>
 						</p>
 						<p>
 							When a <code class="literal">KataConfig</code> CR is created and starts installing <code class="literal">kata-remote</code> on both workers, the following status is displayed for a few seconds.
 						</p>
-						</td><td align="left" valign="top" headers="idm46293261684144">
+						</td><td align="left" valign="top" headers="idm45567345341536">
 <pre class="programlisting language-yaml"> conditions:
     message: Performing initial installation of kata-remote on cluster
     reason: Installing
@@ -4527,28 +4527,28 @@ Mar 11 11:57:28 openshift-worker-0 kata[2241647]: time="2023-03-11T11:57:28.6089
  kataNodes:
    nodeCount: 0
    readyNodeCount: 0</pre>
-						</td></tr><tr><td align="left" valign="top" headers="idm46293261685232">
+						</td></tr><tr><td align="left" valign="top" headers="idm45567345342624">
 						<p>
 							<span class="strong strong"><strong>Installing</strong></span>
 						</p>
 						<p>
 							Within a few seconds the status changes.
 						</p>
-						</td><td align="left" valign="top" headers="idm46293261684144">
+						</td><td align="left" valign="top" headers="idm45567345341536">
 <pre class="programlisting language-yaml"> kataNodes:
    nodeCount: 2
    readyNodeCount: 0
    waitingToInstall:
    - worker-0
    - worker-1</pre>
-						</td></tr><tr><td align="left" valign="top" headers="idm46293261685232">
+						</td></tr><tr><td align="left" valign="top" headers="idm45567345342624">
 						<p>
 							<span class="strong strong"><strong>Installing</strong></span> (Worker-1 installation starting)
 						</p>
 						<p>
 							For a short period of time, the status changes, signifying that one node has initiated the installation of <code class="literal">kata-remote</code>, while the other is in a waiting state. This is because only one node can be unavailable at any given time. The <code class="literal">nodeCount</code> remains at 2 because both nodes will eventually receive <code class="literal">kata-remote</code>, but the <code class="literal">readyNodeCount</code> is currently 0 as neither of them has reached that state yet.
 						</p>
-						</td><td align="left" valign="top" headers="idm46293261684144">
+						</td><td align="left" valign="top" headers="idm45567345341536">
 <pre class="programlisting language-yaml"> kataNodes:
    installing:
    - worker-1
@@ -4556,14 +4556,14 @@ Mar 11 11:57:28 openshift-worker-0 kata[2241647]: time="2023-03-11T11:57:28.6089
    readyNodeCount: 0
    waitingToInstall:
    - worker-0</pre>
-						</td></tr><tr><td align="left" valign="top" headers="idm46293261685232">
+						</td></tr><tr><td align="left" valign="top" headers="idm45567345342624">
 						<p>
 							<span class="strong strong"><strong>Installing</strong></span> (Worker-1 installed, worker-0 installation started)
 						</p>
 						<p>
 							After some time, <code class="literal">worker-1</code> will complete its installation, causing a change in the status. The <code class="literal">readyNodeCount</code> is updated to 1, indicating that <code class="literal">worker-1</code> is now prepared to execute <code class="literal">kata-remote</code> workloads. You cannot schedule or run <code class="literal">kata-remote</code> workloads until the runtime class is created at the end of the installation process.
 						</p>
-						</td><td align="left" valign="top" headers="idm46293261684144">
+						</td><td align="left" valign="top" headers="idm45567345341536">
 <pre class="programlisting language-yaml"> kataNodes:
    installed:
    - worker-1
@@ -4571,14 +4571,14 @@ Mar 11 11:57:28 openshift-worker-0 kata[2241647]: time="2023-03-11T11:57:28.6089
    - worker-0
    nodeCount: 2
    readyNodeCount: 1</pre>
-						</td></tr><tr><td align="left" valign="top" headers="idm46293261685232">
+						</td></tr><tr><td align="left" valign="top" headers="idm45567345342624">
 						<p>
 							<span class="strong strong"><strong>Installed</strong></span>
 						</p>
 						<p>
 							When installed, both workers are listed as installed, and the <code class="literal">InProgress</code> condition transitions to <code class="literal">False</code> without specifying a reason, indicating the successful installation of <code class="literal">kata-remote</code> on the cluster.
 						</p>
-						</td><td align="left" valign="top" headers="idm46293261684144">
+						</td><td align="left" valign="top" headers="idm45567345341536">
 <pre class="programlisting language-yaml"> conditions:
     message: ""
     reason: ""
@@ -4590,14 +4590,14 @@ Mar 11 11:57:28 openshift-worker-0 kata[2241647]: time="2023-03-11T11:57:28.6089
    - worker-1
    nodeCount: 2
    readyNodeCount: 2</pre>
-						</td></tr></tbody></table></div></div><div class="informaltable"><table class="lt-4-cols lt-7-rows"><colgroup><col style="width: 50%; " class="col_1"/><col style="width: 50%; " class="col_2"/></colgroup><thead><tr><th align="left" valign="top" id="idm46293258692272" scope="col">Status</th><th align="left" valign="top" id="idm46293258691184" scope="col">Description</th></tr></thead><tbody><tr><td align="left" valign="top" headers="idm46293258692272">
+						</td></tr></tbody></table></div></div><div class="informaltable"><table class="lt-4-cols lt-7-rows"><colgroup><col style="width: 50%; " class="col_1"/><col style="width: 50%; " class="col_2"/></colgroup><thead><tr><th align="left" valign="top" id="idm45567346074288" scope="col">Status</th><th align="left" valign="top" id="idm45567346073200" scope="col">Description</th></tr></thead><tbody><tr><td align="left" valign="top" headers="idm45567346074288">
 						<p>
 							<span class="strong strong"><strong>Initial uninstall</strong></span>
 						</p>
 						<p>
 							If <code class="literal">kata-remote</code> is installed on both workers, and you delete the <code class="literal">KataConfig</code> to remove <code class="literal">kata-remote</code> from the cluster, both workers briefly enter a waiting state for a few seconds.
 						</p>
-						</td><td align="left" valign="top" headers="idm46293258691184">
+						</td><td align="left" valign="top" headers="idm45567346073200">
 <pre class="programlisting language-yaml"> conditions:
     message: Removing kata-remote from cluster
     reason: Uninstalling
@@ -4609,14 +4609,14 @@ Mar 11 11:57:28 openshift-worker-0 kata[2241647]: time="2023-03-11T11:57:28.6089
    waitingToUninstall:
    - worker-0
    - worker-1</pre>
-						</td></tr><tr><td align="left" valign="top" headers="idm46293258692272">
+						</td></tr><tr><td align="left" valign="top" headers="idm45567346074288">
 						<p>
 							<span class="strong strong"><strong>Uninstalling</strong></span>
 						</p>
 						<p>
 							After a few seconds, one of the workers starts uninstalling.
 						</p>
-						</td><td align="left" valign="top" headers="idm46293258691184">
+						</td><td align="left" valign="top" headers="idm45567346073200">
 <pre class="programlisting language-yaml"> kataNodes:
    nodeCount: 0
    readyNodeCount: 0
@@ -4624,14 +4624,14 @@ Mar 11 11:57:28 openshift-worker-0 kata[2241647]: time="2023-03-11T11:57:28.6089
    - worker-1
    waitingToUninstall:
    - worker-0</pre>
-						</td></tr><tr><td align="left" valign="top" headers="idm46293258692272">
+						</td></tr><tr><td align="left" valign="top" headers="idm45567346074288">
 						<p>
 							<span class="strong strong"><strong>Uninstalling</strong></span>
 						</p>
 						<p>
 							Worker-1 finishes and worker-0 starts uninstalling.
 						</p>
-						</td><td align="left" valign="top" headers="idm46293258691184">
+						</td><td align="left" valign="top" headers="idm45567346073200">
 <pre class="programlisting language-yaml"> kataNodes:
    nodeCount: 0
    readyNodeCount: 0
@@ -4643,7 +4643,7 @@ Mar 11 11:57:28 openshift-worker-0 kata[2241647]: time="2023-03-11T11:57:28.6089
 						<code class="literal">Failed</code>: This is reported if the node cannot finish its transition. The <code class="literal">status</code> reports <code class="literal">True</code> and the <code class="literal">message</code> is <code class="literal">Node &lt;node_name&gt; Degraded: &lt;error_message_from_the_node&gt;</code>.
 					</li><li class="listitem">
 						<code class="literal">BlockedByExistingKataPods</code>: This is reported if there are pods running on a cluster that use the <code class="literal">kata-remote</code> runtime while <code class="literal">kata-remote</code> is being uninstalled. The <code class="literal">status</code> field is <code class="literal">False</code> and the <code class="literal">message</code> is <code class="literal">Existing pods using "kata-remote" RuntimeClass found. Please delete the pods manually for KataConfig deletion to proceed</code>. There could also be a technical error message reported like <code class="literal">Failed to list kata pods: &lt;error_message&gt;</code> if communication with the cluster control plane fails.
-					</li></ul></div></div></div></section><div><div xml:lang="en-US" class="legalnotice" id="idm46293261256384"><h1 class="legalnotice">Legal Notice</h1><div class="para">
+					</li></ul></div></div></div></section><div><div xml:lang="en-US" class="legalnotice" id="idm45567348196240"><h1 class="legalnotice">Legal Notice</h1><div class="para">
 		Copyright <span class="trademark"/>© 2024 Red Hat, Inc.
 	</div><div class="para">
 		The text of and illustrations in this document are licensed by Red Hat under a Creative Commons Attribution–Share Alike 3.0 Unported license ("CC-BY-SA"). An explanation of CC-BY-SA is available at <a class="uri" href="http://creativecommons.org/licenses/by-sa/3.0/">http://creativecommons.org/licenses/by-sa/3.0/</a>. In accordance with CC-BY-SA, if you distribute this document or an adaptation of it, you must provide the URL for the original version.
