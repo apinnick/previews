@@ -575,7 +575,7 @@
 				You can sign container images by using a tool such as <link xlink:href="https://developers.redhat.com/products/trusted-artifact-signer/overview">Red Hat Trusted Artifact Signer</link>. Then, you create a container image signature verification policy.
 			</simpara>
 			<simpara>
-				The Confidential compute attestation Operator verifies the signatures, ensuring that only trusted and authenticated container images are deployed in your environment.
+				The Trustee Operator verifies the signatures, ensuring that only trusted and authenticated container images are deployed in your environment.
 			</simpara>
 			<simpara>
 				For more information, see <link xlink:href="https://www.redhat.com/en/blog/exploring-openshift-confidential-containers-solution">Exploring the OpenShift Confidential Containers solution</link>.
