@@ -1,12 +1,21 @@
-# Preview build URLs
+# Preview builds
 
-OpenShift: `https://apinnick.github.io/previews/<branch>/welcome`
+I created this repo to share preview builds with people outside Red Hat. Folders = branches.
+
+## Preview build URLs
+
+OpenShift: `https://apinnick.github.io/previews/<branch>/welcome/`
 
 Asciidoc: `https://apinnick.github.io/previews/<branch>/html-single/`
 
-# Generating previews
+Examples:
 
-## OpenShift
+- `https://apinnick.github.io/previews/ocpdocs-123-new-feature/welcome/`
+- `https://apinnick.github.io/previews/HCIDOCS-123-new-feature/html-single/`
+
+## Generating previews
+
+### OpenShift
 
 Run the following command in the OCP-docs repo:
 
@@ -20,7 +29,7 @@ If you just want to generate the preview build URL, you can run a shorter versio
 $ BRANCH=$(git branch --show-current) && GITUSER=$(git config --get remote.origin.url | sed -r 's/git@github.com://; s/\/openshift-docs.git//') && echo -e "\nPreview build URL: https://$GITUSER.github.io/previews/$BRANCH/welcome/"
 ~~~
 
-## Asciidoc
+### Asciidoc
 
 Run the following command in the same directory as the master.adoc file:
 
