@@ -37,4 +37,4 @@ Run the following command in the same directory as the master.adoc file:
 bccutil && BRANCH=$(git branch --show-current) && cp -r build/tmp/en-US/ ~/previews/$BRANCH/ && cd ~/previews && git add . && git commit -m "init" && git push && cd - && GITUSER=$(git config --get remote.origin.url | awk -F'[:/]+' '{print $2}') && echo -e "\nPreview build uploaded.\nPreview build URL: https://$GITUSER.github.io/previews/$BRANCH/html-single/"
 ~~~
 
-If you do not use `bccutil`, you can use ptobably use `asciidoctor` and play with the preview path. I have not tested this.
+If you do not use `bccutil`, you can use probably use `asciidoctor` and play with the preview path. I have not tested this.
