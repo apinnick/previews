@@ -15,18 +15,18 @@ Examples:
 
 ## Generating previews
 
-### OpenShift
+### OpenShift (Asciibinder)
 
 Run the following command in the OCP-docs repo:
 
 ~~~
-$ asciibinder && BRANCH=$(git branch --show-current) && cp -r _preview/openshift-enterprise/$BRANCH ../previews && cd ../previews && git add . && git commit -m "init" && git push && cd - && GITUSER=$(git config --get remote.origin.url | sed -r 's/git@github.com://; s/\/openshift-docs.git//') && echo -e "\nPreview build uploaded.\nPreview build URL: https://$GITUSER.github.io/previews/$BRANCH/welcome/"
+asciibinder && BRANCH=$(git branch --show-current) && cp -r _preview/openshift-enterprise/$BRANCH ../previews && cd ../previews && git add . && git commit -m "init" && git push && cd - && GITUSER=$(git config --get remote.origin.url | awk -F'[:/]+' '{print $2}') && echo -e "\nPreview build uploaded.\nPreview build URL: https://$GITUSER.github.io/previews/$BRANCH/welcome/"
 ~~~
 
 If you just want to generate the preview build URL, you can run a shorter version of this command:
 
 ~~~
-$ BRANCH=$(git branch --show-current) && GITUSER=$(git config --get remote.origin.url | sed -r 's/git@github.com://; s/\/openshift-docs.git//') && echo -e "\nPreview build URL: https://$GITUSER.github.io/previews/$BRANCH/welcome/"
+BRANCH=$(git branch --show-current) && GITUSER=$(git config --get remote.origin.url | awk -F'[:/]+' '{print $2}') && echo -e "\nPreview build URL: https://$GITUSER.github.io/previews/$BRANCH/welcome/"
 ~~~
 
 ### Asciidoc
@@ -34,5 +34,7 @@ $ BRANCH=$(git branch --show-current) && GITUSER=$(git config --get remote.origi
 Run the following command in the same directory as the master.adoc file:
 
 ~~~
-$ bccutil && BRANCH=$(git branch --show-current) && cp -r build/tmp/en-US/ ~/previews/$BRANCH/ && cd ~/previews && git add . && git commit -m "init" && git push && cd - && GITUSER=$(git config --get remote.origin.url | sed -r 's/^.*://; s/\/.*$//') && echo -e "\nPreview build uploaded.\nPreview build URL: https://$GITUSER.github.io/previews/$BRANCH/html-single/"
+bccutil && BRANCH=$(git branch --show-current) && cp -r build/tmp/en-US/ ~/previews/$BRANCH/ && cd ~/previews && git add . && git commit -m "init" && git push && cd - && GITUSER=$(git config --get remote.origin.url | awk -F'[:/]+' '{print $2}') && echo -e "\nPreview build uploaded.\nPreview build URL: https://$GITUSER.github.io/previews/$BRANCH/html-single/"
 ~~~
+
+If you do not use `bccutil`, you can use ptobably use `asciidoctor` and play with the preview path. I have not tested this.
