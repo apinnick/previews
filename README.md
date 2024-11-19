@@ -1,10 +1,14 @@
-# Preview builds
+# Preview build URLs
 
-## OpenShift docs
+OpenShift: `https://apinnick.github.io/previews/<branch>/welcome`
 
-Preview build URL structure: `https://<user>.github.io/previews/<branch>/welcome`
+Asciidoc: `https://apinnick.github.io/previews/<branch>/html-single/`
 
-You can run the following command in the openshift-docs repo to upload a preview and generate the preview URL:
+# Generating previews
+
+## OpenShift
+
+Run the following command in the OCP-docs repo:
 
 ~~~
 $ asciibinder && BRANCH=$(git branch --show-current) && cp -r _preview/openshift-enterprise/$BRANCH ../previews && cd ../previews && git add . && git commit -m "init" && git push && cd - && GITUSER=$(git config --get remote.origin.url | sed -r 's/git@github.com://; s/\/openshift-docs.git//') && echo -e "\nPreview build uploaded.\nPreview build URL: https://$GITUSER.github.io/previews/$BRANCH/welcome/"
@@ -17,8 +21,6 @@ $ BRANCH=$(git branch --show-current) && GITUSER=$(git config --get remote.origi
 ~~~
 
 ## Asciidoc
-
-Preview build URL structure: `https://<user>.github.io/previews/<branch>/html-single`
 
 Run the following command in the same directory as the master.adoc file:
 
