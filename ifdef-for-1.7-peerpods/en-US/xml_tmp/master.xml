@@ -1644,8 +1644,6 @@ data:
 </listitem>
 <listitem>
 <simpara>Click <emphasis role="strong">Save</emphasis> to apply the changes.</simpara>
-<programlisting language="terminal" linenumbering="unnumbered">$ oc set env ds/peerpodconfig-ctrl-caa-daemon \
-  -n openshift-sandboxed-containers-operator REBOOT="$(date)"</programlisting>
 </listitem>
 <listitem>
 <simpara>Navigate to <emphasis role="strong">Workloads</emphasis> → <emphasis role="strong">ConfigMaps</emphasis> to view the new config map.</simpara>
@@ -2208,11 +2206,6 @@ data:
 <simpara>Create the config map by running the following command:</simpara>
 <programlisting language="terminal" linenumbering="unnumbered">$ oc apply -f peer-pods-cm.yaml</programlisting>
 </listitem>
-<listitem>
-<simpara>Optional: To update an existing peer pods config map, restart the <literal>peerpodconfig-ctrl-caa-daemon</literal> daemon set by running the following command:</simpara>
-<programlisting language="terminal" linenumbering="unnumbered">$ oc set env ds/peerpodconfig-ctrl-caa-daemon \
-  -n openshift-sandboxed-containers-operator REBOOT="$(date)"</programlisting>
-</listitem>
 </orderedlist>
 </section>
 <section xml:id="creating-kataconfig-cr-cli_aws-cli">
@@ -2727,8 +2720,6 @@ data:
 </listitem>
 <listitem>
 <simpara>Click <emphasis role="strong">Save</emphasis> to apply the changes.</simpara>
-<programlisting language="terminal" linenumbering="unnumbered">$ oc set env ds/peerpodconfig-ctrl-caa-daemon \
-  -n openshift-sandboxed-containers-operator REBOOT="$(date)"</programlisting>
 </listitem>
 <listitem>
 <simpara>Navigate to <emphasis role="strong">Workloads</emphasis> → <emphasis role="strong">ConfigMaps</emphasis> to view the new config map.</simpara>
@@ -3304,11 +3295,6 @@ data:
 <listitem>
 <simpara>Create the config map by running the following command:</simpara>
 <programlisting language="terminal" linenumbering="unnumbered">$ oc apply -f peer-pods-cm.yaml</programlisting>
-</listitem>
-<listitem>
-<simpara>Optional: To update an existing peer pods config map, restart the <literal>peerpodconfig-ctrl-caa-daemon</literal> daemon set by running the following command:</simpara>
-<programlisting language="terminal" linenumbering="unnumbered">$ oc set env ds/peerpodconfig-ctrl-caa-daemon \
-  -n openshift-sandboxed-containers-operator REBOOT="$(date)"</programlisting>
 </listitem>
 </orderedlist>
 </section>
@@ -4928,11 +4914,6 @@ data:
 <listitem>
 <simpara>Create the config map by running the following command:</simpara>
 <programlisting language="terminal" linenumbering="unnumbered">$ oc apply -f peer-pods-cm.yaml</programlisting>
-</listitem>
-<listitem>
-<simpara>Optional: To update an existing peer pods config map, restart the <literal>peerpodconfig-ctrl-caa-daemon</literal> daemon set by running the following command:</simpara>
-<programlisting language="terminal" linenumbering="unnumbered">$ oc set env ds/peerpodconfig-ctrl-caa-daemon \
-  -n openshift-sandboxed-containers-operator REBOOT="$(date)"</programlisting>
 </listitem>
 </orderedlist>
 </section>
